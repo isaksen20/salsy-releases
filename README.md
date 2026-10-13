@@ -10,8 +10,8 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.69.0 | Debian 13 amd64 |
-| Salsy PC-klient | 0.69.0 | Debian 13 amd64 |
+| Salsy Server | 0.70.0 | Debian 13 amd64 |
+| Salsy PC-klient | 0.70.0 | Debian 13 amd64 |
 | Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
@@ -31,7 +31,14 @@ nedlastingsadresser, versjoner, kontrollsummer og Android-signatur.
 Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
 Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
 innført automatisk installasjon av oppdateringer.
-Vilkår 1.3 må godtas på nytt ved oppdatering av server/PC-klient.
+Vilkår 1.3 må godtas ved første gangs bruk eller når tidligere godtatte vilkår er endret.
+
+Fra server 0.70.0 finnes **Domene / offentlig HTTPS → Sett opp HTTPS automatisk …**.
+Veiviseren oppretter en separat Caddy-proxy med sudo. Med Apache, Mailcow eller
+andre proxyer velges manuell DNS-bekreftelse og en ledig HTTPS-port, for eksempel
+9443. Eksisterende proxykonfigurasjon og tjenester endres ikke. DNS/ruter må
+settes av administrator; manuelle DNS-sertifikater må fornyes før utløp med samme
+veiviser. Hele fremgangsmåten står i kapittel 14.0 i PDF-bruksanvisningen.
 
 ## English
 
@@ -42,6 +49,11 @@ Android APKs target Android 7+ on arm64/x86_64 and use a permanent release key.
 Previously debug-signed apps may require replacement after preserving connection
 details. Back up server data before upgrading. Checksums and version metadata are
 provided; automatic installation is not implemented.
+
+Server 0.70.0 includes optional automatic HTTPS provisioning with a separate
+Caddy service and a provider-independent manual DNS wizard. Use an unused public
+port when Apache/Mailcow already runs on the machine. DNS certificates require
+manual renewal through the wizard; router/DNS configuration remains external.
 
 Build checks cover packaged server behavior, payroll, backups, source-file absence
 and APK signatures. Native desktop GUI and physical Android testing were not
