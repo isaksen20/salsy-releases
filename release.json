@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "repository": "isaksen20/salsy-releases",
-  "release_tag": "v0.71.0",
-  "release_url": "https://github.com/isaksen20/salsy-releases/releases/tag/v0.71.0",
+  "release_tag": "v0.71.1",
+  "release_url": "https://github.com/isaksen20/salsy-releases/releases/tag/v0.71.1",
   "components": {
     "server": {
-      "version": "0.71.0",
-      "file": "salsy-server_0.71.0-1_amd64.deb",
-      "size": 41748830,
-      "sha256": "e91a74868cb990320a8d24fbae0e00bd261cffc377ed38429cd6599afeb64df7",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.0/salsy-server_0.71.0-1_amd64.deb",
+      "version": "0.71.1",
+      "file": "salsy-server_0.71.1-1_amd64.deb",
+      "size": 41749372,
+      "sha256": "c3d8364c3a036c3e863a85c58831d9017e80fce5eee50675e1ac973a31f6ca05",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.1/salsy-server_0.71.1-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
     "client": {
-      "version": "0.71.0",
-      "file": "salsy-client_0.71.0-1_amd64.deb",
-      "size": 20044902,
-      "sha256": "21e1c8d9402a14727aa154b2574f679c1b75ce1f1c7434f5c85cc243d571ca8a",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.0/salsy-client_0.71.0-1_amd64.deb",
+      "version": "0.71.1",
+      "file": "salsy-client_0.71.1-1_amd64.deb",
+      "size": 20045306,
+      "sha256": "2d75746b450ea58a3e116360f6686926af6a84a7eac25e97c7cb1b1b6f62ce5a",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.1/salsy-client_0.71.1-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
     "android": {
@@ -25,7 +25,7 @@
       "file": "salsy-android-0.30.0.apk",
       "size": 35378265,
       "sha256": "e7b39cdf73fead33025104542836221fae3e41c47cb269481b876052117a0027",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.0/salsy-android-0.30.0.apk",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.1/salsy-android-0.30.0.apk",
       "signer_sha256": "d88dfb630483f9eec6bbcea42baa9aff535f630bc26a77a652f67c6e62d0b22f",
       "platform": "android-24+-arm64-x86_64"
     },
@@ -34,15 +34,15 @@
       "file": "salsy-warehouse-0.11.0.apk",
       "size": 35337245,
       "sha256": "7d23446c3a497ae7ae363c944cbecaf64c621236bff4cfd342c5f59439e5545c",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.0/salsy-warehouse-0.11.0.apk",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.1/salsy-warehouse-0.11.0.apk",
       "signer_sha256": "d88dfb630483f9eec6bbcea42baa9aff535f630bc26a77a652f67c6e62d0b22f",
       "platform": "android-24+-arm64-x86_64"
     }
   },
   "documentation": {
     "file": "Salsy-bruksanvisning.pdf",
-    "size": 551963,
-    "sha256": "2328c254ee8bf61e6b95e3c09785aa10da7684264389db995f2ce05438b4606c",
-    "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.0/Salsy-bruksanvisning.pdf"
+    "size": 551996,
+    "sha256": "08121ef0f180e4dbc45f466fdaed6618279b852489794bc60b8272b68d53409a",
+    "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.71.1/Salsy-bruksanvisning.pdf"
   }
 }
