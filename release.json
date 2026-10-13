@@ -7,8 +7,8 @@
     "server": {
       "version": "0.70.0",
       "file": "salsy-server_0.70.0-1_amd64.deb",
-      "size": 41722772,
-      "sha256": "dc2842e982e688945f0da001b4e50dcaf5d4740bec15a9c5e0f460b1f373597e",
+      "size": 41723394,
+      "sha256": "9ef8f06ef5c13b1557fe5d241f06975b91aad68600d5e55d35f81f12303f7332",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.70.0/salsy-server_0.70.0-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
