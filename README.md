@@ -1,0 +1,46 @@
+# Salsy – offisielle installasjonsfiler / official installers
+
+Utvikler og utgiver / developer and publisher: **Thomas Isaksen**.
+
+Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
+Les [bruksanvisningen (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf).
+Dette repositoriet inneholder utgivelsesinformasjon og offentlige installasjonsfiler.
+Kildekoden holdes privat. Se [distribusjonsinformasjon](NOTICE.md) og vilkårene
+på [norsk](terms-nb.md) / [English](terms-en.md).
+
+| Program | Versjon | Plattform |
+| --- | --- | --- |
+| Salsy Server | 0.68.0 | Debian 13 amd64 |
+| Salsy PC-klient | 0.68.0 | Debian 13 amd64 |
+| Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
+| Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
+
+Debian-pakkene bruker Python 3.13. Andre Linux-versjoner og Raspberry Pi/ARM
+støttes ikke av disse to amd64-pakkene. Nettklientene følger serveren.
+For Debian: last ned riktig `.deb` og installer med `sudo apt install ./FILNAVN.deb`.
+Ta sikkerhetskopi av serverdata før oppdatering; oppdater server og PC-klient sammen.
+
+Last ned APK på Android og åpne filen. Android kan be om tillatelse til å installere
+fra nettleseren. Første offentlige APK har ny signatur: eldre debug/testapper kan
+kreve avinstallasjon først. Ta vare på tilkoblingsfilen; lokale appinnstillinger
+slettes ved avinstallasjon. Serverdata beholdes. Kommende utgivelser bruker samme
+private signeringsnøkkel.
+
+`SHA256SUMS` dekker alle fire installasjonsfilene og PDF-bruksanvisningen. `release.json` inneholder
+nedlastingsadresser, versjoner, kontrollsummer og Android-signatur.
+Det er ikke innført automatisk installasjon av oppdateringer.
+Vilkår 1.2 må godtas på nytt ved oppdatering av server/PC-klient.
+
+## English
+
+Download the four installers from [Releases](https://github.com/isaksen20/salsy-releases/releases/latest).
+Source code is private; this is not an open-source release.
+Debian packages target Debian 13 amd64 with Python 3.13.
+Android APKs target Android 7+ on arm64/x86_64 and use a permanent release key.
+Previously debug-signed apps may require replacement after preserving connection
+details. Back up server data before upgrading. Checksums and version metadata are
+provided; automatic installation is not implemented.
+
+Build checks cover packaged server behavior, payroll, backups, source-file absence
+and APK signatures. Native desktop GUI and physical Android testing were not
+available in the build environment.
