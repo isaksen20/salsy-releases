@@ -1,6 +1,6 @@
 # SALSY – TERMS AND CONDITIONS AND DISCLAIMER OF LIABILITY
 
-**Version:** 1.2  
+**Version:** 1.3  
 **Last updated:** October 13, 2026  
 **Software:** Salsy  
 **Developer and Publisher:** Thomas Isaksen (private developer)  
@@ -204,6 +204,16 @@ Users and organizations are responsible for verifying the software's origin, int
 The user's and organization's responsibility to verify all information and calculations applies regardless of the software version used.
 
 All use and distribution of Salsy must comply with its applicable software license.
+
+### 11.1 Exclusive rights to services and hosting
+
+Thomas Isaksen and any organizations under Thomas Isaksen's ownership or control have the exclusive right to sell services related to Salsy. These include hosting, server operation, setup, support, and maintenance offered to others.
+
+Other users and organizations may host and operate the Salsy server only for their own use or their own organization's internal use. They may not host, operate, or make a Salsy server available to other organizations or customers, whether for payment or free of charge.
+
+Only Thomas Isaksen and organizations under his ownership or control may offer Salsy hosting or sell other Salsy services to third parties. Public availability of installers does not grant a right to sell such services or provide hosting for others.
+
+These restrictions apply to Salsy. Bundled third-party components retain their own licenses and rights. Mandatory law takes precedence over these terms.
 
 ## 12. No Guarantee of Legal Compliance
 

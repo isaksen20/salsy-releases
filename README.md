@@ -10,8 +10,8 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.68.0 | Debian 13 amd64 |
-| Salsy PC-klient | 0.68.0 | Debian 13 amd64 |
+| Salsy Server | 0.69.0 | Debian 13 amd64 |
+| Salsy PC-klient | 0.69.0 | Debian 13 amd64 |
 | Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
@@ -28,8 +28,10 @@ private signeringsnøkkel.
 
 `SHA256SUMS` dekker alle fire installasjonsfilene og PDF-bruksanvisningen. `release.json` inneholder
 nedlastingsadresser, versjoner, kontrollsummer og Android-signatur.
-Det er ikke innført automatisk installasjon av oppdateringer.
-Vilkår 1.2 må godtas på nytt ved oppdatering av server/PC-klient.
+Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
+Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
+innført automatisk installasjon av oppdateringer.
+Vilkår 1.3 må godtas på nytt ved oppdatering av server/PC-klient.
 
 ## English
 

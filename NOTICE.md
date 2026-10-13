@@ -4,6 +4,9 @@ Copyright © 2026 Thomas Isaksen, developer and publisher.
 
 Official installers are publicly available from this repository's Releases.
 Salsy source code remains private. No open-source license is granted for Salsy.
+Thomas Isaksen and organizations under his ownership or control have exclusive
+rights to sell Salsy-related services and provide Salsy hosting for others. Other
+users may host only for their own use or their organization's internal use.
 Installation and use are subject to the bundled Salsy terms, provided here in
 [Norwegian](terms-nb.md) and [English](terms-en.md).
 

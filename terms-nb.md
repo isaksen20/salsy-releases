@@ -1,6 +1,6 @@
 # SALSY – VILKÅR OG BETINGELSER OG ANSVARSFRASKRIVELSE
 
-**Versjon:** 1.2  
+**Versjon:** 1.3  
 **Sist oppdatert:** 13. oktober 2026  
 **Programvare:** Salsy  
 **Utvikler og utgiver:** Thomas Isaksen (privat utvikler)  
@@ -204,6 +204,16 @@ Brukere og virksomheter er ansvarlige for å kontrollere programvarens opprinnel
 Brukerens og virksomhetens ansvar for å kontrollere alle opplysninger og beregninger gjelder uavhengig av hvilken programvareversjon som brukes.
 
 All bruk og distribusjon av Salsy må følge programvarens gjeldende lisens.
+
+### 11.1 Enerett til tjenester og hosting
+
+Thomas Isaksen og eventuelle organisasjoner underlagt Thomas Isaksens eierskap eller kontroll har enerett til salg av tjenester tilknyttet Salsy. Dette omfatter blant annet hosting, serverdrift, oppsett, support og vedlikehold som tilbys andre.
+
+Andre brukere og virksomheter kan bare hoste og drifte Salsy-serveren for eget bruk eller for sin egen virksomhets interne bruk. De kan ikke hoste, drifte eller gjøre en Salsy-server tilgjengelig for andre virksomheter eller kunder, verken mot betaling eller vederlagsfritt.
+
+Bare Thomas Isaksen og organisasjoner underlagt hans eierskap eller kontroll kan tilby Salsy-hosting eller selge andre Salsy-tjenester til tredjeparter. Offentlig tilgang til installasjonsfilene gir ingen rett til å selge slike tjenester eller tilby hosting for andre.
+
+Disse begrensningene gjelder Salsy. Medfølgende tredjepartskomponenter beholder sine egne lisenser og rettigheter. Ufravikelig lovgivning går foran disse vilkårene.
 
 ## 12. Ingen garanti for etterlevelse av lovgivningen
 
