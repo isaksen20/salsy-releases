@@ -10,8 +10,8 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.70.0 | Debian 13 amd64 |
-| Salsy PC-klient | 0.70.0 | Debian 13 amd64 |
+| Salsy Server | 0.71.0 | Debian 13 amd64 |
+| Salsy PC-klient | 0.71.0 | Debian 13 amd64 |
 | Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
@@ -32,6 +32,11 @@ Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
 Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
 innført automatisk installasjon av oppdateringer.
 Vilkår 1.3 må godtas ved første gangs bruk eller når tidligere godtatte vilkår er endret.
+
+Fra 0.71.0 kan automatisk OS-oppstart og opplåsing aktiveres per instans under
+**Oppstart** i servervinduet. Systemd lagrer maskinbundet kryptert legitimasjon;
+root på maskinen kan hente den ut. Nye vilkår godtas for bedriften av administrator
+i Salsy PC eller PC-nett, uten lokal serverinnlogging. Se kapittel 15 i PDF.
 
 Fra server 0.70.0 finnes **Domene / offentlig HTTPS → Sett opp HTTPS automatisk …**.
 Veiviseren oppretter en separat Caddy-proxy med sudo. Med Apache, Mailcow eller
