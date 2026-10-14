@@ -10,13 +10,16 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.71.3 | Debian 13 amd64 |
-| Salsy PC-klient | 0.71.3 | Debian 13 amd64 |
+| Salsy Server | 0.72.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.72.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.72.0 | Debian 13 amd64 |
 | Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
-Debian-pakkene bruker Python 3.13. Andre Linux-versjoner og Raspberry Pi/ARM
-støttes ikke av disse to amd64-pakkene. Nettklientene følger serveren.
+Debian-pakkene bruker Python 3.13. Velg serverfilen for maskinens arkitektur:
+`dpkg --print-architecture` viser `amd64` eller `arm64`. ARM64 krever 64-bits OS;
+32-bits ARM/armhf og Debian 12 støttes ikke av disse pakkene. PC-klienten er amd64.
+Nettklientene og alle serverfunksjoner er de samme på begge serverarkitekturer.
 For Debian: last ned riktig `.deb` og installer med `sudo apt install ./FILNAVN.deb`.
 Ta sikkerhetskopi av serverdata før oppdatering; oppdater server og PC-klient sammen.
 
@@ -26,7 +29,7 @@ kreve avinstallasjon først. Ta vare på tilkoblingsfilen; lokale appinnstilling
 slettes ved avinstallasjon. Serverdata beholdes. Kommende utgivelser bruker samme
 private signeringsnøkkel.
 
-`SHA256SUMS` dekker alle fire installasjonsfilene og PDF-bruksanvisningen. `release.json` inneholder
+`SHA256SUMS` dekker alle fem installasjonsfilene og PDF-bruksanvisningen. `release.json` inneholder
 nedlastingsadresser, versjoner, kontrollsummer og Android-signatur.
 Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
 Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
@@ -54,9 +57,12 @@ veiviser. Hele fremgangsmåten står i kapittel 14.0 i PDF-bruksanvisningen.
 
 ## English
 
-Download the four installers from [Releases](https://github.com/isaksen20/salsy-releases/releases/latest).
+Download the installers from [Releases](https://github.com/isaksen20/salsy-releases/releases/latest).
 Source code is private; this is not an open-source release.
-Debian packages target Debian 13 amd64 with Python 3.13.
+Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package is amd64.
+The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
+based on Debian 13/trixie. Server code and web clients are identical on both
+architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
 Version 0.71.3 fixes reset-failed errors when enrolling new services.
 Version 0.71.2 fixes boot-service configuration and retries after failed setup.
 Version 0.71.1 fixes the server package’s unsupported PAX tar headers.
