@@ -10,9 +10,9 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.72.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.72.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.72.0 | Debian 13 amd64 |
+| Salsy Server | 0.73.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.73.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.73.0 | Debian 13 amd64 |
 | Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
