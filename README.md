@@ -10,9 +10,9 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.73.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.73.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.73.0 | Debian 13 amd64 |
+| Salsy Server | 0.74.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.74.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.74.0 | Debian 13 amd64 |
 | Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
@@ -35,6 +35,14 @@ Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
 Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
 innført automatisk installasjon av oppdateringer.
 Vilkår 1.3 må godtas ved første gangs bruk eller når tidligere godtatte vilkår er endret.
+
+Versjon 0.74.0 utvider regnskap i både PC-klienten og PC-nettklienten med
+reskontro og delbetalinger, MVA-grunnlag fra bokførte poster, lønnsbilag,
+anleggsmidler og avskrivning, lagerverdsetting og årsavslutningskontroller.
+Regnskap er fortsatt i skygge-/kontrollmodus: komplett årsregnskap,
+skattemelding og direkte innsending til myndighetene er ikke implementert.
+Bruksanvisningen beskriver arbeidsflytene og begrensningene.
+Android-pakkene er uendret fra forrige utgivelse.
 
 Versjon 0.71.3 retter systemctl-feil ved aktivering av nye tjenester.
 
@@ -63,6 +71,12 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
+Version 0.74.0 extends accounting in both desktop clients with open items and
+partial payments, ledger-based VAT reports, payroll postings, fixed assets and
+depreciation, inventory valuations and year-end controls. Accounting remains in
+shadow/review mode; complete annual accounts, tax returns and direct submission
+to authorities are not implemented. See the updated manual for limitations.
+The Android installers are unchanged from the previous release.
 Version 0.71.3 fixes reset-failed errors when enrolling new services.
 Version 0.71.2 fixes boot-service configuration and retries after failed setup.
 Version 0.71.1 fixes the server package’s unsupported PAX tar headers.
