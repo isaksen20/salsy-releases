@@ -10,8 +10,8 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.71.2 | Debian 13 amd64 |
-| Salsy PC-klient | 0.71.2 | Debian 13 amd64 |
+| Salsy Server | 0.71.3 | Debian 13 amd64 |
+| Salsy PC-klient | 0.71.3 | Debian 13 amd64 |
 | Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
@@ -32,6 +32,8 @@ Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
 Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
 innført automatisk installasjon av oppdateringer.
 Vilkår 1.3 må godtas ved første gangs bruk eller når tidligere godtatte vilkår er endret.
+
+Versjon 0.71.3 retter systemctl-feil ved aktivering av nye tjenester.
 
 Versjon 0.71.2 retter automatisk oppstart og nye forsøk etter mislykket oppsett.
 
@@ -55,6 +57,7 @@ veiviser. Hele fremgangsmåten står i kapittel 14.0 i PDF-bruksanvisningen.
 Download the four installers from [Releases](https://github.com/isaksen20/salsy-releases/releases/latest).
 Source code is private; this is not an open-source release.
 Debian packages target Debian 13 amd64 with Python 3.13.
+Version 0.71.3 fixes reset-failed errors when enrolling new services.
 Version 0.71.2 fixes boot-service configuration and retries after failed setup.
 Version 0.71.1 fixes the server package’s unsupported PAX tar headers.
 Download the new `.deb` rather than reusing the 0.71.0 server installer.
