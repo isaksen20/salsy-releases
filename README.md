@@ -10,10 +10,10 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.75.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.75.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.75.0 | Debian 13 amd64 |
-| Salsy Android | 0.31.0 | Android 7+ / arm64 eller x86_64 |
+| Salsy Server | 0.75.1 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.75.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.75.1 | Debian 13 amd64 |
+| Salsy Android | 0.31.1 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
 Debian-pakkene bruker Python 3.13. Velg serverfilen for maskinens arkitektur:
@@ -35,6 +35,10 @@ Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
 Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
 innført automatisk installasjon av oppdateringer.
 Vilkår 1.3 må godtas ved første gangs bruk eller når tidligere godtatte vilkår er endret.
+
+Versjon 0.75.1 gir leder passordresetting i Brukere og tilganger, med avslutning
+av brukerens økter. Deaktiverte Ledige vakter, Vaktbytte og Registrer tillegg
+skjules også for administratorer i alle klientene. Android er 0.31.1.
 
 Versjon 0.75.0 legger til valgfri Booking i PC, PC-nett, Android og mobilnett.
 Ukevisningen har tidsmarkør, individuelle dagsruller og samtidige bookinger.
@@ -76,6 +80,9 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
+Version 0.75.1 adds administrator password resets with session revocation.
+Disabled Open shifts, Shift swaps and Register supplements are hidden for
+administrators as well as employees. Salsy Android is updated to 0.31.1.
 Version 0.75.0 adds optional Booking to native desktop, desktop web, Android
 and mobile web: weekly timelines, independent day scrolling, a live clock
 marker, simultaneous bookings and separate view/create/manager permissions.
