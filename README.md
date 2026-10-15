@@ -10,10 +10,10 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.74.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.74.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.74.0 | Debian 13 amd64 |
-| Salsy Android | 0.30.0 | Android 7+ / arm64 eller x86_64 |
+| Salsy Server | 0.75.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.75.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.75.0 | Debian 13 amd64 |
+| Salsy Android | 0.31.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
 Debian-pakkene bruker Python 3.13. Velg serverfilen for maskinens arkitektur:
@@ -36,13 +36,18 @@ Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
 innført automatisk installasjon av oppdateringer.
 Vilkår 1.3 må godtas ved første gangs bruk eller når tidligere godtatte vilkår er endret.
 
+Versjon 0.75.0 legger til valgfri Booking i PC, PC-nett, Android og mobilnett.
+Ukevisningen har tidsmarkør, individuelle dagsruller og samtidige bookinger.
+Brukertilganger skiller visning, oppretting og lederadministrasjon.
+Android er oppdatert til 0.31.0. Aktiver Booking i bedriftens Innstillinger.
+
 Versjon 0.74.0 utvider regnskap i både PC-klienten og PC-nettklienten med
 reskontro og delbetalinger, MVA-grunnlag fra bokførte poster, lønnsbilag,
 anleggsmidler og avskrivning, lagerverdsetting og årsavslutningskontroller.
 Regnskap er fortsatt i skygge-/kontrollmodus: komplett årsregnskap,
 skattemelding og direkte innsending til myndighetene er ikke implementert.
 Bruksanvisningen beskriver arbeidsflytene og begrensningene.
-Android-pakkene er uendret fra forrige utgivelse.
+Warehouse Android er uendret.
 
 Versjon 0.71.3 retter systemctl-feil ved aktivering av nye tjenester.
 
@@ -71,12 +76,16 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
+Version 0.75.0 adds optional Booking to native desktop, desktop web, Android
+and mobile web: weekly timelines, independent day scrolling, a live clock
+marker, simultaneous bookings and separate view/create/manager permissions.
+Enable Booking in company Settings. Salsy Android is updated to 0.31.0.
 Version 0.74.0 extends accounting in both desktop clients with open items and
 partial payments, ledger-based VAT reports, payroll postings, fixed assets and
 depreciation, inventory valuations and year-end controls. Accounting remains in
 shadow/review mode; complete annual accounts, tax returns and direct submission
 to authorities are not implemented. See the updated manual for limitations.
-The Android installers are unchanged from the previous release.
+The Warehouse Android installer is unchanged.
 Version 0.71.3 fixes reset-failed errors when enrolling new services.
 Version 0.71.2 fixes boot-service configuration and retries after failed setup.
 Version 0.71.1 fixes the server package’s unsupported PAX tar headers.
@@ -92,5 +101,5 @@ port when Apache/Mailcow already runs on the machine. DNS certificates require
 manual renewal through the wizard; router/DNS configuration remains external.
 
 Build checks cover packaged server behavior, payroll, backups, source-file absence
-and APK signatures. Native desktop GUI and physical Android testing were not
-available in the build environment.
+and APK signatures. Native desktop GUI and browser workflows were tested with synthetic data.
+Physical Android and Raspberry Pi devices were not available for testing.
