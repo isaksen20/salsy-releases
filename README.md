@@ -10,9 +10,10 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.75.1 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.75.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.75.1 | Debian 13 amd64 |
+| Salsy Server | 0.77.19 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.77.19 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.77.19 | Debian 13 amd64 |
+| Salsy PRP (frittstående skiftplanlegger) | 0.2.19 | Debian 13 amd64 |
 | Salsy Android | 0.31.1 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
@@ -23,13 +24,45 @@ Nettklientene og alle serverfunksjoner er de samme på begge serverarkitekturer.
 For Debian: last ned riktig `.deb` og installer med `sudo apt install ./FILNAVN.deb`.
 Ta sikkerhetskopi av serverdata før oppdatering; oppdater server og PC-klient sammen.
 
+## Salsy dependency fix
+
+Last ned [Salsy-dependency-fix.sh](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-dependency-fix.sh)
+og åpne en terminal i nedlastingsmappen:
+
+```sh
+sh Salsy-dependency-fix.sh --install
+```
+
+Hjelpefilen ber om Linux-administratorpassord, oppdaterer APT-pakkelisten og
+installerer systemavhengighetene til Salsy Server på Debian 13 (AMD64/ARM64).
+Den kan også reparere manglende avhengigheter etter en avbrutt pakkeinstallasjon.
+APT får ikke fjerne pakker under reparasjonen. Passordet lagres ikke.
+På minimale installasjoner uten sudo spør su etter root-passordet.
+Filen installerer ikke Salsy eller Python-pakker med pip og endrer ikke
+bedriftsdata, porter, proxyinnstillinger eller APT-kilder.
+Python-bibliotekene og Caddy følger med serverens DEB-pakke.
+Vanlige Debian-installasjonsskript kan starte systemtjenester.
+For kontroll uten installasjon eller passord: `sh Salsy-dependency-fix.sh --check`.
+Se [veiledningen](DEPENDENCY_FIX.md) for detaljer.
+
+## Nytt siden 0.75.1
+
+Server/PC 0.77.19 inkluderer PRP i nettklienten og utveksling av ansatte,
+regler og skiftplaner. Den frittstående PRP-appen kan brukes uten serverinnlogging.
+PRP 0.2.19 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
+redigering/låsing av vakter, OnCall og PDF-/Excel-/CSV-eksport.
+OnCall krever en tilstøtende kveldsvakt og følger valgte kompetansekrav og sperrer.
+PDF viser kompetansemarkeringer og felles forklaring/vaktkoder.
+Genererte planer kan fortsatt ha udekkede behov og må kontrolleres; generatoren
+lover ikke en optimal eller fullstendig plan. Se [PRP-veiledningen](SALSY_PRP.md).
+
 Last ned APK på Android og åpne filen. Android kan be om tillatelse til å installere
 fra nettleseren. Første offentlige APK har ny signatur: eldre debug/testapper kan
 kreve avinstallasjon først. Ta vare på tilkoblingsfilen; lokale appinnstillinger
 slettes ved avinstallasjon. Serverdata beholdes. Kommende utgivelser bruker samme
 private signeringsnøkkel.
 
-`SHA256SUMS` dekker alle fem installasjonsfilene og PDF-bruksanvisningen. `release.json` inneholder
+`SHA256SUMS` dekker alle seks installasjonsfilene, PDF-bruksanvisningen, hjelpefilen og veiledningene. `release.json` inneholder
 nedlastingsadresser, versjoner, kontrollsummer og Android-signatur.
 Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
 Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
@@ -80,6 +113,20 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
+Salsy 0.77.19 also includes the shared PRP web planner. Standalone PRP
+0.2.19 works offline without a server account; generated schedules may
+remain incomplete and require review. See [the PRP guide](SALSY_PRP.md).
+
+Download [Salsy-dependency-fix.sh](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-dependency-fix.sh)
+and run `sh Salsy-dependency-fix.sh --install` in the download folder.
+It requests Linux administrator authentication, refreshes APT lists and installs
+Salsy Server system dependencies on Debian 13 (AMD64/ARM64), with missing-dependency
+repair and package removal disabled. Without sudo it uses su and the root password.
+It does not store passwords, install Salsy, run pip or change company data,
+ports, proxies or APT sources. Standard Debian package scripts may start services.
+The DEB already contains Caddy and the Python libraries. `--check` checks without
+changes or authentication. Read [the helper guide](DEPENDENCY_FIX.md).
+
 Version 0.75.1 adds administrator password resets with session revocation.
 Disabled Open shifts, Shift swaps and Register supplements are hidden for
 administrators as well as employees. Salsy Android is updated to 0.31.1.
