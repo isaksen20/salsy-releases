@@ -10,10 +10,10 @@ på [norsk](terms-nb.md) / [English](terms-en.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.77.19 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.77.19 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.77.19 | Debian 13 amd64 |
-| Salsy PRP (frittstående skiftplanlegger) | 0.2.19 | Debian 13 amd64 |
+| Salsy Server | 0.77.20 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.77.20 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.77.20 | Debian 13 amd64 |
+| Salsy PRP (frittstående skiftplanlegger) | 0.2.20 | Debian 13 amd64 |
 | Salsy Android | 0.31.1 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
 
@@ -23,6 +23,15 @@ Debian-pakkene bruker Python 3.13. Velg serverfilen for maskinens arkitektur:
 Nettklientene og alle serverfunksjoner er de samme på begge serverarkitekturer.
 For Debian: last ned riktig `.deb` og installer med `sudo apt install ./FILNAVN.deb`.
 Ta sikkerhetskopi av serverdata før oppdatering; oppdater server og PC-klient sammen.
+
+## Sikkerhetsoppdatering 0.77.20 / Security update
+
+Oppdater server og PC-klient til 0.77.20, og frittstående PRP til 0.2.20.
+Utgivelsen retter delegert tilgangskontroll, oppdaterer medfølgende
+sikkerhetsbiblioteker og fjerner GUI-trådfeil på stemplings- og lønnssiden.
+Lønnsberegningene endres ikke. Start serverinstanser, PC-klienter og Salsys
+egen HTTPS-proxy på nytt etter oppdateringen. Android-installasjonsfilene er uendret.
+Les [sikkerhetsinformasjonen / security advisory](SECURITY_UPDATE_0.77.20.md).
 
 ## Salsy dependency fix
 
@@ -47,9 +56,9 @@ Se [veiledningen](DEPENDENCY_FIX.md) for detaljer.
 
 ## Nytt siden 0.75.1
 
-Server/PC 0.77.19 inkluderer PRP i nettklienten og utveksling av ansatte,
+Server/PC 0.77.20 inkluderer PRP i nettklienten og utveksling av ansatte,
 regler og skiftplaner. Den frittstående PRP-appen kan brukes uten serverinnlogging.
-PRP 0.2.19 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
+PRP 0.2.20 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
 redigering/låsing av vakter, OnCall og PDF-/Excel-/CSV-eksport.
 OnCall krever en tilstøtende kveldsvakt og følger valgte kompetansekrav og sperrer.
 PDF viser kompetansemarkeringer og felles forklaring/vaktkoder.
@@ -113,8 +122,8 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
-Salsy 0.77.19 also includes the shared PRP web planner. Standalone PRP
-0.2.19 works offline without a server account; generated schedules may
+Salsy 0.77.20 also includes the shared PRP web planner. Standalone PRP
+0.2.20 works offline without a server account; generated schedules may
 remain incomplete and require review. See [the PRP guide](SALSY_PRP.md).
 
 Download [Salsy-dependency-fix.sh](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-dependency-fix.sh)
