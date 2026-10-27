@@ -8,6 +8,22 @@ Dette repositoriet inneholder utgivelsesinformasjon og offentlige installasjonsf
 Kildekoden holdes privat. Se [distribusjonsinformasjon](NOTICE.md) og vilkårene
 på [norsk](terms-nb.md) / [English](terms-en.md).
 
+## Felles tariffbibliotek – 0.79.0
+
+Salsy og PRP har 11 kildebelagte tariffavtaler, blant annet for dekk/bilverksted,
+mekanikere, lager og butikk, med organisasjonene i parentes. Velg tariffmal under
+Tariffavtale i PC/PC-nett, eller Regler og tariff i PRP. Salsy åpner et inaktivt
+avtaleutkast som leder kontrollerer, redigerer og aktiverer. PRP har 44
+avtalevarianter pluss Egne regler. Biblioteket i frittstående PRP virker uten
+innlogging eller internett.
+
+Malene viser kildeutgave og dato for kontroll, med merknad når kildeperioden er
+passert. Kontroller gjeldende avtale, satser og lokale avtaler før bruk. Er
+malen utdatert, må den tilpasses manuelt frem til utvikleren oppdaterer den.
+Malene inneholder utvalgte grunnregler; de er ikke full automatisk behandling
+av alle tariffbestemmelser. Egne lagrede avtaler og planer overskrives ikke.
+Les [avtaleliste, kilder og brukerveiledning](TARIFFMALER.md).
+
 ## Avdelinger og passordreset – 0.78.0
 
 Uten avdelinger fungerer Salsy som før. Avdelinger opprettes uttrykkelig fra
@@ -26,12 +42,12 @@ bedriftsservere krever den private Hosting Manager.
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.78.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.78.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.78.0 | Debian 13 amd64 |
-| Salsy PRP (frittstående skiftplanlegger) | 0.2.23 | Debian 13 amd64 |
-| Salsy Android | 0.31.1 | Android 7+ / arm64 eller x86_64 |
-| Salsy Warehouse Android | 0.11.0 | Android 7+ / arm64 eller x86_64 |
+| Salsy Server | 0.79.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.79.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.79.0 | Debian 13 amd64 |
+| Salsy PRP (frittstående skiftplanlegger) | 0.2.24 | Debian 13 amd64 |
+| Salsy Android | 0.31.3 | Android 7+ / arm64 eller x86_64 |
+| Salsy Warehouse Android | 0.11.2 | Android 7+ / arm64 eller x86_64 |
 
 Debian-pakkene bruker Python 3.13. Velg serverfilen for maskinens arkitektur:
 `dpkg --print-architecture` viser `amd64` eller `arm64`. ARM64 krever 64-bits OS;
@@ -81,9 +97,9 @@ Se [veiledningen](DEPENDENCY_FIX.md) for detaljer.
 
 ## Nytt siden 0.75.1
 
-Server/PC 0.78.0 inkluderer PRP i nettklienten og utveksling av ansatte,
+Server/PC 0.79.0 inkluderer PRP i nettklienten og utveksling av ansatte,
 regler og skiftplaner. Den frittstående PRP-appen kan brukes uten serverinnlogging.
-PRP 0.2.23 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
+PRP 0.2.24 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
 redigering/låsing av vakter, OnCall og PDF-/Excel-/CSV-eksport.
 OnCall krever en tilstøtende kveldsvakt og følger valgte kompetansekrav og sperrer.
 PDF viser kompetansemarkeringer og felles forklaring/vaktkoder.
@@ -147,8 +163,8 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
-Salsy 0.78.0 also includes the shared PRP web planner. Standalone PRP
-0.2.23 works offline without a server account; generated schedules may
+Salsy 0.79.0 also includes the shared PRP web planner. Standalone PRP
+0.2.24 works offline without a server account; generated schedules may
 remain incomplete and require review. See [the PRP guide](SALSY_PRP.md).
 
 Download [Salsy-dependency-fix.sh](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-dependency-fix.sh)

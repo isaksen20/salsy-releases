@@ -2,6 +2,14 @@
 
 Salsy Personnel Resource Planning er en separat Linux-app. Den fungerer uten Salsy-server, brukerkonto, internett eller innlogging etter at avhengighetene er installert. Den kan i tillegg brukes som nettapp på en Salsy-server som har aktivert PRP. Begge bruker samme Python-motor.
 
+## Tariffbibliotek (PRP 0.2.24 / Server 0.79.0)
+
+Under **Regler og tariff** velges nå 11 kildebelagte avtaler, med organisasjonene i parentes. Dette omfatter alternative avtaler for bil/dekk, lager, butikk og industri, samt renhold og den eksisterende Flyoverenskomsten. Velg riktig arbeidstidsordning: biblioteket har 44 avtalevarianter og Egne regler. Kildeutgave, kontrolldato, kildelenke og merknader vises. Biblioteket fungerer også uten innlogging eller internett; kildedokumentet åpnes i nettleseren.
+
+**Kontroller at avtalen, satsene og lokale avtaler er oppdatert. Er malen utdatert, rediger reglene selv frem til utvikleren oppdaterer malen.** Flere offentlige kilder viser fortsatt grunntekst 2024–2026 med nyere protokoller ved siden av. Disse merkes med faktisk kildeutgave. Det gjøres ingen automatisk livekontroll, og en ny programversjon overskriver ikke egne lagrede regler.
+
+Valg av mal erstatter grunnreglene etter bekreftelse, mens importerte Salsy-avtaler og dispensasjoner beholdes. Malen gir ukentlig norm og utvalgte utgangsverdier, ikke en full automatisk tariffvurdering. Minste vakt på tre timer er et redigerbart planleggingsvalg. For eksempel har Landsoverenskomsten Virke–HK 33,5 timer i den helkontinuerlige varianten, og Handelsoverenskomsten NHO–HK har 36 timers ukeshvile uten særskilt avtale. Kontroller øvrige vilkår, og bruk Endre regler / Lagre regler for tilpasning. Ingen dispensasjon eller gjennomsnittsberegning aktiveres automatisk. Se [TARIFFMALER.md](TARIFFMALER.md) for kilder og avgrensninger.
+
 ## Kvarter og rekkefølge på ansatte
 
 PRP genererer start og slutt på hele kvarter: **:00, :15, :30 og :45**. Dette gjelder ordinære vakter, OnCall, etterfylling og omfordeling. Nye manuelt registrerte vakter avrundes til nærmeste kvarter før regelkontrollen. Eksempel: **08:00–15:54 blir 08:00–16:00**, altså åtte timer, når dette passer med reglene og timemålet.
