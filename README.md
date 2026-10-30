@@ -8,6 +8,20 @@ Dette repositoriet inneholder utgivelsesinformasjon og offentlige installasjonsf
 Kildekoden holdes privat. Se [distribusjonsinformasjon](NOTICE.md) og vilkårene
 på [norsk](terms-nb.md) / [English](terms-en.md).
 
+## Tredagersvaktbok, permisjon og permittering – 0.82.0
+
+PC og PC-nett har tre dager med navn, arbeidstid og status, datovelger og piler.
+Dobbeltklikk eller høyreklikk åpner kalenderens dagsvindu med samme rettigheter.
+Permisjon med/uten lønn og ny permittering vises i vaktbok og kalender. Leder
+velger uttrykkelig med/uten lønn for hver permitteringsperiode. Ubetalte dager
+reduserer lønnsgrunnlaget gjennom den felles lønnsmotoren. Fast månedslønn følger
+kalenderdagsfordeling. Ingen automatisk arbeidsgiverperiode eller NAV-innsending.
+Se bruksanvisning kapittel 3.4 og ROSTER.md i server-/PC-pakkene.
+
+English: A three-day PC/web roster shares calendar actions and permissions.
+Managers explicitly choose paid/unpaid furlough periods; unpaid leave/furlough
+reduces payroll through the shared engine. Employer periods remain manual.
+
 ## Forskjøvet vakt i PC og PC-nett – 0.81.0
 
 I kalenderen velger leder en vakt og **Forskjøvet vakt**. Angi ny dato og tid,
@@ -93,9 +107,9 @@ bedriftsservere krever den private Hosting Manager.
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.81.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.81.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.81.0 | Debian 13 amd64 |
+| Salsy Server | 0.82.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.82.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.82.0 | Debian 13 amd64 |
 | Salsy PRP (frittstående skiftplanlegger) | 0.2.24 | Debian 13 amd64 |
 | Salsy Android | 0.32.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+ / arm64 eller x86_64 |
@@ -148,7 +162,7 @@ Se [veiledningen](DEPENDENCY_FIX.md) for detaljer.
 
 ## Nytt siden 0.75.1
 
-Server/PC 0.81.0 inkluderer PRP i nettklienten og utveksling av ansatte,
+Server/PC 0.82.0 inkluderer PRP i nettklienten og utveksling av ansatte,
 regler og skiftplaner. Den frittstående PRP-appen kan brukes uten serverinnlogging.
 PRP 0.2.24 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
 redigering/låsing av vakter, OnCall og PDF-/Excel-/CSV-eksport.
@@ -214,7 +228,7 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
-Salsy 0.81.0 also includes the shared PRP web planner. Standalone PRP
+Salsy 0.82.0 also includes the shared PRP web planner. Standalone PRP
 0.2.24 works offline without a server account; generated schedules may
 remain incomplete and require review. See [the PRP guide](SALSY_PRP.md).
 
