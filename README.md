@@ -8,6 +8,22 @@ Dette repositoriet inneholder utgivelsesinformasjon og offentlige installasjonsf
 Kildekoden holdes privat. Se [distribusjonsinformasjon](NOTICE.md) og vilkårene
 på [norsk](terms-nb.md) / [English](terms-en.md).
 
+## QR- og NFC-stempling med plasseringer – 0.80.0
+
+Ansatte velger inn eller ut og skanner samme QR-kode eller NFC-brikke. QR i
+mobilnettappen bruker kamera og en lokalt levert leser, uavhengig av Web NFC.
+I PC og PC-nett kan leder administrere plasseringer, velge avdeling eller felles
+bedriftsplassering, vise QR og lagre PDF. Android 0.32.0 har QR-skanning og
+plasseringer under Innstillinger. Eksisterende NFC-brikker beholdes når QR legges
+til; eksplisitt kodebytte sperrer gamle koder. Sletting beholder historikken.
+Ansatte kan stemple på tvers av avdelinger uten innsyn i andre avdelingers data.
+Statiske QR-koder kan kopieres og er ikke et bevis på fysisk tilstedeværelse.
+Se bruksanvisningens kapittel 9.7. Nettleseren må ha gyldig HTTPS og kameratilgang.
+
+English: Adds locally decoded QR time clock, editable department/shared locations,
+printable PDFs and cross-department punches. Android adds QR scanning. NFC and QR
+use the same location payload for clock-in and clock-out; old NFC tags are preserved.
+
 ## To lagringsplasser for sikkerhetskopi – 0.79.1
 
 Velg en valgfri **Ekstra lagringsmappe** under serverens **Sikkerhetskopi**,
@@ -57,11 +73,11 @@ bedriftsservere krever den private Hosting Manager.
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.79.1 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.79.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.79.1 | Debian 13 amd64 |
+| Salsy Server | 0.80.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.80.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.80.0 | Debian 13 amd64 |
 | Salsy PRP (frittstående skiftplanlegger) | 0.2.24 | Debian 13 amd64 |
-| Salsy Android | 0.31.3 | Android 7+ / arm64 eller x86_64 |
+| Salsy Android | 0.32.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+ / arm64 eller x86_64 |
 
 Debian-pakkene bruker Python 3.13. Velg serverfilen for maskinens arkitektur:
@@ -112,7 +128,7 @@ Se [veiledningen](DEPENDENCY_FIX.md) for detaljer.
 
 ## Nytt siden 0.75.1
 
-Server/PC 0.79.1 inkluderer PRP i nettklienten og utveksling av ansatte,
+Server/PC 0.80.0 inkluderer PRP i nettklienten og utveksling av ansatte,
 regler og skiftplaner. Den frittstående PRP-appen kan brukes uten serverinnlogging.
 PRP 0.2.24 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
 redigering/låsing av vakter, OnCall og PDF-/Excel-/CSV-eksport.
@@ -178,7 +194,7 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
-Salsy 0.79.1 also includes the shared PRP web planner. Standalone PRP
+Salsy 0.80.0 also includes the shared PRP web planner. Standalone PRP
 0.2.24 works offline without a server account; generated schedules may
 remain incomplete and require review. See [the PRP guide](SALSY_PRP.md).
 
