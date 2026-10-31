@@ -2,6 +2,12 @@
 
 Salsy Personnel Resource Planning er en separat Linux-app. Den fungerer uten Salsy-server, brukerkonto, internett eller innlogging etter at avhengighetene er installert. Den kan i tillegg brukes som nettapp på en Salsy-server som har aktivert PRP. Begge bruker samme Python-motor.
 
+## Kompakt behovsplanlegger (PRP 0.2.25 / Server 0.82.2)
+
+Behovsplanleggeren bruker en kompakt knapperad øverst, med dato, kompetansevalg og kort hjelpetekst rett under. Knapperaden kan rulles vannrett på smale vinduer. Grafen bruker resten av vinduet og tilpasser tidsskalaen slik at omtrent ti timer er synlige samtidig. På svært små skjermer beholdes minste linjeavstand for leselige klokkeslett. Ved endring av vindusstørrelse beholdes klokkeslettet øverst så langt tidslinjens grenser tillater. Nettvinduet fyller nesten hele nettleseren. Rull loddrett for resten av døgnet; dag-/ukesvisning, fast tidskolonne, kvartersintervaller og nattbehov fungerer som før.
+
+English: The needs planner has a single compact action row, horizontally scrollable in narrow windows, with date, skill selection and smaller help text just below. The chart fills the remaining space and adapts its vertical scale to show about ten hours at once, subject to minimum readable line spacing on very small screens. Resizing preserves the top visible clock time where timeline bounds allow. The web dialog nearly fills the browser. Scroll for other times; day/week views, pinned time labels, quarter-hour handles and overnight needs are retained.
+
 ## Tariffbibliotek (PRP 0.2.24 / Server 0.79.0)
 
 Under **Regler og tariff** velges nå 11 kildebelagte avtaler, med organisasjonene i parentes. Dette omfatter alternative avtaler for bil/dekk, lager, butikk og industri, samt renhold og den eksisterende Flyoverenskomsten. Velg riktig arbeidstidsordning: biblioteket har 44 avtalevarianter og Egne regler. Kildeutgave, kontrolldato, kildelenke og merknader vises. Biblioteket fungerer også uten innlogging eller internett; kildedokumentet åpnes i nettleseren.
@@ -24,7 +30,7 @@ English: Generated work and OnCall shifts use quarter-hour clock boundaries. Man
 
 ## Start den frittstående appen
 
-Last ned `salsy-prp_0.2.19-1_amd64.deb` fra den offisielle GitHub-utgivelsen og installer på Debian 13 med `sudo apt install ./salsy-prp_0.2.19-1_amd64.deb` fra nedlastingsmappen. Pakken inkluderer planleggingsmotoren og trenger ikke Salsy Server installert. Start Salsy PRP fra programmenyen. Python 3.13 og python3-tk er systemavhengigheter som APT installerer ved behov.
+Last ned `salsy-prp_0.2.25-1_amd64.deb` fra den offisielle GitHub-utgivelsen og installer på Debian 13 med `sudo apt install ./salsy-prp_0.2.25-1_amd64.deb` fra nedlastingsmappen. Pakken inkluderer planleggingsmotoren og trenger ikke Salsy Server installert. Start Salsy PRP fra programmenyen. Python 3.13 og python3-tk er systemavhengigheter som APT installerer ved behov.
 
 I utviklingsmiljøet kan appen også startes med `Salsy-PRP.desktop` eller `./start-prp.sh` i prosjektmappen. Første oppstart oppretter da `.venv-prp` og trenger nett for PRPs avhengigheter, samt python3-venv og python3-tk. Utviklingsfilene følger ikke med den offentlige utgivelsen.
 
