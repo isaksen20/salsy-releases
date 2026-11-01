@@ -2,6 +2,17 @@
 
 Salsy Personnel Resource Planning er en separat Linux-app. Den fungerer uten Salsy-server, brukerkonto, internett eller innlogging etter at avhengighetene er installert. Den kan i tillegg brukes som nettapp på en Salsy-server som har aktivert PRP. Begge bruker samme Python-motor.
 
+Under **Regler og tariff → Tariffdekning og kilder** kan du se separate
+kildeutgaver, endringsprotokoller og konkrete gjenstående bestemmelser per
+avtale. Samme oversikt finnes i frittstående PRP og PRP-nett. Oversikten
+endrer ingen regler i prosjektet. [Luftfartsavtalene](AIRLINE_TARIFF_REVIEW.md)
+gjennomgås separat; ufullstendige nye maler er ikke valgbare.
+
+English: **Agreement coverage and sources** is available under Rules and
+agreements in standalone and web PRP. It shows separate source editions,
+protocols and outstanding provisions without changing project rules. Source
+notes are in Norwegian. New incomplete templates remain unavailable.
+
 ## Kompakt behovsplanlegger (PRP 0.2.25 / Server 0.82.2)
 
 Behovsplanleggeren bruker en kompakt knapperad øverst, med dato, kompetansevalg og kort hjelpetekst rett under. Knapperaden kan rulles vannrett på smale vinduer. Grafen bruker resten av vinduet og tilpasser tidsskalaen slik at omtrent ti timer er synlige samtidig. På svært små skjermer beholdes minste linjeavstand for leselige klokkeslett. Ved endring av vindusstørrelse beholdes klokkeslettet øverst så langt tidslinjens grenser tillater. Nettvinduet fyller nesten hele nettleseren. Rull loddrett for resten av døgnet; dag-/ukesvisning, fast tidskolonne, kvartersintervaller og nattbehov fungerer som før.
@@ -9,6 +20,8 @@ Behovsplanleggeren bruker en kompakt knapperad øverst, med dato, kompetansevalg
 English: The needs planner has a single compact action row, horizontally scrollable in narrow windows, with date, skill selection and smaller help text just below. The chart fills the remaining space and adapts its vertical scale to show about ten hours at once, subject to minimum readable line spacing on very small screens. Resizing preserves the top visible clock time where timeline bounds allow. The web dialog nearly fills the browser. Scroll for other times; day/week views, pinned time labels, quarter-hour handles and overnight needs are retained.
 
 ## Tariffbibliotek (PRP 0.2.24 / Server 0.79.0)
+
+**Status 31.10.2026:** Malene er uttrykkelig delvise. Nye avtaler fra yrkeslisten legges ikke til som ferdige før hele beregningsgrunnlaget er kontrollert. Importerte felt for egne overtidsgrunnlag, lokale avklaringer og tvangsaktivering beholdes. PRP utfører ikke egne lønnsberegninger. Se [beregningsstatus](TARIFF_CALCULATIONS_STATUS.md).
 
 Under **Regler og tariff** velges nå 11 kildebelagte avtaler, med organisasjonene i parentes. Dette omfatter alternative avtaler for bil/dekk, lager, butikk og industri, samt renhold og den eksisterende Flyoverenskomsten. Velg riktig arbeidstidsordning: biblioteket har 44 avtalevarianter og Egne regler. Kildeutgave, kontrolldato, kildelenke og merknader vises. Biblioteket fungerer også uten innlogging eller internett; kildedokumentet åpnes i nettleseren.
 
@@ -262,3 +275,76 @@ Når **Preferanser → Prioriter fridag etter arbeidshelg** er satt til **Mandag
 Øverst til høyre over planmatrisen står **Mangler årsverk: 3,84**, for eksempel. Tallet summerer de udekkede linjene én gang og deler deres vektede normtid på normtiden for én full stilling gjennom planperioden. Det er altså manglende heltidsstillinger for perioden, ikke et fast årlig timetall. OnCall og pauser bruker samme beregning som de udekkede linjene. Det er forskjellig fra ansattes ubrukte normtid. Tallet oppdateres ved generering og redigering av behov, vakter, regler og periode; mens behov beregnes vises beregner. Ingen normdager i perioden gir en strek fremfor et misvisende tall. Beregningen deles av Linux og nettappen.
 
 English: PDF shift-code keys list base work codes only, e.g. 9A. The grid retains 9AO, and the legend explains the O suffix. Standby time records remain separate.
+
+### Kompenserende døgnhvile og klokkeskifte
+
+En dispensasjon som reduserer daglig hvile må fortsatt følges av kompenserende
+hvile før neste hovedarbeidsperiode. Ved 11 timers norm og 8 timers hvile kreves
+14 timer i neste hvileperiode. PRP deler kontrollen med Salsy, og bruker faktisk
+forløpt tid for døgn- og ukeshvile rundt sommer-/vintertid. «Tillat regelbrudd»
+beholder synlige avvik og kravet om eksport-/importbekreftelse. En pålagt pause
+midt i arbeidsdagen er ikke kompenserende døgnhvile. Arbeid før og etter planen,
+ukentlig kompenserende hvile og tariffspesifikke pause-/fridagsordninger må
+fortsatt kontrolleres; dette er ikke en full gjennomføring av alle avtalevilkår.
+
+English: A dated reduction of daily rest is also checked for compensatory rest
+before the next main work period. Daily and weekly rest use elapsed time across
+seasonal clock changes. Rule-override mode still reports violations. Work outside
+the project, weekly compensation and special contractual break/day-off rules
+remain outside this new check.
+
+### Avtalt hvilevindu
+
+Under **Regler og tariff → Ny dispensasjon** kan det angis **Hvilevindu fra
+dato**, **Hvilevindu til dato**, **Avtalt sammenhengende hvile (timer)** og
+**Avtalegrunnlag for hvilevindu**. Dette er et dokumentert krav om sammenhengende
+fri mellom disse datoene, for eksempel normal ukeshvile kombinert med avtalt
+kompensasjon. Oppgi hele hvilen, ikke bare kompensasjonsdelen.
+
+PRP krever at hele vinduet ligger i planperioden og holder av plass ved
+generering. Med eksplisitt regelbruddsmodus kan planen beholdes, men avviket
+vises og må bekreftes ved eksport/import. Overlappende vinduer for samme ansatt
+avvises. Vinduer for andre perioder påvirker ikke den aktuelle planen. Alle
+felt følger CSV/prosjektfil og import til Salsy; redigering i PRP endrer ikke
+serveren før planen importeres. Leder må kontrollere kompensasjonens størrelse
+og frist mot avtalen; PRP gjetter ikke dette.
+
+English: Record a documented rest window on an exception, with inclusive start/
+end dates, total continuous rest and a separate reference. The entire window
+must be inside the project. Generation, manual validation and export check it;
+explicit rule-override mode still reports violations. Overlapping windows for
+the same employee are rejected. CSV and Salsy import preserve all fields.
+
+
+### Egne fridagsregler uten tariffavtale
+
+Under Regler og tariff → Fridagsregler kan egne datostyrte krav legges inn.
+Velg ukedager, hele kalenderuker, minimum frie dager og/eller maksimum
+sammenhengende arbeid på valgte dager. Alle ukedager gjelder påfølgende
+arbeidsdager; bare søndag gjelder påfølgende arbeidssøndager. Salsy og PRP
+bruker samme kontroll, også ved generering og overstyring med synlige avvik.
+Nattvakt teller på neste dato hvis den går etter midnatt. Velg uttrykkelig om
+OnCall også skal telle. Kontroller tilstøtende planer ved ufullstendige vinduer.
+
+Kontrollperioden kan også være **Årlige datoer**, for eksempel `01.05, 17.05`
+med minimum én fri dato. Velg ett år eller en dokumentert lokal toårsordning.
+Toårsvinduer starter i regelens startår. Alle datoene i vinduet må ligge inne
+i planen; datoer utenfor planen regnes aldri som fri. Behold alle ukedager,
+én kalenderuke og 0 sammenhengende arbeidsdager ved denne kontrolltypen.
+Valgene følger PRP-filen og CSV mellom PRP og Salsy.
+
+Bedriftsordninger for pensjon, AFP, forsikring, etterlønn og NAV kan følge
+prosjektet som referanseinformasjon. Private oppgjør følger ikke med, og PRP
+kjører ikke lønn. Returimport aktiverer ikke slike ordninger i Salsy. Ingen
+av disse feltene er nødvendig for å lage en frittstående plan uten tariff.
+Se [bedriftsordninger og hvile](BENEFITS_AND_REST.md).
+
+English: Optional company day-off patterns work without a collective agreement.
+The shared solver/validator checks complete calendar-week windows and consecutive
+selected weekdays, including overnight dates and explicitly selected OnCall.
+Annual-date rules can instead require at least one free date among e.g. May 1
+and May 17. One-year or documented two-year windows are supported, anchored
+to the rule's first year. Every date in the window must be inside the project;
+outside dates are never assumed free. Settings survive PRP and CSV exchange.
+Check outside-plan boundary context. Company benefit definitions are reference
+information; personal settlements are excluded and PRP does not execute payroll.

@@ -4,7 +4,7 @@
 set -u
 
 TITLE='Salsy dependency fix'
-PACKAGES='python3 python3-tk libc6 libgcc-s1 libstdc++6 sudo systemd nftables passwd ca-certificates'
+PACKAGES='python3 python3-tk libc6 libgcc-s1 libstdc++6 sudo systemd nftables passwd ca-certificates tzdata'
 
 finish() {
     code=$1

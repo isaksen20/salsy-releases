@@ -1,39 +1,39 @@
 {
   "schema_version": 1,
   "repository": "isaksen20/salsy-releases",
-  "release_tag": "v0.82.2",
-  "release_url": "https://github.com/isaksen20/salsy-releases/releases/tag/v0.82.2",
+  "release_tag": "v0.84.0",
+  "release_url": "https://github.com/isaksen20/salsy-releases/releases/tag/v0.84.0",
   "components": {
     "server": {
-      "version": "0.82.2",
-      "file": "salsy-server_0.82.2-1_amd64.deb",
-      "size": 113799576,
-      "sha256": "209b7cff6513ab836880d265add20f20682157aa9ddd9578513ba9ff3bfb69e8",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/salsy-server_0.82.2-1_amd64.deb",
+      "version": "0.84.0",
+      "file": "salsy-server_0.84.0-1_amd64.deb",
+      "size": 114497088,
+      "sha256": "eba945601c6ad38a9ed7b03b419b59c863f29f948fb74f06a2bdee8a2a9b2f51",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/salsy-server_0.84.0-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
     "server_arm64": {
-      "version": "0.82.2",
-      "file": "salsy-server_0.82.2-1_arm64.deb",
-      "size": 109362692,
-      "sha256": "332d8505a9f24b613050e9305958c3ed530812df7c7c588218604a8e350b0258",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/salsy-server_0.82.2-1_arm64.deb",
+      "version": "0.84.0",
+      "file": "salsy-server_0.84.0-1_arm64.deb",
+      "size": 110059704,
+      "sha256": "efe4fc89fd90479cddda4181f6deaf66f26183d7fc87e9e29fa66b1d675c9b4d",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/salsy-server_0.84.0-1_arm64.deb",
       "platform": "debian-13-arm64"
     },
     "client": {
-      "version": "0.82.2",
-      "file": "salsy-client_0.82.2-1_amd64.deb",
-      "size": 20447402,
-      "sha256": "8ebaed23f25696ba448c853568c7730ffd5683231b3d36c35ba4556c71fda51f",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/salsy-client_0.82.2-1_amd64.deb",
+      "version": "0.84.0",
+      "file": "salsy-client_0.84.0-1_amd64.deb",
+      "size": 20747034,
+      "sha256": "ddd00124c78fe7f8aaaf1ce5e5d717436ba1e146aa171db0b9b39e252eb996c6",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/salsy-client_0.84.0-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
     "prp": {
-      "version": "0.2.25",
-      "file": "salsy-prp_0.2.25-1_amd64.deb",
-      "size": 78467526,
-      "sha256": "5a5bda5a93d2c5fb514eceaae4cee9cceb8055c44f1c5b19db48ec05b07f8f09",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/salsy-prp_0.2.25-1_amd64.deb",
+      "version": "0.2.26",
+      "file": "salsy-prp_0.2.26-1_amd64.deb",
+      "size": 78630770,
+      "sha256": "632bf650fbb25de136dff9dbfb75b6d8e9447ce248b6300cdd19a350902e81d5",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/salsy-prp_0.2.26-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
     "android": {
@@ -41,7 +41,7 @@
       "file": "salsy-android-0.32.0.apk",
       "size": 35693825,
       "sha256": "86f0bce42b5ed984be0f011f1cff8043f0565a1337bef1e72d8d5840e9e2563e",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/salsy-android-0.32.0.apk",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/salsy-android-0.32.0.apk",
       "signer_sha256": "d88dfb630483f9eec6bbcea42baa9aff535f630bc26a77a652f67c6e62d0b22f",
       "platform": "android-24+-arm64-x86_64"
     },
@@ -50,47 +50,71 @@
       "file": "salsy-warehouse-0.11.2.apk",
       "size": 35337245,
       "sha256": "7e867e2d510d1e1722bd62702cf5b8767ad18df4f10a25b01ef7f675bb5742c8",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/salsy-warehouse-0.11.2.apk",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/salsy-warehouse-0.11.2.apk",
       "signer_sha256": "d88dfb630483f9eec6bbcea42baa9aff535f630bc26a77a652f67c6e62d0b22f",
       "platform": "android-24+-arm64-x86_64"
     }
   },
   "documentation": {
     "file": "Salsy-bruksanvisning.pdf",
-    "size": 607555,
-    "sha256": "ba619709ad49394b667c1dce9565f617bf27f143d1154a1e5ee3be5341b4ce3b",
-    "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/Salsy-bruksanvisning.pdf"
+    "size": 643178,
+    "sha256": "0dc5081de37239a184e913aca71478849fda7d1bf646d2184d82f9369acdcfd1",
+    "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/Salsy-bruksanvisning.pdf"
   },
   "supplementary": {
     "dependency_fix": {
       "file": "Salsy-dependency-fix.sh",
-      "size": 5923,
-      "sha256": "28dc71ae285d42ed179e3f9e6cecc45fe35ddc7c44ad5722476383e4a91b2839",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/Salsy-dependency-fix.sh"
+      "size": 5930,
+      "sha256": "f9126c3a180769acde57c66dc771491fefece7604a7d20b5e396cb05bc3b45ed",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/Salsy-dependency-fix.sh"
     },
     "dependency_fix_guide": {
       "file": "DEPENDENCY_FIX.md",
-      "size": 3376,
-      "sha256": "08d8afcd2bce3b465f9dcd3cc7eb1e7c1564f25c1eff75295eb441bc4cecc021",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/DEPENDENCY_FIX.md"
+      "size": 3459,
+      "sha256": "e0d2f26639f3daaad40434860c86a936bbccaed687d525441b9a8a33bb8f64d3",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/DEPENDENCY_FIX.md"
     },
     "prp_guide": {
       "file": "SALSY_PRP.md",
-      "size": 50006,
-      "sha256": "d258778e6d75a93f404d1bc1fae142ef88c9dbe2b0711a2375de0773cb8cfcab",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/SALSY_PRP.md"
+      "size": 55479,
+      "sha256": "182a6bc080d914de786c8953bf9ad7460acccc92e8871c7152fddfca1009d3d1",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/SALSY_PRP.md"
     },
     "tariff_guide": {
       "file": "TARIFFMALER.md",
-      "size": 6350,
-      "sha256": "91c878f92c4ec6a037aa8b555629133645e18bc1b656df4a49d436412734c3f5",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/TARIFFMALER.md"
+      "size": 6644,
+      "sha256": "5e163b9fd464dc9139ca0d0ddc44da834ea5b24e4aeb6d127152937ec94087ec",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/TARIFFMALER.md"
+    },
+    "aviation_status": {
+      "file": "AIRLINE_TARIFF_REVIEW.md",
+      "size": 30248,
+      "sha256": "f507339271ebab09fa2e41e228a8dc58f2a3cc39220f4e9edfdf16bb5074586c",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/AIRLINE_TARIFF_REVIEW.md"
+    },
+    "tariff_status": {
+      "file": "TARIFF_CALCULATIONS_STATUS.md",
+      "size": 21825,
+      "sha256": "fcb2f253c7bed0c7ee55eb7087ec07de821eb456a14cd23a641da9ba243e0ea4",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/TARIFF_CALCULATIONS_STATUS.md"
     },
     "security_advisory": {
       "file": "SECURITY_UPDATE_0.77.20.md",
       "size": 3028,
       "sha256": "1a78d4dd6646c95ecff793dffde4dc3a276233b6b0f3b7f951b3f64cb89a906d",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.82.2/SECURITY_UPDATE_0.77.20.md"
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/SECURITY_UPDATE_0.77.20.md"
     }
+  },
+  "release_scope": "partial",
+  "tariff_coverage": {
+    "complete_agreements": 0,
+    "aviation_agreements_complete": false,
+    "status_file": "AIRLINE_TARIFF_REVIEW.md"
+  },
+  "release_notes": {
+    "file": "RELEASE_0.84.0.md",
+    "size": 4348,
+    "sha256": "30876f2a14cb39f3ca25609b16f958fef6308e286042a378b7a9df6d5778f5be",
+    "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.84.0/RELEASE_0.84.0.md"
   }
 }

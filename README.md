@@ -8,17 +8,31 @@ Dette repositoriet inneholder utgivelsesinformasjon og offentlige installasjonsf
 Kildekoden holdes privat. Se [distribusjonsinformasjon](NOTICE.md) og vilkårene
 på [norsk](terms-nb.md) / [English](terms-en.md).
 
-## Kompakt PRP-behovsplanlegger – server/PC 0.82.2, PRP 0.2.25
+## Delutgivelse 0.84.0 – tariffarbeid og kontrollgrunnlag
 
-Behovsplanleggeren fyller nesten hele nettleseren. Knappene ligger på én kompakt
-rad, med dato/kompetansevalg og mindre hjelpetekst rett under. Grafen bruker
-resten av vinduet og viser omtrent ti timer samtidig. Knapperaden kan rulles
-vannrett på smale skjermer. Tilsvarende forbedringer følger den separate
-Linux-appen. Redigering, drahåndtak, nattbehov og dekningsberegning beholdes.
-Se [PRP-veiledningen](SALSY_PRP.md).
+Server/PC **0.84.0**, frittstående PRP **0.2.26**. Android 0.32.0 og
+Warehouse Android 0.11.2 følger som uendrede, signerte installasjonsfiler.
 
-English: Larger PRP needs planner, compact single-row toolbar and an adaptive
-time scale showing about ten hours. Available in the standalone app and web PRP.
+Nye kildebestemte tariffoppgjør, pensjons-/forsikringsgrunnlag, kontingenttrekk,
+arbeidstidskontroller og tilstøtende PRP-planer er med i denne delutgivelsen.
+PC og PC-nett bruker samme serverberegninger. Programmene kan fortsatt brukes
+uten tariffavtale. Se [utgivelsesnotatet](RELEASE_0.84.0.md),
+[tariffstatusen](AIRLINE_TARIFF_REVIEW.md) og [PRP-veiledningen](SALSY_PRP.md).
+
+**Flyoverenskomsten og Luftfartsoverenskomsten (HK) er fortsatt ufullstendige.**
+Ingen avtale merkes fullstendig på grunnlag av kontrollerte enkeltregler.
+Kontroller kilder, personkrets, lokale valg og gjenstående dekning før bruk.
+Manglende regler må håndteres og kontrolleres utenfor automatisk beregning.
+
+Installer ny server- og PC-DEB over eksisterende pakke, start serveren på nytt
+og last nettklienten på nytt. Ta sikkerhetskopi før oppgradering. Privat
+Hosting Manager følger serverversjonen, men distribueres bare lokalt.
+
+English: Partial release 0.84.0, standalone PRP 0.2.26. Source-specific
+agreement settlements, deductions, pension information, planning checks and
+adjacent read-only PRP rosters are included. Both aviation agreements remain
+incomplete; see the source and coverage status before use. No-tariff operation
+is retained. Android installers are unchanged. Back up before upgrading.
 
 ## Sikkerhetsoppdatering – 0.82.1
 
@@ -134,10 +148,10 @@ bedriftsservere krever den private Hosting Manager.
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.82.2 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.82.2 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.82.2 | Debian 13 amd64 |
-| Salsy PRP (frittstående skiftplanlegger) | 0.2.25 | Debian 13 amd64 |
+| Salsy Server | 0.84.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.84.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.84.0 | Debian 13 amd64 |
+| Salsy PRP (frittstående skiftplanlegger) | 0.2.26 | Debian 13 amd64 |
 | Salsy Android | 0.32.0 | Android 7+ / arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+ / arm64 eller x86_64 |
 
@@ -189,9 +203,9 @@ Se [veiledningen](DEPENDENCY_FIX.md) for detaljer.
 
 ## Nytt siden 0.75.1
 
-Server/PC 0.82.2 inkluderer PRP i nettklienten og utveksling av ansatte,
+Server/PC 0.84.0 inkluderer PRP i nettklienten og utveksling av ansatte,
 regler og skiftplaner. Den frittstående PRP-appen kan brukes uten serverinnlogging.
-PRP 0.2.25 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
+PRP 0.2.26 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
 redigering/låsing av vakter, OnCall og PDF-/Excel-/CSV-eksport.
 OnCall krever en tilstøtende kveldsvakt og følger valgte kompetansekrav og sperrer.
 PDF viser kompetansemarkeringer og felles forklaring/vaktkoder.
@@ -255,8 +269,8 @@ Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package
 The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
 based on Debian 13/trixie. Server code and web clients are identical on both
 architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
-Salsy 0.82.2 also includes the shared PRP web planner. Standalone PRP
-0.2.25 works offline without a server account; generated schedules may
+Salsy 0.84.0 also includes the shared PRP web planner. Standalone PRP
+0.2.26 works offline without a server account; generated schedules may
 remain incomplete and require review. See [the PRP guide](SALSY_PRP.md).
 
 Download [Salsy-dependency-fix.sh](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-dependency-fix.sh)

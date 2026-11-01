@@ -35,7 +35,8 @@ sh "Salsy dependency fix.sh" --check
 ```
 
 Avhengighetene er Python 3.13, `python3-tk`, `libc6` ≥ 2.41, `libgcc-s1`,
-`libstdc++6`, `sudo`, `systemd`, `nftables`, `passwd` og `ca-certificates`.
+`libstdc++6`, `sudo`, `systemd`, `nftables`, `passwd`, `ca-certificates` og `tzdata`.
+Tidssonedata brukes for korrekt hvileberegning ved sommer- og vintertid.
 Hjelpefilen gjelder dagens Salsy Server-pakker for Debian 13; den oppgraderer
 ikke eldre Debian-utgaver til Debian 13. Samme hjelpefil kan brukes for den
 offentlige serveren og den private serveradministrasjonens felles serveravhengigheter.

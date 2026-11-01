@@ -1,5 +1,10 @@
 # Tariffbibliotek i Salsy og PRP
 
+**Status 01.11.2026:** De eksisterende malene er delvise og skal ikke forstås
+som komplette beregningsgrunnlag. Nye ufullstendige avtaler holdes tilbake.
+Se [beregningsstatus og lokale valg](TARIFF_CALCULATIONS_STATUS.md) for støtte,
+gjenstående arbeid og tvangsaktivering med begrunnelse.
+
 Biblioteket ble kontrollert mot offisielle kilder 27.10.2026. Salsy 0.79.0 og
 PRP 0.2.24 deler samme bibliotek. Organisasjonene vises i parentes, slik at
 avtaler for samme bransje ikke forveksles. Stillingsnavnet alene bestemmer ikke
