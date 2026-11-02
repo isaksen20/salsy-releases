@@ -1,10 +1,10 @@
 # Reise og Utlegg / Travel and Expenses
 
-Server/PC/nettklient 0.85.2 og Salsy Android 0.33.1.
+Server/PC/nettklient 0.85.3 og Salsy Android 0.33.2.
 
 ## Vanlige utlegg for bedriften
 
-1. Åpne **Reise og Utlegg** og velg **Last opp kvittering**. På mobilen kan du velge fil eller ta bilde. PNG, JPEG og PDF støttes, maksimalt 5 MiB per bilag.
+1. Åpne **Reise og Utlegg** og velg **Last opp kvittering**. På mobilen kan du velge fil eller ta bilde. PNG, JPEG og PDF støttes. PNG/JPEG over 5 MiB tilpasses automatisk lokalt og lagres som JPEG på maksimalt 5 MiB. Originalfilen endres ikke. Bilder kan være inntil 50 MiB før tilpasning; ved konvertering støttes inntil 60 millioner bildepunkter. PDF-filer beholdes byte for byte og må fortsatt være maksimalt 5 MiB. Kontroller at tekst og beløp er leselige etter tilpasning.
 2. Oppgi dato, utgiftstype, hva kjøpet gjelder og beløpet på kvitteringen. For eksempel **Verktøy og rekvisita**, «Skruer fra Biltema», 149,90 kr. Angi om du har betalt selv og skal ha refusjon. Bedriftskort gir ingen refusjon til den ansatte.
 3. Ved annen valuta: legg inn dokumentert kurs til NOK og dokumentasjon av kortbelastning/kurs. Salsy henter ikke en tilfeldig valutakurs. For taxi registreres godkjenning eller begrunnelse.
 4. Kvitteringen lagres i **Mine kvitteringer**, også uten en reise eller et krav.
@@ -16,6 +16,8 @@ Server/PC/nettklient 0.85.2 og Salsy Android 0.33.1.
 Velg **Reiseregning** i PC-klienten eller **Reise etter statens regulativ** i nett-/mobilklienten. Ved egne satser viser nett-/mobilklienten **Reiseregning – bedriftens satser**. Bedriften må faktisk ha avtalt å bruke regulativet; dette er ikke automatisk en rettighet i privat sektor. Oppgi egen adresse, formål/arrangement, reiserute, fra-/tilsted, dato og klokkeslett for avreise og hjemkomst. Klokkeslett er hjemstedets norske tid (Europe/Oslo). Ved gjentatt klokkeslett når sommertiden slutter, velg første eller andre forekomst.
 
 Automatisk beregning i første utgave gjelder vanlige innenlandsreiser i **2026**, inntil 28 døgn. Diett krever at avstand, reisetid, yrkesreise og øvrige vilkår er oppfylt. Bekreft nødvendige merkostnader for trekkfri diett. Velg **Beregn reisedøgn**, og angi faktisk overnatting og måltider dekket av andre for hvert døgn. Etter endring av reisetid må døgn og måltider kontrolleres på nytt. For hotell/pensjonat kreves navn og adresse. Privat nattillegg krever reell overnatting uten egen bolig, arbeidsgiverbetalt losji eller soveplass i billetten.
+
+Etter at første overnattingsdøgn er fylt ut, kryss av **Bruk på resterende overnattinger (type, navn og adresse)**. I nett/Android fylles øvrige foreslåtte overnattingsdøgn ut med én gang. I PC-klienten er neste døgn forhåndsutfylt når du åpner det. Type, navn og adresse kopieres; måltider og privat nattillegg må kontrolleres for hvert døgn. Et rent dagtidsdøgn ved hjemreise fylles ikke automatisk med overnatting. Alle døgn kan redigeres individuelt. I nett/Android må du krysse av på nytt hvis du endrer første overnattingssted etter kopiering. Avkryssingen er en utfyllingshjelp og lagres ikke som en lønnsregel.
 
 Kjøreboken registrerer dato, reiserute, kjørelengde, fremkomstmiddel, passasjernavn og dokumentert godkjenning. Passasjertillegg gjelder andre arbeidstakere på oppdrag; bekreft dette i godkjenningsfeltet. Skogs-/anleggsvei og nødvendig tilhenger/utstyr har egne kilometerfelt.
 
@@ -68,7 +70,11 @@ Managers can grant **Travel and Expenses – own claims and receipts** under Emp
 
 Open **Travel and Expenses → Expenses** for ordinary business purchases. Upload a receipt first or attach one from **My receipts**. Enter purpose, amount, currency/conversion evidence and whether you paid personally. Choose an attestor and submit. A trip is not required for ordinary expenses.
 
+Large PNG/JPEG receipts are resized locally and converted to JPEG only when they exceed 5 MiB. The original file is unchanged. Inputs up to 50 MiB / 60 megapixels are supported when converting. PDF receipts are retained byte for byte, with the existing 5 MiB limit. Check readability after resizing.
+
 For a journey, choose **Travel under state travel regulations**, enter dates, route and purpose, calculate travel days, record actual accommodation and provided meals, add mileage and receipts. Automatic allowances cover common domestic trips in 2026; other countries/years use documented expenses without automatic allowances. Special cases and advances require separate handling.
+
+After entering the first overnight stay, select **Use for remaining overnight stays (type, name and address)**. The accommodation type, name and address are copied; meals and overnight allowances remain individual. Daytime return remainders are excluded. All fields remain editable.
 
 An explicitly designated user with **Financial responsibility** reviews assigned claims, confirms evidence and withholding-exempt conditions, then attests, returns or rejects. Self-attestation is blocked. Approved claims are immutable. Payroll claims appear on the chosen payment date; separate payments must be handled outside Salsy. Tax-exempt reimbursement is separate from taxable income. Check income descriptions/units before manual a-melding reporting. The generated PDF documents the calculation and confirmation; it is not a qualified electronic signature.
 
