@@ -1,315 +1,111 @@
 # Salsy – offisielle installasjonsfiler / official installers
 
-Utvikler og utgiver / developer and publisher: **Thomas Isaksen**.
-
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
-Les [bruksanvisningen (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf).
-Dette repositoriet inneholder utgivelsesinformasjon og offentlige installasjonsfiler.
-Kildekoden holdes privat. Se [distribusjonsinformasjon](NOTICE.md) og vilkårene
-på [norsk](terms-nb.md) / [English](terms-en.md).
+[Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
+[Utgivelsesnotat 0.85.1](RELEASE_0.85.1.md) ·
+[Reise og Utlegg](TRAVEL_EXPENSES.md)
 
-## Delutgivelse 0.84.0 – tariffarbeid og kontrollgrunnlag
+Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
+Dette repositoriet inneholder offentlig utgivelsesinformasjon og installasjonsfiler.
+Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
+[distribusjonsinformasjon](NOTICE.md) og vilkår på
+[norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-Server/PC **0.84.0**, frittstående PRP **0.2.26**. Android 0.32.0 og
-Warehouse Android 0.11.2 følger som uendrede, signerte installasjonsfiler.
+## Nytt i 0.85.1: Reise og Utlegg
 
-Nye kildebestemte tariffoppgjør, pensjons-/forsikringsgrunnlag, kontingenttrekk,
-arbeidstidskontroller og tilstøtende PRP-planer er med i denne delutgivelsen.
-PC og PC-nett bruker samme serverberegninger. Programmene kan fortsatt brukes
-uten tariffavtale. Se [utgivelsesnotatet](RELEASE_0.84.0.md),
-[tariffstatusen](AIRLINE_TARIFF_REVIEW.md) og [PRP-veiledningen](SALSY_PRP.md).
+Ansatte kan laste opp kvitteringer før de lager en reiseregning, registrere
+vanlige utlegg uten reise, velge attestant og følge behandlingen. Tilgangen
+**Økonomisk ansvar** gir attestering av tildelte krav. Egenattestering er sperret.
+PC, PC-nett, mobilnett og Salsy Android bruker samme serverberegning.
 
-**Flyoverenskomsten og Luftfartsoverenskomsten (HK) er fortsatt ufullstendige.**
-Ingen avtale merkes fullstendig på grunnlag av kontrollerte enkeltregler.
-Kontroller kilder, personkrets, lokale valg og gjenstående dekning før bruk.
-Manglende regler må håndteres og kontrolleres utenfor automatisk beregning.
+**Statens diettsatser er standard.** Leder/admin med lønnstilgang kan uttrykkelig
+velge bedriftens egne diettsatser i Innstillinger, med beløp, tidsgrenser og
+gyldighetsdato. Offisielle skattegrenser er separate og kan ikke redigeres.
+Innsendte og attesterte krav beholder beregningen; berørte utkast må gjennomgås
+og lagres på nytt før innsending.
 
-Installer ny server- og PC-DEB over eksisterende pakke, start serveren på nytt
-og last nettklienten på nytt. Ta sikkerhetskopi før oppgradering. Privat
-Hosting Manager følger serverversjonen, men distribueres bare lokalt.
+Attesterte krav kan tas med i lønn på valgt utbetalingsdato. Trekkfri refusjon
+vises separat fra bruttolønn; trekkpliktig godtgjørelse inngår i trekkgrunnlaget.
+Attestasjons-PDF, kvitteringer og beregningsgrunnlag beholdes.
 
-English: Partial release 0.84.0, standalone PRP 0.2.26. Source-specific
-agreement settlements, deductions, pension information, planning checks and
-adjacent read-only PRP rosters are included. Both aviation agreements remain
-incomplete; see the source and coverage status before use. No-tariff operation
-is retained. Android installers are unchanged. Back up before upgrading.
+Automatiske reisesatser gjelder vanlige innenlandsreiser i Norge i **2026**,
+inntil 28 døgn. Andre land/år bruker dokumenterte utgifter uten automatisk diett.
+Forskudd og særtilfeller krever separat behandling. A-melding og betaling skjer
+fortsatt manuelt. Les [veiledningen og begrensningene](TRAVEL_EXPENSES.md).
 
-## Sikkerhetsoppdatering – 0.82.1
-
-Retter avdelingsskille ved innloggingsheadere og strammer inn formatet for
-widgetnøkler. Feilen krevde innlogging; de lokale forsøkene ga ikke beskyttede
-bedriftsdata uten gyldig innlogging. Server og PC får dnspython 2.9.0. Medfølgende
-Caddy er v2.11.7-salsy.2 med x/net 0.62.0 og nødvendige Go-avhengigheter.
-Installer både server og PC. Start server og aktuell Salsy-administrert proxy
-på nytt etter oppgradering; en reload av konfigurasjonen erstatter ikke en
-kjørende proxybinær. Ny Caddyfile eller nytt sertifikat trengs ikke.
-Se SECURITY_REVIEW_2026-10-31.md i server-/PC-pakken og utgivelsesnotatet.
-
-English: Authentication/department scoping is fixed, widget credentials use
-consistent Bearer parsing, and DNS/proxy dependencies are updated. Restart the
-server and its Salsy-managed Caddy service after upgrading both PC and server.
-
-## Tredagersvaktbok, permisjon og permittering – 0.82.0
-
-PC og PC-nett har tre dager med navn, arbeidstid og status, datovelger og piler.
-Dobbeltklikk eller høyreklikk åpner kalenderens dagsvindu med samme rettigheter.
-Permisjon med/uten lønn og ny permittering vises i vaktbok og kalender. Leder
-velger uttrykkelig med/uten lønn for hver permitteringsperiode. Ubetalte dager
-reduserer lønnsgrunnlaget gjennom den felles lønnsmotoren. Fast månedslønn følger
-kalenderdagsfordeling. Ingen automatisk arbeidsgiverperiode eller NAV-innsending.
-Se bruksanvisning kapittel 3.4 og ROSTER.md i server-/PC-pakkene.
-
-English: A three-day PC/web roster shares calendar actions and permissions.
-Managers explicitly choose paid/unpaid furlough periods; unpaid leave/furlough
-reduces payroll through the shared engine. Employer periods remain manual.
-
-## Forskjøvet vakt i PC og PC-nett – 0.81.0
-
-I kalenderen velger leder en vakt og **Forskjøvet vakt**. Angi ny dato og tid,
-med/uten kompensasjon, og om differansen i betalt tid skal føres med pluss eller
-minus i timebanken. Forhåndsvisningen viser grunnlaget før lagring. Opprinnelig
-vakt og valgt tariffversjon beholdes, og kompensasjon inngår i lønnsestimat,
-eksport og genererte lønnsslipper. Tilbakestilling tilbakefører også bank og
-kompensasjon. Ny generering av skiftplan kan ikke overskrive en aktiv forskyvning.
-
-Konfigurer forskyvningsreglene i den aktuelle tariffavtalen: overtidssatser eller
-egne prosenter, tidsregler, grunnlag og avrunding. Ingen tariff velges automatisk
-for andre virksomheter. Kontroller lokale vilkår og varslingsfrister før valg
-av kompensasjon. Se bruksanvisningen og DISPLACED_SHIFTS.md i server/PC-pakken.
-Android og frittstående PRP er uendrede installasjonsfiler i denne utgivelsen.
-
-English: Calendar shift displacement with explicitly configured collective-agreement
-premiums, signed bank differences, server previews, retained originals and restore.
-Export, estimates and payslips share the server calculation. No agreement's
-compensation rules are presumed for another agreement.
-
-## QR- og NFC-stempling med plasseringer – 0.80.0
-
-Ansatte velger inn eller ut og skanner samme QR-kode eller NFC-brikke. QR i
-mobilnettappen bruker kamera og en lokalt levert leser, uavhengig av Web NFC.
-I PC og PC-nett kan leder administrere plasseringer, velge avdeling eller felles
-bedriftsplassering, vise QR og lagre PDF. Android 0.32.0 har QR-skanning og
-plasseringer under Innstillinger. Eksisterende NFC-brikker beholdes når QR legges
-til; eksplisitt kodebytte sperrer gamle koder. Sletting beholder historikken.
-Ansatte kan stemple på tvers av avdelinger uten innsyn i andre avdelingers data.
-Statiske QR-koder kan kopieres og er ikke et bevis på fysisk tilstedeværelse.
-Se bruksanvisningens kapittel 9.7. Nettleseren må ha gyldig HTTPS og kameratilgang.
-
-English: Adds locally decoded QR time clock, editable department/shared locations,
-printable PDFs and cross-department punches. Android adds QR scanning. NFC and QR
-use the same location payload for clock-in and clock-out; old NFC tags are preserved.
-
-## To lagringsplasser for sikkerhetskopi – 0.79.1
-
-Velg en valgfri **Ekstra lagringsmappe** under serverens **Sikkerhetskopi**,
-for eksempel på en montert nettverksdisk. Samme komplette krypterte kopi lagres
-begge steder og kan gjenopprettes fra hver fil alene. Hver mappe har egen status
-og egen døgnplan. Feil i én mappe hindrer ikke at den andre forsøkes; automatisk
-nytt forsøk etter ti minutter gjelder bare mapper som fortsatt mangler kopi.
-Manuell backup forsøker begge. Tidligere innstillinger med én mappe beholdes.
-Nettverkslagring må være montert og skrivbar for brukeren som kjører serveren.
-Se [bruksanvisningen, kapittel 2.10](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf).
-
-English: The server supports an optional second backup destination, including
-already-mounted network storage. Each encrypted file is independently restorable.
-Destinations have separate daily clocks, status and retry handling.
-
-## Felles tariffbibliotek – 0.79.0
-
-Salsy og PRP har 11 kildebelagte tariffavtaler, blant annet for dekk/bilverksted,
-mekanikere, lager og butikk, med organisasjonene i parentes. Velg tariffmal under
-Tariffavtale i PC/PC-nett, eller Regler og tariff i PRP. Salsy åpner et inaktivt
-avtaleutkast som leder kontrollerer, redigerer og aktiverer. PRP har 44
-avtalevarianter pluss Egne regler. Biblioteket i frittstående PRP virker uten
-innlogging eller internett.
-
-Malene viser kildeutgave og dato for kontroll, med merknad når kildeperioden er
-passert. Kontroller gjeldende avtale, satser og lokale avtaler før bruk. Er
-malen utdatert, må den tilpasses manuelt frem til utvikleren oppdaterer den.
-Malene inneholder utvalgte grunnregler; de er ikke full automatisk behandling
-av alle tariffbestemmelser. Egne lagrede avtaler og planer overskrives ikke.
-Les [avtaleliste, kilder og brukerveiledning](TARIFFMALER.md).
-
-## Avdelinger og passordreset – 0.78.0
-
-Uten avdelinger fungerer Salsy som før. Avdelinger opprettes uttrykkelig fra
-serveren eller lederfanen i PC-/PC-nettklienten. Avdelingsledere får avgrenset
-tilgang; øverste leder og administratorer får avdelingsvalg og en samlet oversikt.
-Alle forretningsmoduler har adskilte avdelingsdata. Fakturanumre er fortløpende
-for bedriften. Standardpassord ved reset velges i brukerfanen; brukeren må bytte
-det ved neste innlogging. Andre administratorers egne resetvalg påvirker ikke
-overordnede administratorers passordreset.
-
-Første aktivering tar en kryptert sikkerhetskopi og oppgraderer datafilen til
-avdelingsformat som krever Server 0.78.0 eller nyere. Eldre serverutgaver avviser
-filen. Uten opprettede avdelinger beholdes det tidligere filformatet. Den vanlige
-serveren kjører én aktiv bedriftsserver per Linux-bruker. Flere separate
-bedriftsservere krever den private Hosting Manager.
+## Nedlasting og oppgradering
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.84.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.84.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.84.0 | Debian 13 amd64 |
-| Salsy PRP (frittstående skiftplanlegger) | 0.2.26 | Debian 13 amd64 |
-| Salsy Android | 0.32.0 | Android 7+ / arm64 eller x86_64 |
-| Salsy Warehouse Android | 0.11.2 | Android 7+ / arm64 eller x86_64 |
+| Salsy Server | 0.85.1 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.85.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.85.1 | Debian 13 amd64 |
+| Salsy PRP, frittstående | 0.2.26 | Debian 13 amd64, uendret fra 0.84.0 |
+| Salsy Android | 0.33.1 | Android 7+, arm64 eller x86_64 |
+| Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
 
-Debian-pakkene bruker Python 3.13. Velg serverfilen for maskinens arkitektur:
-`dpkg --print-architecture` viser `amd64` eller `arm64`. ARM64 krever 64-bits OS;
+Ta sikkerhetskopi før oppgradering. Installer ny server- og PC-DEB over eksisterende
+pakke med `sudo apt install ./FILNAVN.deb`, start serveren på nytt og last
+nettklientene på nytt. Oppdater Salsy Android med den nye signerte APK-filen.
+Samme offisielle Android-signatur beholdes. Eldre debug/test-apper kan kreve
+avinstallasjon; ta da vare på tilkoblingsinformasjonen først.
+
+Debian-pakkene krever Debian 13 og Python 3.13. Kontroller arkitektur med
+`dpkg --print-architecture`: velg amd64 eller arm64. ARM64 krever 64-bits OS;
 32-bits ARM/armhf og Debian 12 støttes ikke av disse pakkene. PC-klienten er amd64.
-Nettklientene og alle serverfunksjoner er de samme på begge serverarkitekturer.
-For Debian: last ned riktig `.deb` og installer med `sudo apt install ./FILNAVN.deb`.
-Ta sikkerhetskopi av serverdata før oppdatering; oppdater server og PC-klient sammen.
+ARM64 og amd64 har samme serverfunksjoner og nettklienter.
 
-## Brukere og første innlogging / Accounts and first sign-in
+Server og PC-klient sjekker GitHub ved oppstart og daglig. Manuell sjekk finnes
+under Oppdateringer i serveren og Innstillinger i PC/PC-nett. Oppdateringer
+installeres ikke automatisk. `release.json` inneholder direkte nedlastingslenker,
+versjoner, SHA-256 og Android-signatur. `SHA256SUMS` dekker utgivelsesfilene.
+Privat Hosting Manager følger serverversjonen, men publiseres ikke her.
 
-Serverens Brukere-fane kan opprette kontoer med valgfri ansattilknytning, roller og
-tilganger. Midlertidige passord må byttes før bruk av PC, nett, Android, Warehouse
-og PRP. Eksisterende kontoer beholdes. Brukerstøtte: support@salsy.eu.
+## Tariff, PRP og regnskap
 
-The server Users tab supports optional employee links and explicit permissions.
-Temporary credentials require a password change before application data is accessible.
+Tariffarbeidet fra [delutgivelse 0.84.0](RELEASE_0.84.0.md) er beholdt.
+**Flyoverenskomsten og Luftfartsoverenskomsten (HK) er fortsatt ufullstendige.**
+Kontroller kilder, personkrets, lokale valg og gjenstående dekning før bruk.
+En kontrollert enkeltregel gjør ikke hele avtalen fullstendig. Salsy og PRP
+kan fortsatt brukes uten tariffavtale.
 
-## Tidligere sikkerhetsrettelser / Previous security fixes
-
-Sikkerhetsrettelsene fra server/PC 0.77.20 og PRP 0.2.20 er beholdt i denne utgivelsen.
-Utgivelsen retter delegert tilgangskontroll, oppdaterer medfølgende
-sikkerhetsbiblioteker og fjerner GUI-trådfeil på stemplings- og lønnssiden.
-Lønnsberegningene endres ikke. Start serverinstanser, PC-klienter og Salsys
-egen HTTPS-proxy på nytt etter oppdateringen. Android-installasjonsfilene er uendret.
-Les [sikkerhetsinformasjonen / security advisory](SECURITY_UPDATE_0.77.20.md).
+Se [tariffmaler](TARIFFMALER.md), [luftfartsstatus](AIRLINE_TARIFF_REVIEW.md),
+[beregningsstatus](TARIFF_CALCULATIONS_STATUS.md) og [PRP-veiledning](SALSY_PRP.md).
+Genererte planer kan ha udekket behov og krever gjennomgang. Regnskap er
+fortsatt i kontrollmodus; komplett årsregnskap, skattemelding og direkte
+myndighetsinnsending er ikke implementert.
 
 ## Salsy dependency fix
 
 Last ned [Salsy-dependency-fix.sh](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-dependency-fix.sh)
-og åpne en terminal i nedlastingsmappen:
-
-```sh
-sh Salsy-dependency-fix.sh --install
-```
-
+og kjør `sh Salsy-dependency-fix.sh --install` fra nedlastingsmappen.
 Hjelpefilen ber om Linux-administratorpassord, oppdaterer APT-pakkelisten og
-installerer systemavhengighetene til Salsy Server på Debian 13 (AMD64/ARM64).
-Den kan også reparere manglende avhengigheter etter en avbrutt pakkeinstallasjon.
-APT får ikke fjerne pakker under reparasjonen. Passordet lagres ikke.
-På minimale installasjoner uten sudo spør su etter root-passordet.
-Filen installerer ikke Salsy eller Python-pakker med pip og endrer ikke
-bedriftsdata, porter, proxyinnstillinger eller APT-kilder.
-Python-bibliotekene og Caddy følger med serverens DEB-pakke.
-Vanlige Debian-installasjonsskript kan starte systemtjenester.
-For kontroll uten installasjon eller passord: `sh Salsy-dependency-fix.sh --check`.
-Se [veiledningen](DEPENDENCY_FIX.md) for detaljer.
-
-## Nytt siden 0.75.1
-
-Server/PC 0.84.0 inkluderer PRP i nettklienten og utveksling av ansatte,
-regler og skiftplaner. Den frittstående PRP-appen kan brukes uten serverinnlogging.
-PRP 0.2.26 har grafisk behovsplanlegging, kompetansekrav, udekket bemanning,
-redigering/låsing av vakter, OnCall og PDF-/Excel-/CSV-eksport.
-OnCall krever en tilstøtende kveldsvakt og følger valgte kompetansekrav og sperrer.
-PDF viser kompetansemarkeringer og felles forklaring/vaktkoder.
-Genererte planer kan fortsatt ha udekkede behov og må kontrolleres; generatoren
-lover ikke en optimal eller fullstendig plan. Se [PRP-veiledningen](SALSY_PRP.md).
-
-Last ned APK på Android og åpne filen. Android kan be om tillatelse til å installere
-fra nettleseren. Første offentlige APK har ny signatur: eldre debug/testapper kan
-kreve avinstallasjon først. Ta vare på tilkoblingsfilen; lokale appinnstillinger
-slettes ved avinstallasjon. Serverdata beholdes. Kommende utgivelser bruker samme
-private signeringsnøkkel.
-
-`SHA256SUMS` dekker alle seks installasjonsfilene, PDF-bruksanvisningen, hjelpefilen og veiledningene. `release.json` inneholder
-nedlastingsadresser, versjoner, kontrollsummer og Android-signatur.
-Server og PC-klient sjekker GitHub ved oppstart og daglig. Sjekk manuelt under
-Oppdateringer i servervinduet / Innstillinger i PC og PC-nettklient. Det er ikke
-innført automatisk installasjon av oppdateringer.
-Vilkår 1.3 må godtas ved første gangs bruk eller når tidligere godtatte vilkår er endret.
-
-Versjon 0.75.1 gir leder passordresetting i Brukere og tilganger, med avslutning
-av brukerens økter. Deaktiverte Ledige vakter, Vaktbytte og Registrer tillegg
-skjules også for administratorer i alle klientene. Android er 0.31.1.
-
-Versjon 0.75.0 legger til valgfri Booking i PC, PC-nett, Android og mobilnett.
-Ukevisningen har tidsmarkør, individuelle dagsruller og samtidige bookinger.
-Brukertilganger skiller visning, oppretting og lederadministrasjon.
-Android er oppdatert til 0.31.0. Aktiver Booking i bedriftens Innstillinger.
-
-Versjon 0.74.0 utvider regnskap i både PC-klienten og PC-nettklienten med
-reskontro og delbetalinger, MVA-grunnlag fra bokførte poster, lønnsbilag,
-anleggsmidler og avskrivning, lagerverdsetting og årsavslutningskontroller.
-Regnskap er fortsatt i skygge-/kontrollmodus: komplett årsregnskap,
-skattemelding og direkte innsending til myndighetene er ikke implementert.
-Bruksanvisningen beskriver arbeidsflytene og begrensningene.
-Warehouse Android er uendret.
-
-Versjon 0.71.3 retter systemctl-feil ved aktivering av nye tjenester.
-
-Versjon 0.71.2 retter automatisk oppstart og nye forsøk etter mislykket oppsett.
-
-Versjon 0.71.1 retter serverinstallasjon som feilet med **unsupported PAX tar header**.
-Last ned den nye `.deb`-filen; tidligere installasjonsfiler skal ikke brukes.
-
-Fra 0.71.0 kan automatisk OS-oppstart og opplåsing aktiveres per instans under
-**Oppstart** i servervinduet. Systemd lagrer maskinbundet kryptert legitimasjon;
-root på maskinen kan hente den ut. Nye vilkår godtas for bedriften av administrator
-i Salsy PC eller PC-nett, uten lokal serverinnlogging. Se kapittel 15 i PDF.
-
-Fra server 0.70.0 finnes **Domene / offentlig HTTPS → Sett opp HTTPS automatisk …**.
-Veiviseren oppretter en separat Caddy-proxy med sudo. Med Apache, Mailcow eller
-andre proxyer velges manuell DNS-bekreftelse og en ledig HTTPS-port, for eksempel
-9443. Eksisterende proxykonfigurasjon og tjenester endres ikke. DNS/ruter må
-settes av administrator; manuelle DNS-sertifikater må fornyes før utløp med samme
-veiviser. Hele fremgangsmåten står i kapittel 14.0 i PDF-bruksanvisningen.
+installerer systemavhengigheter på Debian 13 amd64/arm64. Den kan reparere
+manglende pakkeavhengigheter uten at APT får fjerne pakker. Uten sudo brukes
+su og root-passord. Passord lagres ikke. Den installerer ikke Salsy eller pip-
+pakker og endrer ikke bedriftsdata, porter, proxykonfigurasjon eller APT-kilder.
+Vanlige Debian-installasjonsskript kan starte tjenester. Python-biblioteker og
+Caddy følger med serverpakken. `--check` kontrollerer uten endringer eller passord.
+Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Download the installers from [Releases](https://github.com/isaksen20/salsy-releases/releases/latest).
-Source code is private; this is not an open-source release.
-Server packages target Debian 13 amd64 or arm64 with Python 3.13; the PC package is amd64.
-The ARM64 server requires a 64-bit operating system, including Raspberry Pi OS
-based on Debian 13/trixie. Server code and web clients are identical on both
-architectures. There is no 32-bit ARM package. Check `dpkg --print-architecture`.
-Salsy 0.84.0 also includes the shared PRP web planner. Standalone PRP
-0.2.26 works offline without a server account; generated schedules may
-remain incomplete and require review. See [the PRP guide](SALSY_PRP.md).
+Salsy 0.85.1 adds Travel and Expenses across desktop, desktop web, mobile web
+and Android. Upload receipts independently, create ordinary expense claims or
+travel claims, and select an attestor with Financial responsibility. Self-approval
+is blocked. State meal allowance rates are the default; a payroll manager/admin
+can explicitly enable company amounts, duration thresholds and an effective date.
+Official tax limits remain separate. Submitted and approved claims stay frozen.
+Approved payroll reimbursements and taxable allowances use the shared server engine.
 
-Download [Salsy-dependency-fix.sh](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-dependency-fix.sh)
-and run `sh Salsy-dependency-fix.sh --install` in the download folder.
-It requests Linux administrator authentication, refreshes APT lists and installs
-Salsy Server system dependencies on Debian 13 (AMD64/ARM64), with missing-dependency
-repair and package removal disabled. Without sudo it uses su and the root password.
-It does not store passwords, install Salsy, run pip or change company data,
-ports, proxies or APT sources. Standard Debian package scripts may start services.
-The DEB already contains Caddy and the Python libraries. `--check` checks without
-changes or authentication. Read [the helper guide](DEPENDENCY_FIX.md).
+Automatic allowances cover common domestic travel in Norway in 2026, up to
+28 days. Other countries/years use documented expenses without automatic allowances.
+Advances and special cases require separate handling; payments and a-melding
+submission remain manual. See [the travel guide](TRAVEL_EXPENSES.md).
 
-Version 0.75.1 adds administrator password resets with session revocation.
-Disabled Open shifts, Shift swaps and Register supplements are hidden for
-administrators as well as employees. Salsy Android is updated to 0.31.1.
-Version 0.75.0 adds optional Booking to native desktop, desktop web, Android
-and mobile web: weekly timelines, independent day scrolling, a live clock
-marker, simultaneous bookings and separate view/create/manager permissions.
-Enable Booking in company Settings. Salsy Android is updated to 0.31.0.
-Version 0.74.0 extends accounting in both desktop clients with open items and
-partial payments, ledger-based VAT reports, payroll postings, fixed assets and
-depreciation, inventory valuations and year-end controls. Accounting remains in
-shadow/review mode; complete annual accounts, tax returns and direct submission
-to authorities are not implemented. See the updated manual for limitations.
-The Warehouse Android installer is unchanged.
-Version 0.71.3 fixes reset-failed errors when enrolling new services.
-Version 0.71.2 fixes boot-service configuration and retries after failed setup.
-Version 0.71.1 fixes the server package’s unsupported PAX tar headers.
-Download the new `.deb` rather than reusing the 0.71.0 server installer.
-Android APKs target Android 7+ on arm64/x86_64 and use a permanent release key.
-Previously debug-signed apps may require replacement after preserving connection
-details. Back up server data before upgrading. Checksums and version metadata are
-provided; automatic installation is not implemented.
-
-Server 0.70.0 includes optional automatic HTTPS provisioning with a separate
-Caddy service and a provider-independent manual DNS wizard. Use an unused public
-port when Apache/Mailcow already runs on the machine. DNS certificates require
-manual renewal through the wizard; router/DNS configuration remains external.
-
-Build checks cover packaged server behavior, payroll, backups, source-file absence
-and APK signatures. Native desktop GUI and browser workflows were tested with synthetic data.
-Physical Android and Raspberry Pi devices were not available for testing.
+Back up before upgrading both server and desktop. Restart the server and reload
+web clients; update Salsy Android to 0.33.1. PRP 0.2.26 and Warehouse
+Android 0.11.2 are unchanged. Native desktop/browser flows and ARM64 under QEMU
+were tested with synthetic data; no physical Android/iPhone/ARM device or actual
+OS boot was tested for this release. Both aviation agreements remain incomplete.
+Source code and private hosting installers are not published.
