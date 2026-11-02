@@ -2,7 +2,7 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.85.1](RELEASE_0.85.1.md) ·
+[Utgivelsesnotat 0.85.2](RELEASE_0.85.2.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
@@ -11,7 +11,22 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.85.1: Reise og Utlegg
+## Rettet i 0.85.2: ansatt-tilgang til Reise og Utlegg
+
+PC-nettklientens brukerskjema lot ikke leder velge Reise og Utlegg for rollen
+Ansatt, og kunne fjerne en eksisterende tilgang ved lagring. Skjemaet bruker
+nå samme rettighetsgrunnlag og standardvalg som PC-klienten og serveren.
+Nye ansattkontoer får egne reiser og utlegg som standard. Leder kan gi eller
+fjerne tilgangen uten å endre rollen til administrator.
+
+For eksisterende kontoer: åpne **Ansettelse → Brukere og tilganger**, velg
+brukeren og **Endre valgt konto** (PC) / **Rediger** (PC-nett). Behold rollen
+**Ansatt**, velg riktig ansattkobling og kryss av **Reise og Utlegg – egne krav
+og kvitteringer**. Lagre og la brukeren logge inn på nytt. Modulen må være
+aktivert i Innstillinger. Økonomisk ansvar tildeles fortsatt uttrykkelig;
+det er ikke nødvendig for egne krav.
+
+## Reise og Utlegg fra 0.85.1
 
 Ansatte kan laste opp kvitteringer før de lager en reiseregning, registrere
 vanlige utlegg uten reise, velge attestant og følge behandlingen. Tilgangen
@@ -37,9 +52,9 @@ fortsatt manuelt. Les [veiledningen og begrensningene](TRAVEL_EXPENSES.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.85.1 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.85.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.85.1 | Debian 13 amd64 |
+| Salsy Server | 0.85.2 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.85.2 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.85.2 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.26 | Debian 13 amd64, uendret fra 0.84.0 |
 | Salsy Android | 0.33.1 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
@@ -90,7 +105,13 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.85.1 adds Travel and Expenses across desktop, desktop web, mobile web
+Salsy 0.85.2 fixes the desktop web account editor: managers can grant
+Travel and Expenses to Employee accounts, existing grants survive editing,
+and new accounts get the same defaults as the native PC client and server.
+Explicit revocation is preserved. Financial responsibility remains opt-in.
+Save the account and sign in again after changing permissions.
+
+Travel and Expenses was introduced in 0.85.1 across desktop, desktop web, mobile web
 and Android. Upload receipts independently, create ordinary expense claims or
 travel claims, and select an attestor with Financial responsibility. Self-approval
 is blocked. State meal allowance rates are the default; a payroll manager/admin
@@ -105,7 +126,7 @@ submission remain manual. See [the travel guide](TRAVEL_EXPENSES.md).
 
 Back up before upgrading both server and desktop. Restart the server and reload
 web clients; update Salsy Android to 0.33.1. PRP 0.2.26 and Warehouse
-Android 0.11.2 are unchanged. Native desktop/browser flows and ARM64 under QEMU
+Android 0.11.2 are unchanged. Native desktop/browser account workflows and ARM64 runtime under QEMU
 were tested with synthetic data; no physical Android/iPhone/ARM device or actual
 OS boot was tested for this release. Both aviation agreements remain incomplete.
 Source code and private hosting installers are not published.

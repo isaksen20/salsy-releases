@@ -1,6 +1,6 @@
 # Reise og Utlegg / Travel and Expenses
 
-Server/PC/nettklient 0.85.1 og Salsy Android 0.33.1.
+Server/PC/nettklient 0.85.2 og Salsy Android 0.33.1.
 
 ## Vanlige utlegg for bedriften
 
@@ -31,6 +31,9 @@ Skatteetatens grenser er andre beløp: dagsreise 200/400 kr, hotell 693 kr, pens
 
 ## Tilganger og attestering
 
+Leder/admin åpner **Ansettelse → Brukere og tilganger**, velger brukeren og **Endre valgt konto** (PC) / **Rediger** (PC-nett). Behold rollen **Ansatt**, knytt kontoen til riktig ansatt, og kryss av **Reise og Utlegg – egne krav og kvitteringer**. Lagre. Brukeren må logge inn på nytt etter rettighetsendringer. Nye ansattkontoer har denne tilgangen som standard; den kan fjernes eller gis eksplisitt. Modulen må også være aktivert i Innstillinger. En vanlig ansatt trenger ikke lederrolle eller Økonomisk ansvar for egne reiseregninger og utlegg.
+
+
 Leder/admin tildeler **Økonomisk ansvar** i brukertilganger. Denne tilgangen kan gis en vanlig bruker, også uten ansattkobling. Den gis ikke automatisk til vanlige ansatte. Oppsettsadministrator får tilgangen. **Reise og Utlegg – egne krav og kvitteringer** gir registrering for egen ansattkobling. Modulen kan skjules/deaktiveres i Innstillinger. Godkjent lønnsgrunnlag forsvinner ikke hvis modulen senere skjules.
 
 Ansatt velger en aktiv attestant. Avdelingsskille gjelder; øverste leder med bedriftstilgang kan velges på tvers. Attestanten ser tildelte innsendte krav under **Til attestering** og i hendelser. Leder med lønnstilgang kan se **Alle krav** i sin valgte avdeling. Andre ansatte ser ikke kvitteringene eller kravene. Ingen kan attestere egne krav.
@@ -60,6 +63,8 @@ PC-klient og PC-nettklient bruker samme oppgaver og API. Android bruker den samm
 - Skatteetaten, tolking av påbegynt døgn: https://www.skatteetaten.no/en/rettskilder/type/skattedirektoratets-meldinger/forskuddsutskrivingen-for-2020/ (generell døgnregel, ikke kilde for 2026-beløp)
 
 ## English quick guide
+
+Managers can grant **Travel and Expenses – own claims and receipts** under Employment → Users and permissions while keeping the Employee role. Link the account to the correct employee, save and sign in again. New employee accounts have this permission by default. Financial responsibility is not required for personal claims.
 
 Open **Travel and Expenses → Expenses** for ordinary business purchases. Upload a receipt first or attach one from **My receipts**. Enter purpose, amount, currency/conversion evidence and whether you paid personally. Choose an attestor and submit. A trip is not required for ordinary expenses.
 
