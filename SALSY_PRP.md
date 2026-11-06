@@ -348,3 +348,11 @@ to the rule's first year. Every date in the window must be inside the project;
 outside dates are never assumed free. Settings survive PRP and CSV exchange.
 Check outside-plan boundary context. Company benefit definitions are reference
 information; personal settlements are excluded and PRP does not execute payroll.
+
+## Kompetanse fra Salsy (PRP 0.2.27 / Salsy 0.87.0)
+
+Hent fra Salsy og Salsys eksisterende PRP-eksport tar med kompetansekatalogen og
+ansattes kompetansetildelinger. Kompetansevinduet i Linux- og nettutgaven har nå
+Eksporter kompetanse / Importer kompetanse for samme JSON-format som Salsy.
+Den frittstående appen bruker ingen server for denne utvekslingen. Se
+[Kompetanse](COMPETENCIES.md) for format, additiv import og ansatt-ID-er.

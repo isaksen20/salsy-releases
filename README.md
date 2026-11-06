@@ -2,7 +2,8 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.85.3](RELEASE_0.85.3.md) ·
+[Utgivelsesnotat 0.88.0](RELEASE_0.88.0.md) ·
+[Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
@@ -11,96 +12,85 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.85.3: kvitteringsbilder og overnatting
+## Nytt i 0.88.0: Ressursstyring og Kompetanse
 
-Store PNG/JPEG-kvitteringer tilpasses automatisk før opplasting. PDF-filer
-beholdes uendret med eksisterende 5 MiB grense. Originalbilder endres ikke.
-Opplastingsgrensen for reisekvitteringer er rettet til samme JSON-grense som
-øvrige bilag; dokumentgrensen er fortsatt 5 MiB etter tilpasning.
+Aktiver **Ressursstyring og Mine oppgaver** i Innstillinger → Tilleggsmoduler.
+Leder får en tidslinje med ansatte, vaktrammer og oppgaver med faste klokkeslett,
+detaljer, kompetansekrav og prioritet. Dra oppgaver vertikalt fra oppgaveruten
+til en ansatt eller mellom ansatte; klokkeslettet beholdes. Vaktene åpner de
+samme handlingene som kalenderen. Datofestede oppgaver kan gå over midnatt.
+Et gjenbrukbart oppgavebibliotek kommer senere.
 
-Velg **Bruk på resterende overnattinger (type, navn og adresse)** for å slippe
-å skrive inn samme sted flere ganger. Måltider og nattillegg beholdes per døgn;
-en dagtidsrest ved hjemreise fylles ikke automatisk med overnatting. PC, PC-nett,
-mobilnett og Salsy Android har funksjonene. Les [reiseveiledningen](TRAVEL_EXPENSES.md).
+Utenfor vakten tilbys **Avbryt**, **Utvid vakt automatisk** eller **Endre start/slutt
+manuelt**. Vaktutvidelse og tildeling lagres samlet med kalenderens kontroller.
+Kompetansekrav, overlapp, fravær, GS-arbeidstid og betalt hvile/deldagsfri kontrolleres.
+Ansatte får **Mine oppgaver** i PC, PC-nett, mobilnett og Salsy Android og ser
+bare sine egne oppgaver. Modulen er valgfri og beholder data ved deaktivering.
 
-## Ansatt-tilgang rettet i 0.85.2
+Aktiver også **Kompetanse** for å administrere kompetanser og ansattmatrisen.
+Fullt navn, forkortelse, farge, planmarkering og krav om sammenhengende dekning
+kan overføres til PRP. Salsy og PRP kan importere/eksportere kompetanse som JSON;
+ansatte kobles med samme ansatt-ID. [Veiledning](COMPETENCIES.md).
 
-PC-nettklientens brukerskjema lot ikke leder velge Reise og Utlegg for rollen
-Ansatt, og kunne fjerne en eksisterende tilgang ved lagring. Skjemaet bruker
-nå samme rettighetsgrunnlag og standardvalg som PC-klienten og serveren.
-Nye ansattkontoer får egne reiser og utlegg som standard. Leder kan gi eller
-fjerne tilgangen uten å endre rollen til administrator.
+## Salsy Kasse – tidlig testutgave
 
-For eksisterende kontoer: åpne **Ansettelse → Brukere og tilganger**, velg
-brukeren og **Endre valgt konto** (PC) / **Rediger** (PC-nett). Behold rollen
-**Ansatt**, velg riktig ansattkobling og kryss av **Reise og Utlegg – egne krav
-og kvitteringer**. Lagre og la brukeren logge inn på nytt. Modulen må være
-aktivert i Innstillinger. Økonomisk ansvar tildeles fortsatt uttrykkelig;
-det er ikke nødvendig for egne krav.
-
-## Reise og Utlegg fra 0.85.1
-
-Ansatte kan laste opp kvitteringer før de lager en reiseregning, registrere
-vanlige utlegg uten reise, velge attestant og følge behandlingen. Tilgangen
-**Økonomisk ansvar** gir attestering av tildelte krav. Egenattestering er sperret.
-PC, PC-nett, mobilnett og Salsy Android bruker samme serverberegning.
-
-**Statens diettsatser er standard.** Leder/admin med lønnstilgang kan uttrykkelig
-velge bedriftens egne diettsatser i Innstillinger, med beløp, tidsgrenser og
-gyldighetsdato. Offisielle skattegrenser er separate og kan ikke redigeres.
-Innsendte og attesterte krav beholder beregningen; berørte utkast må gjennomgås
-og lagres på nytt før innsending.
-
-Attesterte krav kan tas med i lønn på valgt utbetalingsdato. Trekkfri refusjon
-vises separat fra bruttolønn; trekkpliktig godtgjørelse inngår i trekkgrunnlaget.
-Attestasjons-PDF, kvitteringer og beregningsgrunnlag beholdes.
-
-Automatiske reisesatser gjelder vanlige innenlandsreiser i Norge i **2026**,
-inntil 28 døgn. Andre land/år bruker dokumenterte utgifter uten automatisk diett.
-Forskudd og særtilfeller krever separat behandling. A-melding og betaling skjer
-fortsatt manuelt. Les [veiledningen og begrensningene](TRAVEL_EXPENSES.md).
+Separat Android-/Linux-app med servertilkobling og frakoblet demo, store
+vareknapper, søk, handlekurv, parkert kvittering, ordrehenting og A4/58/80 mm
+PDF-utskrift. Android er tilpasset nettbrett og kasseskjermer på 10 tommer eller
+mer. **Kun testing: ingen reelle betalinger, lagerendringer, fakturaer eller
+regnskapsposter.** Kortterminal og øvrige krav før virkelig kassebruk gjenstår.
+Les [testveiledningen](SALSY_KASSE.md).
 
 ## Nedlasting og oppgradering
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.85.3 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.85.3 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.85.3 | Debian 13 amd64 |
-| Salsy PRP, frittstående | 0.2.26 | Debian 13 amd64, uendret fra 0.84.0 |
-| Salsy Android | 0.33.2 | Android 7+, arm64 eller x86_64 |
+| Salsy Server | 0.88.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.88.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.88.0 | Debian 13 amd64 |
+| Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
+| Salsy Android | 0.34.0 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
+| Salsy Kasse – test | 0.1.2 | Debian 13, Python 3.13 |
+| Salsy Kasse Android – test | 0.1.2 | Android 7+, arm64 eller x86_64 |
 
 Ta sikkerhetskopi før oppgradering. Installer ny server- og PC-DEB over eksisterende
 pakke med `sudo apt install ./FILNAVN.deb`, start serveren på nytt og last
-nettklientene på nytt. Oppdater Salsy Android med den nye signerte APK-filen.
+nettklientene på nytt. Oppdater Android med den nye signerte APK-filen.
 Samme offisielle Android-signatur beholdes. Eldre debug/test-apper kan kreve
 avinstallasjon; ta da vare på tilkoblingsinformasjonen først.
 
 Debian-pakkene krever Debian 13 og Python 3.13. Kontroller arkitektur med
-`dpkg --print-architecture`: velg amd64 eller arm64. ARM64 krever 64-bits OS;
-32-bits ARM/armhf og Debian 12 støttes ikke av disse pakkene. PC-klienten er amd64.
-ARM64 og amd64 har samme serverfunksjoner og nettklienter.
+`dpkg --print-architecture`: velg amd64 eller arm64 for serveren. ARM64 krever
+64-bits OS; 32-bits ARM/armhf og Debian 12 støttes ikke av disse pakkene.
+PC og PRP er amd64. Begge serverarkitekturer har samme funksjoner og nettklienter.
+Kasse Linux er en arkitekturuavhengig tilleggspakke; se dens veiledning om avhengigheter.
 
 Server og PC-klient sjekker GitHub ved oppstart og daglig. Manuell sjekk finnes
 under Oppdateringer i serveren og Innstillinger i PC/PC-nett. Oppdateringer
-installeres ikke automatisk. `release.json` inneholder direkte nedlastingslenker,
+installeres ikke automatisk. `release.json` har direkte nedlastingslenker,
 versjoner, SHA-256 og Android-signatur. `SHA256SUMS` dekker utgivelsesfilene.
 Privat Hosting Manager følger serverversjonen, men publiseres ikke her.
 
-## Tariff, PRP og regnskap
+## Reise, tariff, PRP og regnskap
 
-Tariffarbeidet fra [delutgivelse 0.84.0](RELEASE_0.84.0.md) er beholdt.
+Reise og Utlegg fra 0.85-serien beholdes: kvitteringer før reiseregning, egne
+utlegg, attestering, statlige eller uttrykkelig valgte bedriftsdiettsatser,
+tilpasning av store kvitteringsbilder og kopiering av overnattingssted.
+Automatiske reisesatser er avgrenset til vanlige innenlandsreiser i Norge i
+2026 inntil 28 døgn. Andre land/år og særtilfeller krever separat behandling.
+Se [reiseveiledningen](TRAVEL_EXPENSES.md).
+
 **Flyoverenskomsten og Luftfartsoverenskomsten (HK) er fortsatt ufullstendige.**
 Kontroller kilder, personkrets, lokale valg og gjenstående dekning før bruk.
 En kontrollert enkeltregel gjør ikke hele avtalen fullstendig. Salsy og PRP
-kan fortsatt brukes uten tariffavtale.
-
-Se [tariffmaler](TARIFFMALER.md), [luftfartsstatus](AIRLINE_TARIFF_REVIEW.md),
+kan fortsatt brukes uten tariffavtale. Se [tariffmaler](TARIFFMALER.md),
+[luftfartsstatus](AIRLINE_TARIFF_REVIEW.md),
 [beregningsstatus](TARIFF_CALCULATIONS_STATUS.md) og [PRP-veiledning](SALSY_PRP.md).
 Genererte planer kan ha udekket behov og krever gjennomgang. Regnskap er
 fortsatt i kontrollmodus; komplett årsregnskap, skattemelding og direkte
-myndighetsinnsending er ikke implementert.
+myndighetsinnsending er ikke implementert. Betalinger og myndighetsinnsending
+skjer fortsatt manuelt.
 
 ## Salsy dependency fix
 
@@ -117,33 +107,22 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.85.3 adds automatic resizing/conversion of large receipt photos
-before upload, keeps PDF bytes unchanged (existing 5 MiB limit), and copies
-accommodation type/name/address to remaining overnight stays without changing
-per-day meals or night allowances. The receipt upload JSON limit is also fixed.
+Salsy 0.88.0 adds Resource management to native PC and PC web. Allocate dated,
+fixed-time tasks with competency requirements and priorities by dragging between
+employees. Outside a shift, cancel or explicitly extend the shift automatically
+or with manually entered times. Shift changes and assignment commit atomically
+using shared calendar checks. Employees see only their own tasks in native PC,
+PC web, mobile web and Android 0.34.0. A reusable task library will follow.
 
-The 0.85.2 desktop web account fix is retained: managers can grant
-Travel and Expenses to Employee accounts, existing grants survive editing,
-and new accounts get the same defaults as the native PC client and server.
-Explicit revocation is preserved. Financial responsibility remains opt-in.
-Save the account and sign in again after changing permissions.
+The Competencies module and PRP 0.2.27 share stable competency and employee IDs,
+with employee matrices, colours, plan markers and JSON exchange.
+Salsy Kasse 0.1.2 is an early Android/Linux test edition with an offline demo,
+tablet-friendly checkout, parked receipts, order retrieval and receipt PDFs.
+**It does not perform real payments or alter stock, invoices or accounting.**
+Terminal integration and production register requirements remain outstanding.
 
-Travel and Expenses was introduced in 0.85.1 across desktop, desktop web, mobile web
-and Android. Upload receipts independently, create ordinary expense claims or
-travel claims, and select an attestor with Financial responsibility. Self-approval
-is blocked. State meal allowance rates are the default; a payroll manager/admin
-can explicitly enable company amounts, duration thresholds and an effective date.
-Official tax limits remain separate. Submitted and approved claims stay frozen.
-Approved payroll reimbursements and taxable allowances use the shared server engine.
-
-Automatic allowances cover common domestic travel in Norway in 2026, up to
-28 days. Other countries/years use documented expenses without automatic allowances.
-Advances and special cases require separate handling; payments and a-melding
-submission remain manual. See [the travel guide](TRAVEL_EXPENSES.md).
-
-Back up before upgrading both server and desktop. Restart the server and reload
-web clients; update Salsy Android to 0.33.2. PRP 0.2.26 and Warehouse
-Android 0.11.2 are unchanged. Native desktop/browser account workflows and ARM64 runtime under QEMU
-were tested with synthetic data; no physical Android/iPhone/ARM device or actual
-OS boot was tested for this release. Both aviation agreements remain incomplete.
-Source code and private hosting installers are not published.
+Back up, upgrade server/PC, restart/reload web clients and update Android.
+Native/browser workflows, packaged public/private server flows and ARM64 under
+QEMU were tested with synthetic data. No physical Android/iPhone/ARM device or
+real systemd boot was tested for this release. Both aviation agreements remain
+incomplete. Source code and private hosting installers are not published.
