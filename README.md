@@ -2,7 +2,7 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.89.0](RELEASE_0.89.0.md) ·
+[Utgivelsesnotat 0.89.1](RELEASE_0.89.1.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md)
 
@@ -12,7 +12,20 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.89.0: PowerPoint-kurs og introduksjoner
+## Nytt i 0.89.1: større lysbilder og prøveforsøk
+
+Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
+zoom/panorering av kursbilder. Android 0.35.1 viser større kursbilder og
+har fullskjerm med knipezoom.
+
+Leder velger **Antall prøveforsøk** i kursbyggeren, med **2 som standard**.
+Etter siste feilslåtte forsøk vises **Du har ikke bestått, kontakt din leder**.
+Serveren sperrer egen omstart; leder med kurstilgang kan nullstille kurset og
+gi en ny runde. Tidligere forsøk og nullstillinger beholdes. Eldre kurs uten
+feltet får to forsøk, og tidligere fullførte forsøk teller med.
+Introduksjonskursene har fortsatt ingen prøve. Les [kursveiledningen](COURSES.md).
+
+## PowerPoint-kurs og introduksjoner fra 0.89.0
 
 Importer PPTX i **Kurs** i PC-klienten og PC-nettklienten. Presentasjonen blir
 et nytt utkast med ett bilde per lysbilde; legg til prøve etterpå om ønskelig.
@@ -59,11 +72,11 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.89.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.89.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.89.0 | Debian 13 amd64 |
+| Salsy Server | 0.89.1 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.89.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.89.1 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
-| Salsy Android | 0.35.0 | Android 7+, arm64 eller x86_64 |
+| Salsy Android | 0.35.1 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.2 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.2 | Android 7+, arm64 eller x86_64 |
@@ -121,12 +134,20 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.89.0 adds PPTX import in native PC and PC web. Slides become static
+Salsy 0.89.1 enlarges course slides in native PC, PC web and mobile web,
+with full-screen viewing and image zoom/pan. Android 0.35.1 adds larger
+course images and full-screen pinch zoom. Managers set the final-exam attempt
+limit, defaulting to **two attempts**. After all attempts fail, learners must
+contact their manager; the server blocks self-reset. Managers with course
+access may grant a new round while retaining attempt/reset history. Older
+course versions default to two and count earlier completed attempts.
+
+PPTX import from 0.89.0 remains available in native PC and PC web. Slides become static
 images in a new course draft, with an optional exam added afterwards. Conversion
 runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
 introductions are assigned automatically when courses are enabled: nine content
 slides for managers/admins and six for employees on mobile. Neither introduction
-has an exam. Android 0.35.0 and mobile web support course completion.
+has an exam. Android 0.35.1 and mobile web support course completion.
 See the [course guide](COURSES.md) for limits and dependencies.
 
 Resource management is available in native PC and PC web. Allocate dated,
@@ -134,7 +155,7 @@ fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 0.35.0. A reusable task library will follow.
+PC web, mobile web and Android 0.35.1. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.27 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.

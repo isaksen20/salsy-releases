@@ -1,4 +1,4 @@
-# Kurs i Salsy 0.89.0 / Android 0.35.0
+# Kurs i Salsy 0.89.1 / Android 0.35.1
 
 Oppdater serveren først, deretter PC- og Android-klientene. Nettappen følger serveren.
 Kurs er av som standard. Aktiver **Innstillinger → Tilleggsmoduler → Aktiver Kurs**.
@@ -7,6 +7,36 @@ tildele og lese alle ansattes status krever `manage_courses`; administrator med
 standardrettigheter får dette automatisk. Tilpassede lederkontoer må få rettigheten
 under Brukere og tilganger. Deaktivering skjuler modulen og sperrer kurs-API-et,
 men sletter ingen kurs, bilder, tildelinger eller resultater.
+
+## Større lysbilder og prøveforsøk (0.89.1)
+
+Kursvisningen bruker tilgjengelig bredde og høyde, med kompakt topp- og bunnlinje.
+En side med bare ett bilde får størst mulig plass uten å kuttes. Velg
+**Fullskjerm** for å skjule programrammen. I nettlesere som støtter det, brukes
+også nettleserens fullskjerm; ellers fylles nettleservinduet. Avslutt med knappen
+eller Esc. Forrige/Neste og minimumstiden virker som før.
+
+Trykk på bildet for **Forstørr lysbildet**: bruk **Zoom inn**, **Zoom ut** og
+**Tilpass** og rull/dra i bildet. Dette endrer ikke side eller progresjon.
+Android har bildevisning over hele skjermen med knipezoom og dra-funksjon.
+Telefonen kan vendes til liggende visning for bedre lesbarhet.
+
+Leder velger **Antall prøveforsøk**, 1–100, i kursbyggeren; standard er **2**.
+I PC-dialogen ligger feltet under **Legg til / endre prøve**. Grensen gjelder
+sluttprøven, ikke medfølgende introduksjoner uten prøve. Et fullført prøveforsøk
+bruker ett forsøk. Pauser og ny innlogging fortsetter samme forsøk.
+
+Etter første ikke-beståtte forsøk kan ansatte starte kurset på nytt dersom det
+finnes forsøk igjen. Når alle forsøk er brukt, vises **Du har ikke bestått,
+kontakt din leder** og egen nullstilling sperres på serveren, også fra andre
+klienter. Leder med `manage_courses` velger ansatt/bruker i kursstatus og trykker
+**Nullstill kurs**, bekrefter og gir en ny runde med kursversjonens antall forsøk.
+Tidligere forsøk og hvem som nullstilte, beholdes. Beståtte kurs nullstilles ikke.
+
+Allerede publiserte versjoner uten feltet bruker to forsøk som standard, og
+tidligere fullførte forsøk teller. Endret grense publiseres som en ny kursversjon;
+eksisterende tildelinger følger fortsatt sin opprinnelige versjon. Bedriften kan
+nullstille et ikke-bestått eldre kurs for å gi nye forsøk ved oppgraderingen.
 
 ## Medfølgende introduksjonskurs (0.89.0)
 
@@ -135,7 +165,7 @@ også lederens tildelingsstatus; kursbygging og tildeling gjøres på PC/nett.
 - Etter bestått prøve åpner **Se svar** en gjennomgang, én side per spørsmål,
   med avgitte svar og fasit. Fasiten sendes ikke til ansatte før bestått prøve.
 - **Avslutt kurs** går tilbake til kurslisten. Ved ikke bestått kan deltakeren
-  bruke **Reset kurs**; hele kurset starter på nytt og gammelt forsøk beholdes.
+  bruke **Reset kurs** så lenge det er forsøk igjen; hele kurset starter på nytt og gammelt forsøk beholdes.
 - Lederen ser ikke startet, startet, bestått eller ikke bestått i kurslisten.
   Nettappen viser også start-/sluttidspunkt. Progresjon lagres hos serveren og
   fortsetter ved ny innlogging eller på en annen klient.
@@ -185,3 +215,18 @@ vault/home directory and never falls back to an unisolated process. One import
 runs at a time, with bounded time/memory/output; originals and temporary PDF/profile
 files are removed. Output is capped at 1600 pixels, 1 MiB per slide and 24 MiB total.
 Import commits images and the draft together; failed jobs leave no partial course.
+
+## English: course display and attempt limits (0.89.1)
+
+Slides use the available viewport. Full screen hides application chrome and uses
+browser fullscreen when supported; otherwise it fills the browser viewport.
+Select an image to zoom and pan without changing course progression. Native PC
+and Android include enlarged image viewers; Android also supports pinch zoom.
+
+Courses default to two completed final-exam attempts. Managers can choose 1–100
+in the builder. After all attempts fail, the learner sees “You have not passed,
+contact your manager”. Server checks prevent self-reset across clients. A user
+with manage_courses can reset a failed course from the learner status list,
+granting a new round while retaining attempt and reset history. Existing
+versions missing the setting default to two and count previous completed attempts.
+Changes to a draft do not alter existing published-version assignments.
