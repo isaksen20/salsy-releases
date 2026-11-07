@@ -2,9 +2,9 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.88.0](RELEASE_0.88.0.md) ·
+[Utgivelsesnotat 0.89.0](RELEASE_0.89.0.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
-[Reise og Utlegg](TRAVEL_EXPENSES.md)
+[Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
 Dette repositoriet inneholder offentlig utgivelsesinformasjon og installasjonsfiler.
@@ -12,7 +12,21 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.88.0: Ressursstyring og Kompetanse
+## Nytt i 0.89.0: PowerPoint-kurs og introduksjoner
+
+Importer PPTX i **Kurs** i PC-klienten og PC-nettklienten. Presentasjonen blir
+et nytt utkast med ett bilde per lysbilde; legg til prøve etterpå om ønskelig.
+Skjulte lysbilder tas også med. Importen støtter inntil 20 MiB og 100 lysbilder.
+Animasjon, video og lyd blir ikke interaktive kurselementer. Konverteringen
+bruker LibreOffice/Poppler i en nettverksisolert Bubblewrap-sandkasse og krever
+nye systemavhengigheter som følger serverpakkens avhengighetsliste.
+
+Når Kurs aktiveres, tildeles illustrerte introduksjoner automatisk: ni
+innholdssider for leder/admin og seks for ansatte på mobil, på norsk og engelsk.
+**Introkursene har ingen prøve.** Også ledere uten ansattilknytning får eget
+kurs. Fullføring beholdes når modulen slås av/på. Les [kursveiledningen](COURSES.md).
+
+## Ressursstyring og Kompetanse
 
 Aktiver **Ressursstyring og Mine oppgaver** i Innstillinger → Tilleggsmoduler.
 Leder får en tidslinje med ansatte, vaktrammer og oppgaver med faste klokkeslett,
@@ -45,11 +59,11 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.88.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.88.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.88.0 | Debian 13 amd64 |
+| Salsy Server | 0.89.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.89.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.89.0 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
-| Salsy Android | 0.34.0 | Android 7+, arm64 eller x86_64 |
+| Salsy Android | 0.35.0 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.2 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.2 | Android 7+, arm64 eller x86_64 |
@@ -107,12 +121,20 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.88.0 adds Resource management to native PC and PC web. Allocate dated,
+Salsy 0.89.0 adds PPTX import in native PC and PC web. Slides become static
+images in a new course draft, with an optional exam added afterwards. Conversion
+runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
+introductions are assigned automatically when courses are enabled: nine content
+slides for managers/admins and six for employees on mobile. Neither introduction
+has an exam. Android 0.35.0 and mobile web support course completion.
+See the [course guide](COURSES.md) for limits and dependencies.
+
+Resource management is available in native PC and PC web. Allocate dated,
 fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 0.34.0. A reusable task library will follow.
+PC web, mobile web and Android 0.35.0. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.27 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.
@@ -124,5 +146,6 @@ Terminal integration and production register requirements remain outstanding.
 Back up, upgrade server/PC, restart/reload web clients and update Android.
 Native/browser workflows, packaged public/private server flows and ARM64 under
 QEMU were tested with synthetic data. No physical Android/iPhone/ARM device or
-real systemd boot was tested for this release. Both aviation agreements remain
+real systemd boot was tested for this release. Office conversion was tested on
+AMD64; the ARM64 Office converter has not been tested. Both aviation agreements remain
 incomplete. Source code and private hosting installers are not published.

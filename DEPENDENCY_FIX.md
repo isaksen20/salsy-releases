@@ -64,3 +64,9 @@ Salsy company data, ports, or proxy configuration. Debian package installation
 scripts may start system services. It does not upgrade older Debian releases.
 The same helper covers the common server dependencies of both public and
 private server editions.
+
+## PowerPoint-kurs fra server 0.89.0
+
+Hjelperen inkluderer også libreoffice-impress, poppler-utils, bubblewrap,
+util-linux, fonts-dejavu-core og fonts-liberation for isolert PowerPoint-import.
+Disse systempakkene installeres fra Debian med APT; de ligger ikke inne i DEB-filen.
