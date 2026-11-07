@@ -2,7 +2,7 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.89.1](RELEASE_0.89.1.md) ·
+[Utgivelsesnotat 0.90.0](RELEASE_0.90.0.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md)
 
@@ -12,7 +12,20 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.89.1: større lysbilder og prøveforsøk
+## Nytt i 0.90.0: kursfiler og fjerning av tildeling
+
+Leder kan velge **Fjern tildeling** fra kursstatus på PC og PC-nett. Tilgangen stoppes,
+mens tidligere forsøk og resultater beholdes i serverens historikk. Fjernede
+introduksjoner tildeles ikke automatisk igjen; ordinære kurs kan tildeles på nytt.
+
+**Eksporter kurs (.ksa)** inneholder siste lagrede utkast med lysbilder, bilder,
+bakgrunn, prøve/fasit, tidsgrenser, beståttgrense og antall forsøk. Ansatte og
+resultater følger ikke med. **Importer kurs (.ksa)** oppretter et nytt upublisert
+utkast som leder kontrollerer, publiserer og tildeler. Filen er ikke kryptert og
+inneholder fasit: del den bare med kursholdere. Maks 40 MiB og 24 MiB bilder.
+Les [kursveiledningen](COURSES.md).
+
+## Større lysbilder og prøveforsøk fra 0.89.1
 
 Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
 zoom/panorering av kursbilder. Android 0.35.1 viser større kursbilder og
@@ -72,9 +85,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.89.1 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.89.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.89.1 | Debian 13 amd64 |
+| Salsy Server | 0.90.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.90.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.90.0 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
 | Salsy Android | 0.35.1 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
@@ -134,7 +147,14 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.89.1 enlarges course slides in native PC, PC web and mobile web,
+Salsy 0.90.0 adds course assignment removal and `.ksa` course exchange in
+native PC and PC web. Removal blocks access while retaining historical attempts
+and results. Export contains the latest saved draft, images, exam/answer key
+and settings, without learner records. Import creates a new unpublished draft
+for review and manual publication/assignment. Files are not encrypted; share
+only with course administrators. Limits: 40 MiB per file, 24 MiB total images.
+
+Course display improvements from 0.89.1 remain available in native PC, PC web and mobile web,
 with full-screen viewing and image zoom/pan. Android 0.35.1 adds larger
 course images and full-screen pinch zoom. Managers set the final-exam attempt
 limit, defaulting to **two attempts**. After all attempts fail, learners must

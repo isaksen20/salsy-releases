@@ -1,4 +1,4 @@
-# Kurs i Salsy 0.89.1 / Android 0.35.1
+# Kurs i Salsy 0.90.0 / Android 0.35.1
 
 Oppdater serveren først, deretter PC- og Android-klientene. Nettappen følger serveren.
 Kurs er av som standard. Aktiver **Innstillinger → Tilleggsmoduler → Aktiver Kurs**.
@@ -7,6 +7,36 @@ tildele og lese alle ansattes status krever `manage_courses`; administrator med
 standardrettigheter får dette automatisk. Tilpassede lederkontoer må få rettigheten
 under Brukere og tilganger. Deaktivering skjuler modulen og sperrer kurs-API-et,
 men sletter ingen kurs, bilder, tildelinger eller resultater.
+
+## Eksport, import og fjerning av tildeling (0.90.0)
+
+I **Kursstatus per ansatt og bruker**, velg personen og kurset og trykk
+**Fjern tildeling**. Bekreft for å stoppe tilgangen. Tidligere forsøk og
+resultater beholdes i serverens historikk, men tildelingen skjules fra den
+aktive kurslisten. Også en fjernet introduksjon forblir fjernet ved neste
+innlogging og når modulen aktiveres igjen. Ordinære kurs kan tildeles på nytt
+som en ny tildeling med egen forsøkshistorikk.
+
+Velg **Eksporter valgt kurs (.ksa)** på PC, eller **Eksporter kurs (.ksa)**
+på kursets kort i PC-nett. Eksporten inneholder siste lagrede utkast, med
+lysbilder, bakgrunn, bilder, spørsmål, fasit, beståttgrense, minimumstider
+og antall forsøk. Lagre endringene i kursbyggeren før eksport. Tildelinger,
+ansatte og resultater følger ikke med. Filen inneholder fasiten og skal
+bare deles med kursholdere. KSA-filen er ikke kryptert.
+
+Velg **Importer kurs (.ksa)** og velg filen. Den åpnes som et nytt,
+upublisert utkast med nye kurs- og bilde-ID-er, også ved import til en annen
+bedrift eller avdeling. Kontroller, lagre, publiser og tildel på vanlig måte.
+Ingenting tildeles automatisk. En eksportert introduksjon blir et vanlig
+redigerbart kurs. PC bruker filvalg/lagring; nettleseren bruker opplasting og
+nedlasting til nettleserens valgte mappe. Begge krever `manage_courses` og
+aktivert kursmodul. Ansatte kan ikke eksportere eller importere fasit.
+
+`.ksa` er versjonert UTF-8 JSON (format `salsy-course`, versjon 1) med PNG-bilder
+innbakt som base64. Ingen kode kjøres og ingen eksterne adresser lastes.
+Grensen er 40 MiB per fil og 24 MiB bilder totalt, maks 1 MiB per PNG.
+Ukjente formater, ugyldige data eller manglende bilder avvises før lagring.
+Import er samlet og gjentatte nettverksforsøk oppretter ikke duplikater.
 
 ## Større lysbilder og prøveforsøk (0.89.1)
 
@@ -230,3 +260,20 @@ with manage_courses can reset a failed course from the learner status list,
 granting a new round while retaining attempt and reset history. Existing
 versions missing the setting default to two and count previous completed attempts.
 Changes to a draft do not alter existing published-version assignments.
+
+## English: course exchange and removal (0.90.0)
+
+Managers can remove an assignment from learner status. This immediately blocks
+further progression and media access through that assignment while retaining
+historical records. Removed introductions are not automatically recreated.
+A normal course can be assigned again as a new assignment.
+
+PC and PC web export/import `.ksa` files containing the latest saved course
+draft, images, exam and answer key, timings and attempt/pass limits. Export
+contains no learner assignments or results. Files are not encrypted: share
+only with course administrators. Import creates an independent unpublished
+draft in the current company/department. Review, publish and assign it manually.
+Native PC uses file dialogs; the browser uses upload/download. Both require
+course-management permission. UTF-8 JSON format version 1 embeds PNG images,
+with limits of 40 MiB per file, 24 MiB total images and 1 MiB per PNG. Invalid
+files are rejected atomically; new IDs prevent references to another company.
