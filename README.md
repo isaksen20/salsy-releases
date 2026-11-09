@@ -2,7 +2,7 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.90.0](RELEASE_0.90.0.md) ·
+[Utgivelsesnotat 0.91.1](RELEASE_0.91.1.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md)
 
@@ -12,7 +12,18 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.90.0: kursfiler og fjerning av tildeling
+## Nytt i 0.91.1: EHF og sikkerhetsrettelser
+
+PC og PC-nett har lokal EHF-kontroll, XML-eksport og Recommand-integrasjon.
+Sending krever bedriftens egen avtale og API-tilgang; testmiljø er standard.
+Kunder velges som Privatkunde eller Bedriftskunde. eFaktura er kun klargjort.
+Miljøbundet sendebekreftelse, aktive sendesperrer, atomisk lagring, tryggere
+statusoppdatering og feilbehandling inngår i denne utgivelsen. Produksjonssending
+har ikke vært tilgjengelig for testing. Oppdater både server og PC, restart
+serveren og last nettklienten på nytt. Java/Saxon installeres som avhengigheter.
+Les [EHF-veiledningen](EHF.md) og [sikkerhetsgjennomgangen](SECURITY_REVIEW_2026-11-09.md).
+
+## Kursfiler og fjerning av tildeling fra 0.90.0
 
 Leder kan velge **Fjern tildeling** fra kursstatus på PC og PC-nett. Tilgangen stoppes,
 mens tidligere forsøk og resultater beholdes i serverens historikk. Fjernede
@@ -85,9 +96,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.90.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.90.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.90.0 | Debian 13 amd64 |
+| Salsy Server | 0.91.1 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.91.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.91.1 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
 | Salsy Android | 0.35.1 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
@@ -147,7 +158,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.90.0 adds course assignment removal and `.ksa` course exchange in
+Salsy 0.91.1 adds course assignment removal and `.ksa` course exchange in
 native PC and PC web. Removal blocks access while retaining historical attempts
 and results. Export contains the latest saved draft, images, exam/answer key
 and settings, without learner records. Import creates a new unpublished draft

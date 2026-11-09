@@ -70,3 +70,15 @@ private server editions.
 Hjelperen inkluderer også libreoffice-impress, poppler-utils, bubblewrap,
 util-linux, fonts-dejavu-core og fonts-liberation for isolert PowerPoint-import.
 Disse systempakkene installeres fra Debian med APT; de ligger ikke inne i DEB-filen.
+
+## EHF fra server 0.91.0
+
+Hjelperen inkluderer `default-jre-headless` og `libsaxonhe-java` for lokale,
+offisielle EHF-regelkontroller. De samme pakkene er ordinære avhengigheter i
+serverens DEB. Eksport og sending stoppes hvis kontrollverktøyene mangler.
+Java/Saxon validerer lokalt; selve sendingen krever en egen aksesspunktavtale.
+
+Since server 0.91.0 the helper also installs `default-jre-headless` and
+`libsaxonhe-java` for official offline EHF validation. These are declared
+server DEB dependencies too. Validation must succeed before export or sending.
+Live delivery additionally requires an access-point agreement and credentials.
