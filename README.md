@@ -2,7 +2,7 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.91.1](RELEASE_0.91.1.md) ·
+[Utgivelsesnotat 0.92.0](RELEASE_0.92.0.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md)
 
@@ -12,7 +12,24 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.91.1: EHF og sikkerhetsrettelser
+## Nytt i 0.92.0: Fakturainnstillinger og bankavstemming
+
+PC og PC-nett har **Fakturainnstillinger** oppe til høyre. Generelt, EHF,
+eFaktura, fakturaavstemming og Open Banking / API samles i et eget vindu.
+Importer ISO 20022 camt.053/camt.054, Nets OCR giro eller CSV med
+forhåndsvisning og duplikatkontroll. Avstem innbetalinger, delbetalinger og
+restbeløp; opphev feil koblinger med historikk. KID kan aktiveres for nye
+fakturaer etter bekreftet bankavtale. Bedriften kan velge egen API-leverandør,
+HTTPS-adresse, autentisering og JSON-feltkoblinger.
+
+Kun lesing av bankdata; ingen betalinger sendes. Bankavtale og samtykke kreves.
+BankID/OAuth, tokenfornyelse, mTLS og alle leverandørspesifikke formater er ikke
+universelt støttet. Ekte bankintegrasjon er ikke produksjonstestet.
+Ingen automatisk bokføring i hovedboken. eFaktura-sending er fortsatt kun
+klargjort. Oppdater server og PC, restart serveren og last nettklienten på nytt.
+Les [veiledningen for fakturaavstemming](INVOICE_RECONCILIATION.md).
+
+## EHF og sikkerhetsrettelser fra 0.91.1
 
 PC og PC-nett har lokal EHF-kontroll, XML-eksport og Recommand-integrasjon.
 Sending krever bedriftens egen avtale og API-tilgang; testmiljø er standard.
@@ -96,9 +113,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.91.1 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.91.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.91.1 | Debian 13 amd64 |
+| Salsy Server | 0.92.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.92.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.92.0 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
 | Salsy Android | 0.35.1 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
@@ -158,7 +175,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.91.1 adds course assignment removal and `.ksa` course exchange in
+Salsy 0.92.0 adds course assignment removal and `.ksa` course exchange in
 native PC and PC web. Removal blocks access while retaining historical attempts
 and results. Export contains the latest saved draft, images, exam/answer key
 and settings, without learner records. Import creates a new unpublished draft
