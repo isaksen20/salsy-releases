@@ -67,3 +67,40 @@ and payslip uploads. HR and medical absence details are excluded from reports.
 Select one department before uploading; cross-department reads require explicit
 permission. Hours use the shared payroll engine, including scheduled future
 shifts, and do not confirm actual attendance. Shadow-accounting limitations remain.
+
+## Hvis innloggingen ser ut til å stoppe
+
+Rapportfeil eller manglende regnskapsførertilgang skal vises etter at kontoen er
+logget inn. Oversikten beholdes med Logg ut og Prøv igjen/Oppdater. Rapportfeil
+kan løses ved å velge en annen rapport eller periode; feil i timegrunnlaget må
+avklares av leder. Ingen lønnsregler omgås for å få fram en rapport.
+
+Kontroller at rollen er Regnskapsfører og at **Regnskapsfører – lese og eksportere økonomidata** er aktivert. Timer, lønn og PDF-opplasting krever også
+lønnstilgangen. Utløpt/deaktivert økt sender fortsatt brukeren til innlogging.
+
+Report or permission errors remain visible in the signed-in workspace, with
+retry and logout controls. Authentication/session expiry still requires login.
+The financial-data permission is required to open the accountant portal.
+
+Nye kontoer, eller endring fra en annen rolle til Regnskapsfører, bruker
+standardtilgangene for økonomidata og timer/lønn når det sendes et tomt valg.
+Leder/admin må selv ha rett til å tildele disse tilgangene; ellers avvises
+opprettingen. Eksisterende regnskapsførerkontoer uten tilgang endres ikke
+automatisk. Leder/admin må oppdatere disse, og brukeren må logge inn på nytt.
+Bevisst fjerning av tilganger fra en eksisterende konto respekteres fortsatt.
+
+Leder/admin med **Administrere brukere og tilganger** kan opprette, redigere og
+resette regnskapsførerkontoer uten **Økonomisk ansvar** eller egne regnskapsfører-
+og lønnsrettigheter. Økonomisk ansvar gjelder attestering av reiser og utlegg.
+Dette gir ikke lederen tilgang til økonomirapportene eller mulighet til å tildele
+større administratorrettigheter. Tilgang til flere avdelinger krever fortsatt
+at lederen selv har denne tilgangen. Avdelingsgrenser beholdes.
+
+Leaders/admins with **Manage users and permissions** can provision and manage
+accountant accounts without financial responsibility or personal finance/payroll
+report permissions. This delegation does not grant the leader report access,
+broader administrator privileges or additional department access.
+
+Timelønn (NOK) vises i Timer per ansatt og Lønnsgrunnlag, og følger med i CSV og Excel. Den viser ordinær sats ved valgt periodeslutt fra felles lønnsmotor, også når den ansatte ikke har timer. Historiske beløp bruker fortsatt satsen på arbeidsdatoen; tom sats betyr at lønn ikke er registrert. Månedslønnstabeller og tariffgrunnlag bruker den ordinære omregnede timesatsen. Feltet krever regnskapsførerens lønnstilgang.
+
+Hourly pay appears in employee hour summaries and payroll-basis reports, including CSV/XLSX. It is the ordinary hourly equivalent at the selected period end, not a rate to multiply by all historical hours. Missing rates remain blank. Payroll read permission is required.

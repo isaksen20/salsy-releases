@@ -7,24 +7,24 @@
     "server": {
       "version": "0.93.0",
       "file": "salsy-server_0.93.0-1_amd64.deb",
-      "size": 80858428,
-      "sha256": "1276d58abbbeb510404d47474e6a92d0c0d7eb59893ad02d19bb34c794a8b581",
+      "size": 80848288,
+      "sha256": "a104e3320cda64868f62e3d163dd81c70c5580ebb11f11aaa5957069e4d70d60",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.93.0/salsy-server_0.93.0-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
     "server_arm64": {
       "version": "0.93.0",
       "file": "salsy-server_0.93.0-1_arm64.deb",
-      "size": 73073032,
-      "sha256": "025874f1f787b24da562101a271fda6bbdb0f0556f2e066f68d9e7b95ba9cf51",
+      "size": 73086344,
+      "sha256": "6b3cf6fb8db726386b567c5a4d2a63da5a37ee60e2e776676bcffe888a217c08",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.93.0/salsy-server_0.93.0-1_arm64.deb",
       "platform": "debian-13-arm64"
     },
     "client": {
       "version": "0.93.0",
       "file": "salsy-client_0.93.0-1_amd64.deb",
-      "size": 16522376,
-      "sha256": "d52b99ca752c44352d8b11e29348f2dcc029c2ce9946e850f62fae2107280c63",
+      "size": 16527860,
+      "sha256": "1a3d139a92370c1f8650de9c6a827851229a85fc2b3defd8e4478aa8277e92ab",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.93.0/salsy-client_0.93.0-1_amd64.deb",
       "platform": "debian-13-amd64"
     },
@@ -76,8 +76,8 @@
   },
   "documentation": {
     "file": "Salsy-bruksanvisning.pdf",
-    "size": 686663,
-    "sha256": "6e29211df0f223f00a294f21cb53cce533c7e7f15a9b007a4db09b7de01f4cbb",
+    "size": 688442,
+    "sha256": "037633180f85608457fba17a727fcb2e9c43d628156148177f3ac6b2612f43a2",
     "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.93.0/Salsy-bruksanvisning.pdf"
   },
   "supplementary": {
@@ -131,8 +131,8 @@
     },
     "accountant_guide": {
       "file": "ACCOUNTANT.md",
-      "size": 4499,
-      "sha256": "9ab00c77f5f4bcae8492d44cf9ffa48863174d6b88fa31d076d115d724676cda",
+      "size": 7286,
+      "sha256": "1af1c1613cda4104a16bdbbbc053a5a1ca2cc176dc74d4edbda1e620057cfded",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.93.0/ACCOUNTANT.md"
     },
     "ehf_security_review": {
@@ -179,8 +179,8 @@
     },
     "release_notes": {
       "file": "RELEASE_0.93.0.md",
-      "size": 1867,
-      "sha256": "001d1dad1f530f00e4a641db14f4a894a37526b439c0a43d85aea6e1ce0dd2f8",
+      "size": 2518,
+      "sha256": "9e969e5f9fe1e40c441beb72ec402d749ca511e71fd287517024cbf4596725c8",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.93.0/RELEASE_0.93.0.md"
     }
   }

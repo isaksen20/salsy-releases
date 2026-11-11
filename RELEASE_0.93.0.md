@@ -1,12 +1,20 @@
 # Salsy 0.93.0 – Regnskapsfører
 
 - Egen regnskapsførerrolle uten ansattilknytning, med samme portal i PC og PC-nett.
+- Tomt tilgangsvalg ved oppretting/ny regnskapsførerrolle bruker standardtilgangene,
+  kontrollert mot oppretterens tildelingsrett. Eksisterende fratakelser respekteres.
 - Finansrapporter, lønnsgrunnlag, timer for én eller alle ansatte og lønnsslipper.
+- Timelønn ved periodeslutt i ansatt-/timeoversikt og lønnsgrunnlag, også i CSV/Excel.
 - Fra-/til-dato med gjeldende måned som standard; full eksport til CSV og Excel.
 - Regnskapsfører kan laste opp PDF-lønnsslipp på den enkelte ansatte. Samme
   filvalidering, avdelingskontroll, krypterte lagring og duplikatregler som leder.
 - Øvrige registreringer er lesbare/eksporterbare; rollen kan ikke endre lønn,
   timer, fakturaer eller bokføring. HR-/medisinske opplysninger er utelatt.
+- Feil ved henting av rapport/tilganger vises etter innlogging, med ny prøve og
+  utlogging tilgjengelig. Rapportfeil skal ikke kaste regnskapsføreren til innlogging.
+- Leder/admin med brukeradministrasjon kan opprette og administrere regnskapsførere
+  uten Økonomisk ansvar. Dette gir ikke lederen økonomiinnsyn, større
+  administratorrettigheter eller tilgang til flere avdelinger.
 - Tilgang på tvers av avdelinger krever eget valg. Felles API/beregningsmotor
   i offentlig server og privat Hosting Manager.
 

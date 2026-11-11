@@ -19,6 +19,11 @@ en egen enkel portal i PC og PC-nett, med finansrapporter, lønnsgrunnlag,
 lønnsslipper og timelister for én eller alle ansatte. Fra-/til-dato står på
 hele gjeldende måned som standard. CSV og Excel eksporterer hele utvalget.
 
+Tomt tilgangsvalg ved oppretting bruker regnskapsførerens standardrettigheter,
+kontrollert mot oppretterens tilgang. Eksisterende kontoer uten tilgang må
+leder/admin oppdatere. Rapport-/tilgangsfeil vises etter innlogging uten å
+sende brukeren tilbake til innloggingssiden.
+
 Regnskapsfører kan laste opp PDF-lønnsslipp på hver enkelt ansatt, med periode,
 utbetalingsdato, brutto, skatt og netto. PDF-en blir tilgjengelig for den ansatte
 under Lønn og lønnsslipper. Øvrige registreringer er kun lesbare/eksporterbare.
@@ -235,3 +240,5 @@ QEMU were tested with synthetic data. No physical Android/iPhone/ARM device or
 real systemd boot was tested for this release. Office conversion was tested on
 AMD64; the ARM64 Office converter has not been tested. Both aviation agreements remain
 incomplete. Source code and private hosting installers are not published.
+
+Leder/admin med brukeradministrasjon kan opprette regnskapsførerkontoer uten Økonomisk ansvar. Avdelingsgrenser og øvrige administratorrettigheter beholdes.
