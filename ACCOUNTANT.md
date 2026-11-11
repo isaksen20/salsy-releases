@@ -1,4 +1,4 @@
-# Regnskapsfører – PC og PC-nett (0.93.0)
+# Regnskapsfører – PC og PC-nett (0.93.1)
 
 Leder/admin velger **Regnskapsfører** som rolle under Ansettelse → Brukere og
 tilganger, eller i serverens Brukere-fane. Kontoen trenger brukernavn og passord,
