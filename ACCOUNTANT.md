@@ -1,4 +1,4 @@
-# Regnskapsfører – PC og PC-nett (0.93.1)
+# Regnskapsfører – PC og PC-nett (0.95.0)
 
 Leder/admin velger **Regnskapsfører** som rolle under Ansettelse → Brukere og
 tilganger, eller i serverens Brukere-fane. Kontoen trenger brukernavn og passord,
@@ -18,6 +18,8 @@ Etter innlogging åpnes en egen oversikt uten vanlig ansattmeny eller lederlinje
 3. Velg Alle ansatte eller én ansatt for relevante rapporter. Trykk Vis.
    Oversikten viser 200 rader per side. CSV/Excel eksporterer hele utvalget,
    med samme rapport-, dato-, avdelings- og ansattfilter.
+   For fakturaer kan **Alle fakturaer (uansett dato)** velges når fakturering
+   er aktivert i avdelingen.
 4. Dobbeltklikk en rad for detaljer og eventuell dokumentfil. Nettleseren laster
    ned dokumentet; PC-klienten åpner PDF/bilder i standardprogrammet.
 5. Velg Last opp lønnsslipp, ansatt, lønnsperiode og utbetalingsdato. Oppgi brutto,
@@ -28,15 +30,20 @@ Etter innlogging åpnes en egen oversikt uten vanlig ansattmeny eller lederlinje
 Tilgangen **Regnskapsfører – lese og eksportere økonomidata** gir finansrapporter.
 Tilgangen **Regnskapsfører – lese/eksportere timer og lønn, laste opp lønnsslipp** gir i tillegg timer,
 lønnsgrunnlag, lønnsslipper, hovedbok/saldobalanse og opplasting av lønnsslipper.
-Den inkluderer hovedbok fordi den kan inneholde lønnsføringer. Rollen kan ikke
-endre timer, lønnssatser, fakturaer, bankavstemming, bokføring eller brukere.
+Den inkluderer hovedbok fordi den kan inneholde lønnsføringer. Den separate
+rettigheten **Regnskapsfører – endre lønn, ferieoppgjør, skattekort, tillegg og
+kontrakter** gir tilgang til disse oppgavene og lønnstabeller. Nye kontoer har
+den som standard; eksisterende eksplisitte tilgangslister oppdateres av leder.
+Uten redigeringsrettigheten forblir økonomidata lesbare/eksporterbare.
+Regnskapsfører kan ikke endre timer, fakturaer, bankavstemming, bokføring eller
+brukere. Se [ferie- og lønnsveiledningen](VACATION_FINANCE.md).
 Personalia, HR-notater og medisinske fraværsopplysninger inngår ikke i rapportene.
 Dokumenter som regnskapsfører får lese kan selvsagt inneholde opplysningene
 virksomheten selv har lagt i disse dokumentene.
 
 Ved avdelinger opprettes kontoen i valgt avdeling. Tilgangen Velge og se alle
 avdelinger åpner avdelingsvalg og samlet rapportvisning, med avdelingsnavn på
-hver rad. **Velg én avdeling før opplasting av lønnsslipp.** En ansatt i en annen
+hver rad. **Velg én avdeling før opplasting av lønnsslipp eller endring av lønnsopplysninger.** En ansatt i en annen
 avdeling kan ikke velges. Kontoer opprettet før første avdeling beholder tilgang
 til Hovedavdeling. Uten avdelinger fungerer portalen for hele bedriften.
 
@@ -61,7 +68,10 @@ selection, including department filtering; the screen displays 200 rows per page
 
 Accountants can upload PDF payslips (up to 5 MiB) for individual employees with
 period, payment date, gross, tax and net amounts. Employees see these through the
-existing payslip feature. Other financial and payroll records remain read-only.
+existing payslip feature. A separate payroll editing permission enables pay
+rates, pay tables, tax cards, supplements, contracts and vacation settlements.
+New accounts receive it by default; existing explicit permissions are preserved.
+Other data remains read-only. See [the finance guide](VACATION_FINANCE.md).
 The payroll permission controls hours, payroll, payslips, ledger/trial balance
 and payslip uploads. HR and medical absence details are excluded from reports.
 Select one department before uploading; cross-department reads require explicit
@@ -83,7 +93,7 @@ retry and logout controls. Authentication/session expiry still requires login.
 The financial-data permission is required to open the accountant portal.
 
 Nye kontoer, eller endring fra en annen rolle til Regnskapsfører, bruker
-standardtilgangene for økonomidata og timer/lønn når det sendes et tomt valg.
+standardtilgangene for økonomidata, timer/lønn og avgrenset lønnsredigering når det sendes et tomt valg.
 Leder/admin må selv ha rett til å tildele disse tilgangene; ellers avvises
 opprettingen. Eksisterende regnskapsførerkontoer uten tilgang endres ikke
 automatisk. Leder/admin må oppdatere disse, og brukeren må logge inn på nytt.

@@ -2,9 +2,10 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.93.1](RELEASE_0.93.1.md) ·
+[Utgivelsesnotat 0.95.0](RELEASE_0.95.0.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
-[Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md)
+[Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
+[Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
 Dette repositoriet inneholder offentlig utgivelsesinformasjon og installasjonsfiler.
@@ -12,27 +13,34 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.93.1: Regnskapsfører
+## Nytt i 0.95.0: Ferieoppgjør og utvidet regnskapsførerportal
 
-Leder/admin kan opprette en regnskapsfører uten ansattilknytning. Rollen åpner
-en egen enkel portal i PC og PC-nett, med finansrapporter, lønnsgrunnlag,
-lønnsslipper og timelister for én eller alle ansatte. Fra-/til-dato står på
-hele gjeldende måned som standard. CSV og Excel eksporterer hele utvalget.
+Leder velger datert ferieoppsett: betalt ferie uten samlet trekk, ubetalt ferie
+med trekk for planlagte timer, eller samlet ferieoppgjør i valgt måned.
+Årsoppgjør forhåndsberegnes og bekreftes per ansatt. Feriepenger og ferietrekk
+er separate poster; ordinær lønn beholdes når ferien tas ut ved årsoppgjør.
+Kontroller avtalte ferieuker, ekstraferie, tidligere utbetalinger og lokale
+beregningsmåter. Utstedt lønn sperrer historiske endringer.
+[Veiledning for ferieoppgjør](VACATION_FINANCE.md).
 
-Tomt tilgangsvalg ved oppretting bruker regnskapsførerens standardrettigheter,
-kontrollert mot oppretterens tilgang. Eksisterende kontoer uten tilgang må
-leder/admin oppdatere. Rapport-/tilgangsfeil vises etter innlogging uten å
-sende brukeren tilbake til innloggingssiden.
+Regnskapsfører har en egen avgrenset redigeringsrettighet til lønnssatser,
+lønnstabeller, skattekort, tillegg, kontrakter og ferieoppgjør. Nye kontoer får
+rettigheten som standard. Eksisterende eksplisitte tilgangslister beholdes;
+leder kan aktivere rettigheten under **Brukere og tilganger**. Økonomisk ansvar
+for attestering er ikke et krav for å opprette en regnskapsførerkonto.
 
-Regnskapsfører kan laste opp PDF-lønnsslipp på hver enkelt ansatt, med periode,
-utbetalingsdato, brutto, skatt og netto. PDF-en blir tilgjengelig for den ansatte
-under Lønn og lønnsslipper. Øvrige registreringer er kun lesbare/eksporterbare.
-Tilgang på tvers av avdelinger må gis uttrykkelig; opplasting krever én valgt
-avdeling. HR-notater og medisinske fraværsopplysninger inngår ikke i rapportene.
+Fakturering må være aktivert før fakturaer vises. Regnskapsfører kan velge
+**Alle fakturaer (uansett dato)**, åpne dokumentene og eksportere listen til
+CSV eller Excel. HR-notater, medisinske opplysninger og avdelingsgrenser
+beskyttes fortsatt. Velg én avdeling før lønnsopplysninger endres.
+[Regnskapsførerveiledning](ACCOUNTANT.md).
 
-Oppdater både server og PC, restart serveren og last PC-nettklienten på nytt.
-Timer er lønnsgrunnlag fra planer/godkjente ekstratimer, ikke bekreftet oppmøte.
-Regnskapet er fortsatt skyggeregnskap. Les [regnskapsførerveiledningen](ACCOUNTANT.md).
+Denne utgivelsen inkluderer også personalverktøyene fra den tidligere lokale
+0.94.0-utgaven: Minioppgaver, stemplingslogg og begrunnet bruk av stemplingstid
+til lønn, samlet ferieoversikt, korrigering av timebank og OnCall per dag i
+skiftplanen. [Veiledning](STAFF_TOOLS.md) · [Endringsliste](RELEASE_0.94.0.md).
+Salsy Android 0.35.2 følger med. Oppdater server og PC, start serveren
+på nytt og last nettklienten på nytt. Regnskapet er fortsatt skyggeregnskap.
 
 ## Fakturainnstillinger og bankavstemming fra 0.92.0
 
@@ -78,7 +86,7 @@ Les [kursveiledningen](COURSES.md).
 ## Større lysbilder og prøveforsøk fra 0.89.1
 
 Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
-zoom/panorering av kursbilder. Android 0.35.1 viser større kursbilder og
+zoom/panorering av kursbilder. Android 0.35.2 viser større kursbilder og
 har fullskjerm med knipezoom.
 
 Leder velger **Antall prøveforsøk** i kursbyggeren, med **2 som standard**.
@@ -135,11 +143,11 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.93.1 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.93.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.93.1 | Debian 13 amd64 |
+| Salsy Server | 0.95.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.95.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.95.0 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
-| Salsy Android | 0.35.1 | Android 7+, arm64 eller x86_64 |
+| Salsy Android | 0.35.2 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.2 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.2 | Android 7+, arm64 eller x86_64 |
@@ -197,7 +205,20 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.93.1 adds course assignment removal and `.ksa` course exchange in
+Salsy 0.95.0 adds dated vacation payment policies and reviewed annual vacation
+settlements, with separate holiday pay and salary deductions. Accountants can
+be authorized to edit pay rates, pay tables, tax cards, supplements, contracts
+and vacation settlements without general HR access. Existing explicit permission
+lists are preserved. When invoicing is enabled, accountants can view and export
+all invoices, irrespective of date. Native PC and desktop web share the same
+server validation and calculations. [Guide](VACATION_FINANCE.md).
+
+The staff tools from the previously local 0.94.0 build are included: mini tasks,
+clock logs with reviewed payroll deductions, vacation overview, audited timebank
+corrections and daily OnCall selection. Android 0.35.2 is included.
+[Staff tools guide](STAFF_TOOLS.md).
+
+Earlier versions added course assignment removal and `.ksa` course exchange in
 native PC and PC web. Removal blocks access while retaining historical attempts
 and results. Export contains the latest saved draft, images, exam/answer key
 and settings, without learner records. Import creates a new unpublished draft
@@ -205,7 +226,7 @@ for review and manual publication/assignment. Files are not encrypted; share
 only with course administrators. Limits: 40 MiB per file, 24 MiB total images.
 
 Course display improvements from 0.89.1 remain available in native PC, PC web and mobile web,
-with full-screen viewing and image zoom/pan. Android 0.35.1 adds larger
+with full-screen viewing and image zoom/pan. Android 0.35.2 adds larger
 course images and full-screen pinch zoom. Managers set the final-exam attempt
 limit, defaulting to **two attempts**. After all attempts fail, learners must
 contact their manager; the server blocks self-reset. Managers with course
@@ -217,7 +238,7 @@ images in a new course draft, with an optional exam added afterwards. Conversion
 runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
 introductions are assigned automatically when courses are enabled: nine content
 slides for managers/admins and six for employees on mobile. Neither introduction
-has an exam. Android 0.35.1 and mobile web support course completion.
+has an exam. Android 0.35.2 and mobile web support course completion.
 See the [course guide](COURSES.md) for limits and dependencies.
 
 Resource management is available in native PC and PC web. Allocate dated,
@@ -225,7 +246,7 @@ fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 0.35.1. A reusable task library will follow.
+PC web, mobile web and Android 0.35.2. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.27 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.

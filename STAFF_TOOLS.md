@@ -1,0 +1,71 @@
+# Minioppgaver, ferieoversikt, timebank og stempling / Staff tools
+
+Fra / Since server and PC **0.94.0**, Salsy Android **0.35.2**.
+
+## Norsk
+
+Se kapittel 27 i `SALSY_BRUKSANVISNING.md` for full norsk brukerveiledning.
+Aktiver Minioppgaver i Innstillinger. Leder oppretter oppgaver med navn og
+valgfrie beskrivelser/tider. Tildel fra vakten i Kalender eller Vaktbok.
+Bibliotekendringer endrer ikke allerede tildelte kopier. Ansatte ser egne
+oppgaver i kalenderens dagsvindu, også på Android og mobilweb.
+
+Lederfanen Ferie samler ferieønsker med faste navn til venstre. Prikkene er
+grønne (godkjent), røde (avslått) eller blå (ubehandlet). Rediger timebank
+bruker ny saldo og obligatorisk begrunnelse; historikken beholdes.
+
+Stempling vises `10:00 - 16:00`, eller `10:00 - --:--` til utstempling.
+Registrerte stemplinger endrer ikke lønn automatisk. Leder forhåndsviser og
+begrunner bruk av stemplingstid. Bare manglende tid innenfor oppsatt vakt
+reduserer betalt tid; ekstra timer må godkjennes på vanlig måte. Original
+skiftplan og stemplinger beholdes. Aktiv beslutning må tilbakestilles med
+begrunnelse før kildedata/fravær endres. Utstedte lønnsslipper sperrer endring.
+Klokkeomstilling og ufullstendig/uklar stemplingsrekkefølge må avklares manuelt.
+Tidsavgrensede tariffkalendertillegg krever plassert ubetalt pause.
+
+OnCall kan velges per dag, også med fast arbeidstid og på fridager.
+Tomme standardtider gir vaktslutt til neste start (08–16 gir 16–08 neste dag);
+fridager bruker 00–24. Velg egne tider per dag eller felles standardtider.
+Oppsatt beredskap kan ikke overlappe vakter eller andre OnCall-perioder.
+Ved forlengelse til neste måned beholdes standardene, men dagene velges på nytt.
+
+Rettigheter: Minioppgaver, OnCall og stemplingsbeslutninger krever
+`manage_schedule`; ferieoversikt og timebankkorrigering krever `manage_leave`.
+Hver avdelings data og innstillinger holdes adskilt. Ansatte ser bare egne
+minioppgaver og egne stemplinger. Begge serverutgaver bruker samme motor.
+
+## English
+
+Enable **Mini tasks** in Settings. Managers create named tasks with optional
+descriptions and times, then assign them from a shift in Calendar or Roster.
+The desktop browser shows a task panel beside the shift; native PC opens a
+selection window. Existing assignments keep their original text when library
+templates change. Employees see their tasks below the shift in the calendar
+day view, including Android and mobile web.
+
+The manager **Vacation** tab shows employees vertically and their requests
+horizontally. Names remain fixed when scrolling. Green means approved, red
+rejected, blue pending. **Edit time bank** records a new balance and mandatory
+reason while preserving the existing ledger and pending reservations.
+
+Clock times appear as `10:00 - 16:00`, or `10:00 - --:--` until clock-out.
+They do not change pay automatically. A manager must preview **Use clock
+times**, supply a reason, and approve. Only missing time inside the scheduled
+shift reduces paid time. Extra work outside that shift follows the existing
+approval workflow and is never credited automatically. The original schedule
+and raw punches are preserved. Restore scheduled pay with a reason before
+editing those sources or adding conflicting leave. Issued payslips block
+changes. Daylight saving dates and incomplete/ambiguous punch sequences need
+manual review. Time-banded contractual calendar premiums require the unpaid
+break to be located.
+
+Select **OnCall** per date in the shift planner, including fixed hours and days
+off. Blank defaults mean shift end until the following start (08–16 becomes
+16–08 next day); a day off defaults to 00–24. Override the shared or individual
+times as needed. Standby cannot overlap ordinary shifts or another standby
+period. Plan renewal retains defaults but requires new daily selections.
+
+Managers need `manage_schedule` for tasks, standby and clock-pay decisions;
+`manage_leave` for vacation overview and balance corrections. Employees only
+see their own task assignments and punches. Department boundaries are enforced
+by the shared server in both public and private editions.
