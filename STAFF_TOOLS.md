@@ -69,3 +69,15 @@ Managers need `manage_schedule` for tasks, standby and clock-pay decisions;
 `manage_leave` for vacation overview and balance corrections. Employees only
 see their own task assignments and punches. Department boundaries are enforced
 by the shared server in both public and private editions.
+
+## Sortering av tildelte minioppgaver / Assigned mini-task order (0.95.1)
+
+I kalenderen vises tildelte minioppgaver etter starttid, fra tidligst til senest.
+Ved lik starttid brukes sluttid og deretter navn. Oppgaver uten starttid vises
+nederst. Dette gjelder også når leder legger til eller fjerner en oppgave mens
+kalendervinduet er åpent. Biblioteket beholder alfabetisk sortering.
+
+Assigned mini tasks appear chronologically by start time, then end time and
+name. Tasks without a start time appear last. The same order applies after
+live assignment changes in native PC, desktop web and mobile calendar views.
+The task library remains alphabetical.

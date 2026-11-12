@@ -2,7 +2,7 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.95.0](RELEASE_0.95.0.md) ·
+[Utgivelsesnotat 0.95.1](RELEASE_0.95.1.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md)
@@ -13,7 +13,15 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.95.0: Ferieoppgjør og utvidet regnskapsførerportal
+## Nytt i 0.95.1: Kronologiske minioppgaver
+
+Tildelte minioppgaver i kalenderen sorteres etter starttid, med oppgaver uten
+starttid nederst. Rekkefølgen oppdateres også når oppgaver tildeles i det åpne
+kalendervinduet. Samme retting gjelder PC, PC-nett og mobil gjennom den felles
+serveren. Biblioteket beholder alfabetisk rekkefølge. Oppdater server og PC,
+start serveren på nytt og last nettsiden på nytt.
+
+## Ferieoppgjør og utvidet regnskapsførerportal fra 0.95.0
 
 Leder velger datert ferieoppsett: betalt ferie uten samlet trekk, ubetalt ferie
 med trekk for planlagte timer, eller samlet ferieoppgjør i valgt måned.
@@ -143,9 +151,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.95.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.95.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.95.0 | Debian 13 amd64 |
+| Salsy Server | 0.95.1 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.95.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.95.1 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
 | Salsy Android | 0.35.2 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.2 | Android 7+, arm64 eller x86_64, uendret |
@@ -205,7 +213,11 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.95.0 adds dated vacation payment policies and reviewed annual vacation
+Salsy 0.95.1 sorts assigned mini tasks chronologically in calendars, including
+live assignment refresh, with tasks without a start time last. Native PC,
+desktop web and mobile use the same corrected server order.
+
+Salsy 0.95.0 introduced dated vacation payment policies and reviewed annual vacation
 settlements, with separate holiday pay and salary deductions. Accountants can
 be authorized to edit pay rates, pay tables, tax cards, supplements, contracts
 and vacation settlements without general HR access. Existing explicit permission
