@@ -2,7 +2,7 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.95.4](RELEASE_0.95.4.md) ·
+[Utgivelsesnotat 0.95.5](RELEASE_0.95.5.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md)
@@ -13,7 +13,22 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.95.4 / New in 0.95.4
+## Nytt i 0.95.5 / New in 0.95.5
+
+Mobilnettklienten på **/app/** og Salsy Android **0.35.4** viser **Dagens
+minioppgaver** over kalenderen. Navn, valgfrie tider og beskrivelse vises i
+kronologisk rekkefølge. Listen gjelder dagens norske dato, også når du blar
+til en annen måned, og skjules uten oppgaver eller når modulen er av.
+Androids kalenderoppdatering henter nye tildelinger fra serveren. PC og PC-nett
+beholder eksisterende visning inne i kalenderen. Oppdater server og Android,
+start serveren på nytt og last mobilnettklienten på nytt.
+[Utgivelsesnotater](RELEASE_0.95.5.md) · [Personalverktøy](STAFF_TOOLS.md).
+
+Mobile web and Android show today's assigned mini tasks above the calendar,
+chronologically, independently of the browsed month. Android refresh fetches
+current assignments. Existing desktop views and access controls are retained.
+
+## Bruksstatistikk fra 0.95.4
 
 Serveren rapporterer automatisk ett tall for aktive kontoer til demoserveren.
 Rapporteringen kan slås av i serverfanen **Bruksstatistikk**. Ingen navn,
@@ -72,7 +87,7 @@ Denne utgivelsen inkluderer også personalverktøyene fra den tidligere lokale
 0.94.0-utgaven: Minioppgaver, stemplingslogg og begrunnet bruk av stemplingstid
 til lønn, samlet ferieoversikt, korrigering av timebank og OnCall per dag i
 skiftplanen. [Veiledning](STAFF_TOOLS.md) · [Endringsliste](RELEASE_0.94.0.md).
-Salsy Android 0.35.3 følger med. Oppdater server og PC, start serveren
+Salsy Android 0.35.4 følger med. Oppdater server og PC, start serveren
 på nytt og last nettklienten på nytt. Regnskapet er fortsatt skyggeregnskap.
 
 ## Fakturainnstillinger og bankavstemming fra 0.92.0
@@ -119,7 +134,7 @@ Les [kursveiledningen](COURSES.md).
 ## Større lysbilder og prøveforsøk fra 0.89.1
 
 Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
-zoom/panorering av kursbilder. Android 0.35.3 viser større kursbilder og
+zoom/panorering av kursbilder. Android 0.35.4 viser større kursbilder og
 har fullskjerm med knipezoom.
 
 Leder velger **Antall prøveforsøk** i kursbyggeren, med **2 som standard**.
@@ -176,11 +191,11 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.95.4 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.95.4 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.95.4 | Debian 13 amd64 |
+| Salsy Server | 0.95.5 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.95.5 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.95.5 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
-| Salsy Android | 0.35.3 | Android 7+, arm64 eller x86_64 |
+| Salsy Android | 0.35.4 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.3 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.2 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.2 | Android 7+, arm64 eller x86_64 |
@@ -238,7 +253,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.95.4 sorts assigned mini tasks chronologically in calendars, including
+Salsy 0.95.5 sorts assigned mini tasks chronologically in calendars, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
 
@@ -252,7 +267,7 @@ server validation and calculations. [Guide](VACATION_FINANCE.md).
 
 The staff tools from the previously local 0.94.0 build are included: mini tasks,
 clock logs with reviewed payroll deductions, vacation overview, audited timebank
-corrections and daily OnCall selection. Android 0.35.3 is included.
+corrections and daily OnCall selection. Android 0.35.4 is included.
 [Staff tools guide](STAFF_TOOLS.md).
 
 Earlier versions added course assignment removal and `.ksa` course exchange in
@@ -263,7 +278,7 @@ for review and manual publication/assignment. Files are not encrypted; share
 only with course administrators. Limits: 40 MiB per file, 24 MiB total images.
 
 Course display improvements from 0.89.1 remain available in native PC, PC web and mobile web,
-with full-screen viewing and image zoom/pan. Android 0.35.3 adds larger
+with full-screen viewing and image zoom/pan. Android 0.35.4 adds larger
 course images and full-screen pinch zoom. Managers set the final-exam attempt
 limit, defaulting to **two attempts**. After all attempts fail, learners must
 contact their manager; the server blocks self-reset. Managers with course
@@ -275,7 +290,7 @@ images in a new course draft, with an optional exam added afterwards. Conversion
 runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
 introductions are assigned automatically when courses are enabled: nine content
 slides for managers/admins and six for employees on mobile. Neither introduction
-has an exam. Android 0.35.3 and mobile web support course completion.
+has an exam. Android 0.35.4 and mobile web support course completion.
 See the [course guide](COURSES.md) for limits and dependencies.
 
 Resource management is available in native PC and PC web. Allocate dated,
@@ -283,7 +298,7 @@ fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 0.35.3. A reusable task library will follow.
+PC web, mobile web and Android 0.35.4. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.27 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.

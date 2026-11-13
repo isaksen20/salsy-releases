@@ -95,3 +95,22 @@ The shared browser QR reader offers recovery after stalled or interrupted video.
 Manual punches reject nonexistent daylight-saving times and equal timestamps.
 Optional mobile sessions last at most nine hours. PC and desktop web sign out
 after thirty minutes without user interaction; polling does not extend idle time.
+
+
+## Dagens minioppgaver på mobil – 0.95.5 / Android 0.35.4
+
+Mobilnettklienten på `/app/` og Salsy Android viser **Dagens minioppgaver**
+over kalenderen når den valgte ansatte har tildelte minioppgaver i dag.
+Listen viser navn, eventuelle tider og beskrivelse, sortert etter starttid.
+Oppgaver uten starttid vises nederst. Datoen følger norsk tid (Europe/Oslo).
+Dagens liste beholdes også når du blar til en annen måned. Uten oppgaver eller
+når modulen er deaktivert, vises ingen ekstra liste. Oppgavene finnes fortsatt
+under vakten når en kalenderdag åpnes. PC og PC-nett beholder dagens visning
+inne i kalenderen. Ingen nye rettigheter eller endringer i tildeling innføres.
+
+English: Mobile web (`/app/`) and Salsy Android show **Today’s mini tasks**
+above the calendar, with names, optional times and descriptions. Tasks are
+chronological, with tasks without start times last. Today uses Norwegian time
+and remains visible while browsing another month. The list is omitted when
+empty or disabled. Shift/day details and the existing PC calendar are retained;
+all data comes from the same permission-checked calendar API.
