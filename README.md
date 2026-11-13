@@ -2,10 +2,10 @@
 
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.95.3](RELEASE_0.95.3.md) ·
+[Utgivelsesnotat 0.95.4](RELEASE_0.95.4.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
-[Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md)
+[Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
 Dette repositoriet inneholder offentlig utgivelsesinformasjon og installasjonsfiler.
@@ -13,7 +13,20 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.95.3 / New in 0.95.3
+## Nytt i 0.95.4 / New in 0.95.4
+
+Serveren rapporterer automatisk ett tall for aktive kontoer til demoserveren.
+Rapporteringen kan slås av i serverfanen **Bruksstatistikk**. Ingen navn,
+e-post, klientkode eller bedriftsdata sendes. Tallene er egenrapporterte
+kontoer, ikke unike personer; eldre rapporter utløper etter 30 dager.
+Mottak må aktiveres på demoserveren etter oppgradering. Les
+[veiledningen](USAGE_STATISTICS.md) og [utgivelsesnotatene](RELEASE_0.95.4.md).
+
+Servers report an active-account count by default with an opt-out. Latest
+self-reported counts expire after 30 days; no account/company details are sent.
+Collection must be enabled on the upgraded demo host.
+
+## Stempling og innloggingsfrister fra 0.95.3
 
 Stemplingskameraet kan startes på nytt etter avbrudd/hengende video. Mobilvalg
 **Forbli innlogget** varer maksimalt ni timer fra innlogging. PC og PC-nett logger
@@ -163,9 +176,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.95.3 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.95.3 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.95.3 | Debian 13 amd64 |
+| Salsy Server | 0.95.4 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.95.4 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.95.4 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.27 | Debian 13 amd64 |
 | Salsy Android | 0.35.3 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.3 | Android 7+, arm64 eller x86_64, uendret |
@@ -225,7 +238,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.95.3 sorts assigned mini tasks chronologically in calendars, including
+Salsy 0.95.4 sorts assigned mini tasks chronologically in calendars, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
 
