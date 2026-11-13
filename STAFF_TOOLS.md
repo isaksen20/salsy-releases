@@ -81,3 +81,17 @@ Assigned mini tasks appear chronologically by start time, then end time and
 name. Tasks without a start time appear last. The same order applies after
 live assignment changes in native PC, desktop web and mobile calendar views.
 The task library remains alphabetical.
+
+
+## Stemplingskamera og økter / Camera and sessions (0.95.3)
+
+QR-leseren kan startes på nytt ved hengende video eller etter bakgrunn. Ingen
+kamerabilder sendes til serveren. Manuell stempling avviser ikke-eksisterende
+tider ved sommertid og to stemplinger på samme tidspunkt. Mobilvalg **Forbli
+innlogget** gjelder maksimalt ni timer; PC og PC-nett logger ut etter tretti
+minutter uten brukerinteraksjon, uavhengig av bakgrunnshenting.
+
+The shared browser QR reader offers recovery after stalled or interrupted video.
+Manual punches reject nonexistent daylight-saving times and equal timestamps.
+Optional mobile sessions last at most nine hours. PC and desktop web sign out
+after thirty minutes without user interaction; polling does not extend idle time.
