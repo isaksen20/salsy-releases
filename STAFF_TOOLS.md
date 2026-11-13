@@ -114,3 +114,24 @@ chronological, with tasks without start times last. Today uses Norwegian time
 and remains visible while browsing another month. The list is omitted when
 empty or disabled. Shift/day details and the existing PC calendar are retained;
 all data comes from the same permission-checked calendar API.
+
+
+## Nye beskjeder på mobilkalenderen – 0.95.6 / Android 0.35.5
+
+Øverst i kalenderen vises **1 ny beskjed** eller **2 nye beskjeder** når den
+innloggede brukeren har uleste, tilgjengelige beskjeder eller varsler.
+Trykk på telleren for å åpne **Beskjeder og varsler**. Bruk den eksisterende
+haken for å markere et varsel som sett, eller krysset for å fjerne det. Å bare
+åpne innboksen eller få et systemvarsel levert endrer ikke lesestatus.
+
+Listen hentes ved åpning, omtrent hvert minutt mens kalenderen er synlig,
+og når appen eller fanen blir aktiv igjen. Ved null uleste skjules telleren.
+Telleren gjelder din konto selv når leder viser en annen ansatts kalender;
+rettighetsbegrensede og fjernede varsler telles ikke. Nettverksfeil stopper
+ikke kalenderen. Oppdateringen gjelder mobilnett på /app/ og Salsy Android.
+
+English: The mobile calendar's new-message count opens the existing inbox.
+Only your readable unseen messages/alerts count, independently of the selected
+calendar employee or device delivery cursor. Mark as seen or remove using the
+existing actions. Count refreshes on opening, roughly each visible minute, and
+when returning to the app/tab. At zero it is hidden; outages do not block Calendar.
