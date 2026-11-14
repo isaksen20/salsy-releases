@@ -131,8 +131,8 @@
     },
     "accountant_guide": {
       "file": "ACCOUNTANT.md",
-      "size": 8070,
-      "sha256": "c059eda75367500b3546fd506c9c29f346c0312e1cd7c29f6bf3799e3d22d2cf",
+      "size": 8550,
+      "sha256": "f8d7ceb698e22ffc6c935217f7937c2a07d6df628729225b894ea0492a6f6352",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.95.6/ACCOUNTANT.md"
     },
     "vacation_finance_guide": {
@@ -212,6 +212,12 @@
       "size": 1985,
       "sha256": "f8907d6a74bc98fae537e816a3ad8558cac710688907d6631cab053a3360b60c",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.95.6/RELEASE_0.95.6.md"
+    },
+    "accountant_manual": {
+      "file": "Salsy-regnskapsforer-bruksanvisning.pdf",
+      "size": 406726,
+      "sha256": "dbf830b8fd8ed5e7ba418eaf23099d6e6159e93a6f9d0651dde2031b5c8f79df",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.95.6/Salsy-regnskapsforer-bruksanvisning.pdf"
     }
   }
 }

@@ -1,5 +1,8 @@
 # Regnskapsfører – PC og PC-nett (0.95.0)
 
+[Egen PDF-bruksanvisning for regnskapsfører](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf)
+beskriver funksjonene i regnskapsførersiden for både PC-programmet og nettversjonen.
+
 Leder/admin velger **Regnskapsfører** som rolle under Ansettelse → Brukere og
 tilganger, eller i serverens Brukere-fane. Kontoen trenger brukernavn og passord,
 uten ansattilknytning eller personalia. Serveropprettede kontoer bruker samme
@@ -59,6 +62,9 @@ og bankavstemming bokfører ikke automatisk i hovedboken. Eksportene er
 rapportuttrekk, ikke en ny lovpålagt innsendingskanal.
 
 ## English
+
+A dedicated [Norwegian accountant PDF manual](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf)
+covers the accountant workspace in both the PC program and desktop web client.
 
 Create an Accountant account without an employee link. Connect using the normal
 PC connection profile or `/app/salsy/` and the existing company client code.
