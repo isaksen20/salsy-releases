@@ -356,3 +356,7 @@ ansattes kompetansetildelinger. Kompetansevinduet i Linux- og nettutgaven har n�
 Eksporter kompetanse / Importer kompetanse for samme JSON-format som Salsy.
 Den frittstående appen bruker ingen server for denne utvekslingen. Se
 [Kompetanse](COMPETENCIES.md) for format, additiv import og ansatt-ID-er.
+
+## Brukerstøtte fra 0.2.28
+
+Brukerstøtte i verktøylinjen viser support@salsy.eu og en klikkbar https://salsy.eu/. Linux bruker standardnettleseren; PRP-nett åpner en ny fane. / The Support toolbar button shows the support email and official website, opening the native browser or a new browser tab.

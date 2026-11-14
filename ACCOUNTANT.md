@@ -1,4 +1,4 @@
-# Regnskapsfører – PC og PC-nett (0.95.0)
+# Regnskapsfører – PC og PC-nett (0.95.7)
 
 [Egen PDF-bruksanvisning for regnskapsfører](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf)
 beskriver funksjonene i regnskapsførersiden for både PC-programmet og nettversjonen.

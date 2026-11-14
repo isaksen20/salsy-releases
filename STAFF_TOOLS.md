@@ -1,5 +1,16 @@
 # Minioppgaver, ferieoversikt, timebank og stempling / Staff tools
 
+Brukerstøtte i Innstillinger har en klikkbar lenke til **https://salsy.eu/** under
+**support@salsy.eu** i PC-programmet, PC-nettklienten, mobilnettet, Warehouse og
+Android-appene, inkludert Kasse. Regnskapsførersiden har kontaktfelt nederst.
+PRP har en Brukerstøtte-knapp med samme kontaktinformasjon. Nettklientene åpner
+nettsiden i en ny fane; programmene bruker enhetens nettleser.
+
+Support in Settings includes a clickable **https://salsy.eu/** below
+**support@salsy.eu** across PC, web, Warehouse and Android, including Checkout.
+The accountant workspace has a contact panel at the bottom; PRP has a Support
+button. Web clients open a new tab; native apps use the device browser.
+
 Fra / Since server and PC **0.94.0**, Salsy Android **0.35.2**.
 
 ## Norsk

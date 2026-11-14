@@ -199,3 +199,7 @@ No real payments, stock changes or accounting entries are made. Receipts are
 permanent TEST snapshots. A terminal adapter interface is prepared, but a real
 provider, compliance work and the Norwegian product declaration are still needed
 before production use. This build cannot be switched into production mode.
+
+## Brukerstøtte fra 0.1.3
+
+Innstillinger har support@salsy.eu og en klikkbar https://salsy.eu/ under adressen på både Linux og Android. / Settings shows the support email and clickable official website on Linux and Android.
