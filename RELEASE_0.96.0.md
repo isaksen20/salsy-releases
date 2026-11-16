@@ -1,9 +1,18 @@
 # Salsy 0.96.0 – Serverstatus og IT ansvarlig
 
-Salsy får den separate Android-appen **Salsy Status 0.1.1** for overvåking og
+Salsy får den separate Android-appen **Salsy Status 0.1.2** for overvåking og
 administrasjon av én eller flere servere. PC og PC-nettklienten får en
 **Status**-side med feilsøking og søkbar endringslogg. Statusrettigheten kan også
 gis til ledere. [Veiledning](SERVER_STATUS.md).
+
+## Appoppdatering 16.11.2026 – Salsy Status 0.1.2
+
+Serverkortene viser nå statusen også med farget omriss: grønt ved normal status,
+gult ved treg kontakt eller behov for oppfølging, rødt når serveren ikke kan nås,
+er stoppet, låst eller mangler. Rød ramme er 4 dp, mot 2 dp for grønn og gul,
+slik at feil synes bedre ved rask rulling. Ikoner og statustekst beholdes.
+Bruksanvisningen og nedlastingsoversikten er oppdatert. Installer den nye
+signerte Status-APK-en over 0.1.1; server og PC bruker fortsatt 0.96.0.
 
 ## Salsy Status på Android
 
@@ -59,7 +68,7 @@ følger serverversjonen, men publiseres ikke.
 
 Ta sikkerhetskopi. Installer server/PC **0.96.0** over eksisterende pakke,
 start serveren på nytt og last nettklientene på nytt. Installer den signerte
-**salsy-status-0.1.1.apk** på Android 8 eller nyere. Opprett eller tildel de
+**salsy-status-0.1.2.apk** på Android 8 eller nyere. Opprett eller tildel de
 nødvendige statusrettighetene før innlogging. Serveren må være oppdatert først.
 Oppdatert generell bruksanvisning og regnskapsførerveiledning følger med.
 
@@ -69,7 +78,7 @@ versjonene allerede brukes. Kasse er fortsatt en testutgave uten reelle betaling
 
 API-/tilgangsgrenser, serveropplåsing, PC-/nettvisninger, private serverflyter
 og pakkede AMD64-/ARM64-servere er kontrollert med syntetiske data. ARM64 er
-kjørt i QEMU. Status-appens 11 automatiske tester og bygg/signaturkontroll har
+kjørt i QEMU. Status-appens 12 automatiske tester og bygg/signaturkontroll har
 bestått. Fysisk Android, faktisk varslingslevering, fysisk ARM og systemd-oppstart
 er ikke testet. Eksterne proxyer må overvåkes via sine offentlige adresser;
 samlerapporten viser den lokale API-tilstanden. Eksisterende begrensninger i
@@ -78,10 +87,12 @@ tariffdekning, regnskap, bankintegrasjon og Kasse gjelder fortsatt.
 ## English
 
 Salsy 0.96.0 adds a permission-controlled Status workspace to native PC and
-desktop web, and the separate Android 8+ app **Salsy Status 0.1.1**. Monitor
+desktop web, and the separate Android 8+ app **Salsy Status 0.1.2**. Monitor
 standalone HTTPS servers using a username, password and client code. Local
 server names, green/amber/red status icons, server detail pages, diagnostics,
 backup status, authorized password resets and session revocation are included.
+The 0.1.2 app update adds matching colored card outlines, with a thicker red
+outline for failed/stopped servers. Server and PC remain at 0.96.0.
 Back navigation returns to the previous screen; exiting home asks for confirmation.
 
 The server-only IT operator role has explicitly selected permissions and an

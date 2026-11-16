@@ -74,19 +74,19 @@
       "status": "test-only-no-real-payments"
     },
     "status_android": {
-      "version": "0.1.1",
-      "file": "salsy-status-0.1.1.apk",
+      "version": "0.1.2",
+      "file": "salsy-status-0.1.2.apk",
       "size": 611776,
-      "sha256": "e4dbf64f46a9ab8928509d909f333297b6212f697492c4631bd31ac23fc09d0a",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.96.0/salsy-status-0.1.1.apk",
+      "sha256": "07690f89af017715bd4578862323a56d0128ca11936ce3a9f50d3e9885e4ea1b",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.96.0/salsy-status-0.1.2.apk",
       "signer_sha256": "d88dfb630483f9eec6bbcea42baa9aff535f630bc26a77a652f67c6e62d0b22f",
       "platform": "android-26+-any"
     }
   },
   "documentation": {
     "file": "Salsy-bruksanvisning.pdf",
-    "size": 719822,
-    "sha256": "331cc4935e4e4a9bde103d2a57091ca36ee5ba99e2dd5be5d5dfb5b5137b3114",
+    "size": 720016,
+    "sha256": "6a20b3d272d44714d05ae72b8de83d5c20b5ede7a2ad16f500f33d454bbda402",
     "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.96.0/Salsy-bruksanvisning.pdf"
   },
   "supplementary": {
@@ -164,8 +164,8 @@
     },
     "server_status_guide": {
       "file": "SERVER_STATUS.md",
-      "size": 13059,
-      "sha256": "89f8fda0b1e04a90e0da5f57736ebae296d98f7faadd0d69f6cdfd0190f9089a",
+      "size": 13562,
+      "sha256": "290949332f79f6ff63547e7ad9ddc3ab6e29aac6716dfb020c58cbbdad1924e2",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.96.0/SERVER_STATUS.md"
     },
     "staff_tools_guide": {
@@ -230,8 +230,8 @@
     },
     "release_notes": {
       "file": "RELEASE_0.96.0.md",
-      "size": 5882,
-      "sha256": "7bf220248a44aaee41418679accf7f954a00c179e69c1b49fc951ddbababcfff",
+      "size": 6553,
+      "sha256": "0f85195420386253e90b36be138d11ebe8dcca04d72eb6b092920218c06652b7",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v0.96.0/RELEASE_0.96.0.md"
     }
   }

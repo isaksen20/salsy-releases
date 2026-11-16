@@ -28,6 +28,12 @@ trykke på serverkortet. **Endre servernavn** gir hvert kort et eget lokalt navn
 bedriftsnavn, domene og andre brukeres navnevalg endres ikke. Navnene beholdes
 ved statusoppdateringer og ny innlogging på samme adresse.
 
+Fra **Salsy Status 0.1.2** viser også omrisset rundt serverkortet statusfargen.
+Grønn og gul ramme er 2 dp; rød ramme er 4 dp for å skille seg tydeligere ut
+ved rask rulling i lange serverlister. Ikonet og statusteksten vises fortsatt.
+Ukjent status har en nøytral grå ramme. Rammen oppdateres sammen med kortets
+øvrige statusinformasjon.
+
 - **Grønt:** normal kontakt på første forsøk, under tre sekunder, og normal
   rapportert serverstatus.
 - **Gult:** kontakt bruker minst tre sekunder eller lykkes først etter flere
@@ -192,6 +198,8 @@ tilkobling i appen.
 
 Salsy Status is a separate Android 8+ application. Add an HTTPS server origin
 or `/status` URL and authenticate with username, password and client code.
+Status 0.1.2 adds matching green/amber/red card outlines; red outlines are twice
+as thick to make failed or stopped servers easier to spot while scrolling.
 Background polling is scheduled approximately every 15 minutes by Android;
 battery management and force-stop can delay or prevent checks. Administrative
 actions require a normal authenticated session. Persistent background tokens

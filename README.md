@@ -17,12 +17,14 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 
 ## Nytt i 0.96.0 / New in 0.96.0
 
-Den nye **Salsy Status 0.1.1** for Android viser servere med egne navn,
+Den nye **Salsy Status 0.1.2** for Android viser servere med egne navn,
 statusikoner og siste kontroll. Trykk på en server for sikkerhetskopi,
 feilsøking, brukeradministrasjon og avslutting av økter innenfor dine tilganger.
+Fra Status 0.1.2 har serverkortene også grønt, gult eller rødt omriss som følger
+statusen. Rød ramme er dobbelt så tykk for å være lett å oppdage ved rask rulling.
 Vanlige selvstendige servere legges inn direkte med HTTPS-adresse, brukernavn,
 passord og klientkode. Tilbakeknappen går ett steg tilbake og spør før avslutting.
-[Last ned Salsy Status (APK)](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-status-0.1.1.apk).
+[Last ned Salsy Status (APK)](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-status-0.1.2.apk).
 
 **IT ansvarlig** opprettes på selve serveren med uttrykkelig valgte rettigheter
 og valgfri ansattilknytning. Med særskilt tilgang kan IT bruke eget passord for
@@ -264,7 +266,7 @@ Les [testveiledningen](SALSY_KASSE.md).
 | Salsy Warehouse Android | 0.11.4 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.3 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.3 | Android 7+, arm64 eller x86_64 |
-| Salsy Status | 0.1.1 | Android 8+, uten særskilt CPU-krav |
+| Salsy Status | 0.1.2 | Android 8+, uten særskilt CPU-krav |
 
 Ta sikkerhetskopi før oppgradering. Installer ny server- og PC-DEB over eksisterende
 pakke med `sudo apt install ./FILNAVN.deb`, start serveren på nytt og last
