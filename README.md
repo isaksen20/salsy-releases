@@ -3,11 +3,11 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.96.1](RELEASE_0.96.1.md) ·
+[Utgivelsesnotat 0.96.2](RELEASE_0.96.2.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
-[Serverstatus og IT ansvarlig](SERVER_STATUS.md) · [Lys og mørk modus](APPEARANCE.md)
+[Serverstatus og IT ansvarlig](SERVER_STATUS.md) · [Lys og mørk modus](APPEARANCE.md) · [Passnøkler](PASSKEYS.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
 Dette repositoriet inneholder offentlig utgivelsesinformasjon og installasjonsfiler.
@@ -15,35 +15,35 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.96.1 / New in 0.96.1
+## Nytt i 0.96.2 / New in 0.96.2
 
-**Android-rettelse 0.35.8:** Kalender åpnes igjen etter feilen
-`ModuleNotFoundError: No module named 'salsy_prp'`. Installer den nye Android-APK-en
-over tidligere utgave. Server og PC bruker fortsatt 0.96.1.
+**Passnøkler** lar brukeren logge inn med biometri eller skjermkode i mobilnett,
+PC-nett, regnskapsførersiden og Warehouse-nett. Aktiver etter vanlig innlogging
+under **Innstillinger → Passnøkler**, eller knappen **Passnøkler** for regnskapsfører.
+Bekreft nåværende passord og klientkode. Riktig konfigurert HTTPS-domene og port
+kreves; passordinnlogging beholdes. Nøkler kan fjernes, og passordbytte/reset
+ugyldiggjør tidligere nøkler. Tilganger, avdelingsgrenser og øktgrenser beholdes.
+[Veiledning / English](PASSKEYS.md).
 
-**Lys og mørk modus** kan nå velges under **Innstillinger → Utseende** i
-Salsy PC, Android, `/app/`, `/app/salsy/`, Warehouse Android og `/app/warehouse/`.
-Regnskapsmodulen følger temaet. Regnskapsfører har et eget **Tema**-valg øverst
-til høyre, sammen med de andre knappene. Valget huskes lokalt, og byttet beholder
-innloggingen. [Veiledning](APPEARANCE.md).
+Oppdater server og PC til **0.96.2**, start serveren på nytt og last
+nettklientene på nytt. Linux PC viser/fjerner nøkler og åpner nettleseren for
+nettpålogging; den overfører ikke nettleserens økt til PC-programmet. Android-
+appene er uendret. Oppdaterte PDF-bruksanvisninger følger med. Privat
+serveradministrasjon holdes lokal. Fysiske mobil- og ARM-enheter er ikke testet.
 
-**Salsy Status 0.1.3** får tannhjul for innstillinger, lys/mørk modus,
-knapp for test av notifikasjoner og en widget som viser serverne på Androids
-startskjerm. Widgeten viser sist kjente status, kan rulles og endres i størrelse;
-trykk på en server for å åpne den. Androids batterisparing og nettverk kan forsinke
-kontrollene. Fysisk Android, faktisk varslingslevering og fysisk widget er ikke
-testet. [Oppsett og forklaring](SERVER_STATUS.md).
-[Last ned Salsy Status (APK)](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-status-0.1.3.apk).
+WebAuthn passkeys are available across web clients, with password fallback,
+exact configured origins, own-key revocation and unchanged session/access rules.
+[Release notes](RELEASE_0.96.2.md).
 
-Oppdater server og PC til **0.96.1**, Salsy Android til **0.35.8** og
-Warehouse Android til **0.11.5**. Start serveren på nytt og last
-nettklientene på nytt. Oppdaterte PDF-bruksanvisninger følger med. Private
-serveradministrasjonspakker publiseres ikke.
+## Lys og mørk modus fra 0.96.1
 
-Persistent light/dark mode is available across PC, Android, mobile web, desktop
-web and Warehouse, including accounting and a top-right accountant selector.
-Status adds settings, a notification test and a resizable server widget.
-[Release notes / English](RELEASE_0.96.1.md).
+Velg **Innstillinger → Utseende** i PC, Android, mobilnett, PC-nett og Warehouse.
+Regnskapsfører har **Tema** øverst til høyre. [Veiledning](APPEARANCE.md).
+Salsy Status **0.1.3** har innstillinger, testvarsel og server-widget.
+[Oppsett](SERVER_STATUS.md).
+
+Salsy Android **0.35.8** retter kalenderfeilen med manglende `salsy_prp`-modul.
+[Last ned Android](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-android-0.35.8.apk).
 
 ## Nettsidelenke i Brukerstøtte fra 0.95.7
 
@@ -251,9 +251,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.96.1 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.96.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.96.1 | Debian 13 amd64 |
+| Salsy Server | 0.96.2 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.96.2 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.96.2 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
 | Salsy Android | 0.35.8 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.5 | Android 7+, arm64 eller x86_64, uendret |
@@ -314,7 +314,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.96.1 adds server monitoring and IT accounts as described above. Earlier
+Salsy 0.96.2 adds server monitoring and IT accounts as described above. Earlier
 mini-task improvements remain: assigned mini tasks are sorted chronologically, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
