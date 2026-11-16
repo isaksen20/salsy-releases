@@ -17,6 +17,10 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 
 ## Nytt i 0.96.1 / New in 0.96.1
 
+**Android-rettelse 0.35.8:** Kalender åpnes igjen etter feilen
+`ModuleNotFoundError: No module named 'salsy_prp'`. Installer den nye Android-APK-en
+over tidligere utgave. Server og PC bruker fortsatt 0.96.1.
+
 **Lys og mørk modus** kan nå velges under **Innstillinger → Utseende** i
 Salsy PC, Android, `/app/`, `/app/salsy/`, Warehouse Android og `/app/warehouse/`.
 Regnskapsmodulen følger temaet. Regnskapsfører har et eget **Tema**-valg øverst
@@ -31,7 +35,7 @@ kontrollene. Fysisk Android, faktisk varslingslevering og fysisk widget er ikke
 testet. [Oppsett og forklaring](SERVER_STATUS.md).
 [Last ned Salsy Status (APK)](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-status-0.1.3.apk).
 
-Oppdater server og PC til **0.96.1**, Salsy Android til **0.35.7** og
+Oppdater server og PC til **0.96.1**, Salsy Android til **0.35.8** og
 Warehouse Android til **0.11.5**. Start serveren på nytt og last
 nettklientene på nytt. Oppdaterte PDF-bruksanvisninger følger med. Private
 serveradministrasjonspakker publiseres ikke.
@@ -143,7 +147,7 @@ Denne utgivelsen inkluderer også personalverktøyene fra den tidligere lokale
 0.94.0-utgaven: Minioppgaver, stemplingslogg og begrunnet bruk av stemplingstid
 til lønn, samlet ferieoversikt, korrigering av timebank og OnCall per dag i
 skiftplanen. [Veiledning](STAFF_TOOLS.md) · [Endringsliste](RELEASE_0.94.0.md).
-Salsy Android 0.35.7 følger med. Oppdater server og PC, start serveren
+Salsy Android 0.35.8 følger med. Oppdater server og PC, start serveren
 på nytt og last nettklienten på nytt. Regnskapet er fortsatt skyggeregnskap.
 
 ## Fakturainnstillinger og bankavstemming fra 0.92.0
@@ -190,7 +194,7 @@ Les [kursveiledningen](COURSES.md).
 ## Større lysbilder og prøveforsøk fra 0.89.1
 
 Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
-zoom/panorering av kursbilder. Android 0.35.7 viser større kursbilder og
+zoom/panorering av kursbilder. Android 0.35.8 viser større kursbilder og
 har fullskjerm med knipezoom.
 
 Leder velger **Antall prøveforsøk** i kursbyggeren, med **2 som standard**.
@@ -251,7 +255,7 @@ Les [testveiledningen](SALSY_KASSE.md).
 | Salsy Server ARM64 | 0.96.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
 | Salsy PC-klient | 0.96.1 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
-| Salsy Android | 0.35.7 | Android 7+, arm64 eller x86_64 |
+| Salsy Android | 0.35.8 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.5 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.3 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.3 | Android 7+, arm64 eller x86_64 |
@@ -325,7 +329,7 @@ server validation and calculations. [Guide](VACATION_FINANCE.md).
 
 The staff tools from the previously local 0.94.0 build are included: mini tasks,
 clock logs with reviewed payroll deductions, vacation overview, audited timebank
-corrections and daily OnCall selection. Android 0.35.7 is included.
+corrections and daily OnCall selection. Android 0.35.8 is included.
 [Staff tools guide](STAFF_TOOLS.md).
 
 Earlier versions added course assignment removal and `.ksa` course exchange in
@@ -336,7 +340,7 @@ for review and manual publication/assignment. Files are not encrypted; share
 only with course administrators. Limits: 40 MiB per file, 24 MiB total images.
 
 Course display improvements from 0.89.1 remain available in native PC, PC web and mobile web,
-with full-screen viewing and image zoom/pan. Android 0.35.7 adds larger
+with full-screen viewing and image zoom/pan. Android 0.35.8 adds larger
 course images and full-screen pinch zoom. Managers set the final-exam attempt
 limit, defaulting to **two attempts**. After all attempts fail, learners must
 contact their manager; the server blocks self-reset. Managers with course
@@ -348,7 +352,7 @@ images in a new course draft, with an optional exam added afterwards. Conversion
 runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
 introductions are assigned automatically when courses are enabled: nine content
 slides for managers/admins and six for employees on mobile. Neither introduction
-has an exam. Android 0.35.7 and mobile web support course completion.
+has an exam. Android 0.35.8 and mobile web support course completion.
 See the [course guide](COURSES.md) for limits and dependencies.
 
 Resource management is available in native PC and PC web. Allocate dated,
@@ -356,7 +360,7 @@ fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 0.35.7. A reusable task library will follow.
+PC web, mobile web and Android 0.35.8. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.28 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.

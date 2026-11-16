@@ -1,5 +1,15 @@
 # Salsy 0.96.1 – Lys og mørk modus
 
+## Android-rettelse 16.11.2026 – Salsy Android 0.35.8
+
+Retter at Kalender ikke åpnet og viste `ModuleNotFoundError: No module named
+'salsy_prp'`. Den delte norske helligdagskalenderen manglet i Android-pakken.
+Den er nå inkludert, uten PRP-programmet eller planleggingsmotoren. Pakken
+kontrolleres ved å kjøre kalenderhjelperen direkte fra APK-ens Python-innhold,
+uten prosjektets kildekode tilgjengelig. Installer Android 0.35.8 over tidligere
+utgave; server og PC bruker fortsatt 0.96.1. Ingen serveroppdatering kreves for
+denne rettelsen.
+
 Velg **Innstillinger → Utseende → Lys modus / Mørk modus** i Salsy PC,
 Android, mobilnettklienten på `/app/`, PC-nettklienten på `/app/salsy/`,
 Warehouse Android og Warehouse-nettklienten på `/app/warehouse/`.
@@ -35,7 +45,7 @@ over eksisterende, signert med samme offisielle nøkkel.
 | Komponent | Versjon |
 | --- | --- |
 | Server amd64 / ARM64, PC | 0.96.1 |
-| Salsy Android | 0.35.7 |
+| Salsy Android | 0.35.8 |
 | Warehouse Android | 0.11.5 |
 | Salsy Status | 0.1.3 |
 | PRP | 0.2.28 (uendret) |
