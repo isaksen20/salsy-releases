@@ -3,10 +3,11 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.95.7](RELEASE_0.95.7.md) ·
+[Utgivelsesnotat 0.96.0](RELEASE_0.96.0.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
-[Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md)
+[Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
+[Serverstatus og IT ansvarlig](SERVER_STATUS.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
 Dette repositoriet inneholder offentlig utgivelsesinformasjon og installasjonsfiler.
@@ -14,7 +15,42 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.95.7 / New in 0.95.7
+## Nytt i 0.96.0 / New in 0.96.0
+
+Den nye **Salsy Status 0.1.1** for Android viser servere med egne navn,
+statusikoner og siste kontroll. Trykk på en server for sikkerhetskopi,
+feilsøking, brukeradministrasjon og avslutting av økter innenfor dine tilganger.
+Vanlige selvstendige servere legges inn direkte med HTTPS-adresse, brukernavn,
+passord og klientkode. Tilbakeknappen går ett steg tilbake og spør før avslutting.
+[Last ned Salsy Status (APK)](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-status-0.1.1.apk).
+
+**IT ansvarlig** opprettes på selve serveren med uttrykkelig valgte rettigheter
+og valgfri ansattilknytning. Med særskilt tilgang kan IT bruke eget passord for
+lokal serveroppstart. IT kan bare registrere arbeidstid og ferie for seg selv,
+men kan se andre ansattsider innenfor rettighetene. PC og PC-nett har samme
+**Status**-side med diagnostikk og søkbar endringslogg. Status kan også gis til
+ledere. Loggen viser trygge metadata, ikke passord, nøkler eller dokumentinnhold.
+
+Bakgrunnskontroll på Android planlegges omtrent hvert 15. minutt. Batterisparing,
+nettverk og tvangsstopp påvirker kontrollene. Bakgrunnsnøkkelen er en egen
+kryptert, tilbakekallbar lesetilgang; administrasjon krever vanlig gyldig økt.
+Gyldig HTTPS-sertifikat kreves. Fysisk Android og faktisk varslingslevering er
+ikke testet. Les [veiledningen](SERVER_STATUS.md) og
+[utgivelsesnotatene](RELEASE_0.96.0.md).
+
+Oppdater server og PC til **0.96.0**, start serveren på nytt og last nettklientene
+på nytt. Installer Status-appen på Android 8 eller nyere. De øvrige appversjonene
+er uendret fra forrige utgivelse. Generell bruksanvisning og regnskapsførerveiledning
+følger med. Private serveradministrasjonspakker publiseres ikke.
+
+Salsy adds a separate Android Status app, a server-only IT operator role with
+selected permissions, and matching native PC/desktop web Status workspaces.
+Monitor standalone servers, inspect diagnostics/backups, manage authorized users
+and sessions, and search safe audit metadata. Persistent monitoring is read-only;
+Android scheduling is approximate. Upgrade/restart the server before using the app.
+[English overview and setup](SERVER_STATUS.md).
+
+## Nettsidelenke i Brukerstøtte fra 0.95.7
 
 Brukerstøtte har nå en klikkbar lenke til **https://salsy.eu/** under
 **support@salsy.eu** på PC, Android, mobilnett og Warehouse. Dette gjelder også
@@ -220,14 +256,15 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.95.7 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.95.7 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.95.7 | Debian 13 amd64 |
+| Salsy Server | 0.96.0 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.96.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.96.0 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
 | Salsy Android | 0.35.6 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.4 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.3 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.3 | Android 7+, arm64 eller x86_64 |
+| Salsy Status | 0.1.1 | Android 8+, uten særskilt CPU-krav |
 
 Ta sikkerhetskopi før oppgradering. Installer ny server- og PC-DEB over eksisterende
 pakke med `sudo apt install ./FILNAVN.deb`, start serveren på nytt og last
@@ -282,7 +319,8 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.95.7 sorts assigned mini tasks chronologically in calendars, including
+Salsy 0.96.0 adds server monitoring and IT accounts as described above. Earlier
+mini-task improvements remain: assigned mini tasks are sorted chronologically, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
 
