@@ -55,6 +55,48 @@ Tilbakeknappen lukker det fremste undervinduet, går fra serversiden til
 oversikten og spør før appen lukkes fra oversikten. Bakgrunnskontrollene kan
 fortsette etter vanlig lukking, innenfor Androids begrensninger.
 
+## Appinnstillinger, tema og testvarsel
+
+Fra **Salsy Status 0.1.3** åpner tannhjulet øverst til høyre appens innstillinger.
+Dette er tilgjengelig også før du har lagt til en server. **Lys modus** og
+**Mørk modus** endrer appens sider, felter, dialoger og widgeten. Temavalget
+lagres lokalt. Tilbake tar deg til siden du kom fra, også etter et temabytte.
+
+Trykk **Test varsler** for å sende et lokalt testvarsel på samme varselkanal
+som de virkelige servervarslene. Testen krever ingen serverinnlogging og
+endrer ingen serverstatus. Android 13 eller nyere kan be om varseltillatelse.
+Hvis appvarsler eller kanalen **Salsy serverstatus** er slått av, vises en
+forklaring. **Åpne Androids varselinnstillinger** lar deg endre dette.
+
+Etter sending må du selv kontrollere telefonens varselfelt. Teksten
+«Testvarselet er sendt til Android» betyr at appen har levert varselet til
+Android; lyd, Ikke forstyrr og visning styres fortsatt av telefonens
+innstillinger. Testen kontrollerer ikke serverkontakt eller at fremtidige
+bakgrunnskontroller faktisk blir kjørt. Virkelige servervarsler beholdes.
+
+## Widget på Androids startskjerm
+
+1. Installer Salsy Status 0.1.3 eller nyere og legg til serverne i appen.
+2. Hold inne et tomt område på telefonens startskjerm. Velg **Widgeter**, finn
+   **Salsy Status** og dra widgeten til startskjermen. Fremgangsmåten kan variere
+   med telefonens startskjermprogram.
+3. Tilpass størrelse ved å holde på widgeten og dra kantene. Listen kan rulles
+   vertikalt når alle serverne ikke får plass.
+4. Hver server vises med sitt lokale navn, statusfarge, forklarende tekst og
+   tidspunkt for siste kontroll. Servere rapportert gjennom samme adresse
+   vises hver for seg. Trykk en server for å åpne dens side i appen.
+5. **Åpne / oppdater i appen** åpner oversikten og starter appens vanlige
+   statuskontroll når telefonen har nett. Tannhjulet åpner appinnstillingene.
+
+Widgeten bruker samme krypterte statuslager og samme statusregler som appen.
+Servernavn og siste kjente status blir synlige på startskjermen; passord,
+tilgangsnøkler, brukerlogger og administrative handlinger vises ikke der.
+Navneendringer, nye resultater, slettede tilkoblinger og temabytte oppdaterer
+widgeten. En egen widgetoppdatering omtrent hver halvtime vurderer også om
+lagret status er blitt gammel. Nettkontrollene følger appens vanlige
+bakgrunnsplan på omtrent 15 minutter, med Androids batteribegrensninger.
+Widgeten er derfor ingen kontinuerlig sanntidsmåling.
+
 ## Daglige handlinger i Status-appen
 
 1. Trykk på serverkortet i oversikten. Dette åpner serverens side; bare valg
@@ -198,8 +240,14 @@ tilkobling i appen.
 
 Salsy Status is a separate Android 8+ application. Add an HTTPS server origin
 or `/status` URL and authenticate with username, password and client code.
-Status 0.1.2 adds matching green/amber/red card outlines; red outlines are twice
-as thick to make failed or stopped servers easier to spot while scrolling.
+Status 0.1.3 adds a settings gear, persistent light/dark appearance and a local
+notification test using the real server-alert channel. Blocked app/channel
+notifications are explained. Check the notification shade yourself; this does
+not verify future background work or server connectivity. The home-screen
+widget lists all saved servers with local names, health text/colour and last
+check time. Tap a row to open that server. Its scrollable collection and theme
+follow the app, and it exposes no credentials or administrative actions.
+Matching green/amber/red card outlines remain; red outlines are twice as thick.
 Background polling is scheduled approximately every 15 minutes by Android;
 battery management and force-stop can delay or prevent checks. Administrative
 actions require a normal authenticated session. Persistent background tokens
@@ -219,4 +267,5 @@ the intersection of reporting-account and target-account permissions.
 
 Technical references: [Android JobInfo.Builder](https://developer.android.com/reference/android/app/job/JobInfo.Builder),
 [Android Keystore](https://developer.android.com/privacy-and-security/keystore),
-[notification permission](https://developer.android.com/develop/ui/views/notifications/notification-permission).
+[notification permission](https://developer.android.com/develop/ui/views/notifications/notification-permission),
+[collection widgets](https://developer.android.com/develop/ui/views/appwidgets/collections).

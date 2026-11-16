@@ -3,11 +3,11 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.96.0](RELEASE_0.96.0.md) ·
+[Utgivelsesnotat 0.96.1](RELEASE_0.96.1.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
-[Serverstatus og IT ansvarlig](SERVER_STATUS.md)
+[Serverstatus og IT ansvarlig](SERVER_STATUS.md) · [Lys og mørk modus](APPEARANCE.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
 Dette repositoriet inneholder offentlig utgivelsesinformasjon og installasjonsfiler.
@@ -15,42 +15,31 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.96.0 / New in 0.96.0
+## Nytt i 0.96.1 / New in 0.96.1
 
-Den nye **Salsy Status 0.1.2** for Android viser servere med egne navn,
-statusikoner og siste kontroll. Trykk på en server for sikkerhetskopi,
-feilsøking, brukeradministrasjon og avslutting av økter innenfor dine tilganger.
-Fra Status 0.1.2 har serverkortene også grønt, gult eller rødt omriss som følger
-statusen. Rød ramme er dobbelt så tykk for å være lett å oppdage ved rask rulling.
-Vanlige selvstendige servere legges inn direkte med HTTPS-adresse, brukernavn,
-passord og klientkode. Tilbakeknappen går ett steg tilbake og spør før avslutting.
-[Last ned Salsy Status (APK)](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-status-0.1.2.apk).
+**Lys og mørk modus** kan nå velges under **Innstillinger → Utseende** i
+Salsy PC, Android, `/app/`, `/app/salsy/`, Warehouse Android og `/app/warehouse/`.
+Regnskapsmodulen følger temaet. Regnskapsfører har et eget **Tema**-valg øverst
+til høyre, sammen med de andre knappene. Valget huskes lokalt, og byttet beholder
+innloggingen. [Veiledning](APPEARANCE.md).
 
-**IT ansvarlig** opprettes på selve serveren med uttrykkelig valgte rettigheter
-og valgfri ansattilknytning. Med særskilt tilgang kan IT bruke eget passord for
-lokal serveroppstart. IT kan bare registrere arbeidstid og ferie for seg selv,
-men kan se andre ansattsider innenfor rettighetene. PC og PC-nett har samme
-**Status**-side med diagnostikk og søkbar endringslogg. Status kan også gis til
-ledere. Loggen viser trygge metadata, ikke passord, nøkler eller dokumentinnhold.
+**Salsy Status 0.1.3** får tannhjul for innstillinger, lys/mørk modus,
+knapp for test av notifikasjoner og en widget som viser serverne på Androids
+startskjerm. Widgeten viser sist kjente status, kan rulles og endres i størrelse;
+trykk på en server for å åpne den. Androids batterisparing og nettverk kan forsinke
+kontrollene. Fysisk Android, faktisk varslingslevering og fysisk widget er ikke
+testet. [Oppsett og forklaring](SERVER_STATUS.md).
+[Last ned Salsy Status (APK)](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-status-0.1.3.apk).
 
-Bakgrunnskontroll på Android planlegges omtrent hvert 15. minutt. Batterisparing,
-nettverk og tvangsstopp påvirker kontrollene. Bakgrunnsnøkkelen er en egen
-kryptert, tilbakekallbar lesetilgang; administrasjon krever vanlig gyldig økt.
-Gyldig HTTPS-sertifikat kreves. Fysisk Android og faktisk varslingslevering er
-ikke testet. Les [veiledningen](SERVER_STATUS.md) og
-[utgivelsesnotatene](RELEASE_0.96.0.md).
+Oppdater server og PC til **0.96.1**, Salsy Android til **0.35.7** og
+Warehouse Android til **0.11.5**. Start serveren på nytt og last
+nettklientene på nytt. Oppdaterte PDF-bruksanvisninger følger med. Private
+serveradministrasjonspakker publiseres ikke.
 
-Oppdater server og PC til **0.96.0**, start serveren på nytt og last nettklientene
-på nytt. Installer Status-appen på Android 8 eller nyere. De øvrige appversjonene
-er uendret fra forrige utgivelse. Generell bruksanvisning og regnskapsførerveiledning
-følger med. Private serveradministrasjonspakker publiseres ikke.
-
-Salsy adds a separate Android Status app, a server-only IT operator role with
-selected permissions, and matching native PC/desktop web Status workspaces.
-Monitor standalone servers, inspect diagnostics/backups, manage authorized users
-and sessions, and search safe audit metadata. Persistent monitoring is read-only;
-Android scheduling is approximate. Upgrade/restart the server before using the app.
-[English overview and setup](SERVER_STATUS.md).
+Persistent light/dark mode is available across PC, Android, mobile web, desktop
+web and Warehouse, including accounting and a top-right accountant selector.
+Status adds settings, a notification test and a resizable server widget.
+[Release notes / English](RELEASE_0.96.1.md).
 
 ## Nettsidelenke i Brukerstøtte fra 0.95.7
 
@@ -154,7 +143,7 @@ Denne utgivelsen inkluderer også personalverktøyene fra den tidligere lokale
 0.94.0-utgaven: Minioppgaver, stemplingslogg og begrunnet bruk av stemplingstid
 til lønn, samlet ferieoversikt, korrigering av timebank og OnCall per dag i
 skiftplanen. [Veiledning](STAFF_TOOLS.md) · [Endringsliste](RELEASE_0.94.0.md).
-Salsy Android 0.35.6 følger med. Oppdater server og PC, start serveren
+Salsy Android 0.35.7 følger med. Oppdater server og PC, start serveren
 på nytt og last nettklienten på nytt. Regnskapet er fortsatt skyggeregnskap.
 
 ## Fakturainnstillinger og bankavstemming fra 0.92.0
@@ -201,7 +190,7 @@ Les [kursveiledningen](COURSES.md).
 ## Større lysbilder og prøveforsøk fra 0.89.1
 
 Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
-zoom/panorering av kursbilder. Android 0.35.6 viser større kursbilder og
+zoom/panorering av kursbilder. Android 0.35.7 viser større kursbilder og
 har fullskjerm med knipezoom.
 
 Leder velger **Antall prøveforsøk** i kursbyggeren, med **2 som standard**.
@@ -258,15 +247,15 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.96.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.96.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.96.0 | Debian 13 amd64 |
+| Salsy Server | 0.96.1 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.96.1 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.96.1 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
-| Salsy Android | 0.35.6 | Android 7+, arm64 eller x86_64 |
-| Salsy Warehouse Android | 0.11.4 | Android 7+, arm64 eller x86_64, uendret |
+| Salsy Android | 0.35.7 | Android 7+, arm64 eller x86_64 |
+| Salsy Warehouse Android | 0.11.5 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.3 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.3 | Android 7+, arm64 eller x86_64 |
-| Salsy Status | 0.1.2 | Android 8+, uten særskilt CPU-krav |
+| Salsy Status | 0.1.3 | Android 8+, uten særskilt CPU-krav |
 
 Ta sikkerhetskopi før oppgradering. Installer ny server- og PC-DEB over eksisterende
 pakke med `sudo apt install ./FILNAVN.deb`, start serveren på nytt og last
@@ -321,7 +310,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.96.0 adds server monitoring and IT accounts as described above. Earlier
+Salsy 0.96.1 adds server monitoring and IT accounts as described above. Earlier
 mini-task improvements remain: assigned mini tasks are sorted chronologically, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
@@ -336,7 +325,7 @@ server validation and calculations. [Guide](VACATION_FINANCE.md).
 
 The staff tools from the previously local 0.94.0 build are included: mini tasks,
 clock logs with reviewed payroll deductions, vacation overview, audited timebank
-corrections and daily OnCall selection. Android 0.35.6 is included.
+corrections and daily OnCall selection. Android 0.35.7 is included.
 [Staff tools guide](STAFF_TOOLS.md).
 
 Earlier versions added course assignment removal and `.ksa` course exchange in
@@ -347,7 +336,7 @@ for review and manual publication/assignment. Files are not encrypted; share
 only with course administrators. Limits: 40 MiB per file, 24 MiB total images.
 
 Course display improvements from 0.89.1 remain available in native PC, PC web and mobile web,
-with full-screen viewing and image zoom/pan. Android 0.35.6 adds larger
+with full-screen viewing and image zoom/pan. Android 0.35.7 adds larger
 course images and full-screen pinch zoom. Managers set the final-exam attempt
 limit, defaulting to **two attempts**. After all attempts fail, learners must
 contact their manager; the server blocks self-reset. Managers with course
@@ -359,7 +348,7 @@ images in a new course draft, with an optional exam added afterwards. Conversion
 runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
 introductions are assigned automatically when courses are enabled: nine content
 slides for managers/admins and six for employees on mobile. Neither introduction
-has an exam. Android 0.35.6 and mobile web support course completion.
+has an exam. Android 0.35.7 and mobile web support course completion.
 See the [course guide](COURSES.md) for limits and dependencies.
 
 Resource management is available in native PC and PC web. Allocate dated,
@@ -367,7 +356,7 @@ fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 0.35.6. A reusable task library will follow.
+PC web, mobile web and Android 0.35.7. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.28 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.
