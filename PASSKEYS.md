@@ -41,9 +41,19 @@ Dette styres av telefonen og brukerens egne innstillinger.
 
 ## Logge inn
 
-Skriv inn brukernavn og klientkode, eller bruk det som allerede er husket.
-Trykk **Logg inn med passnøkkel** og bekreft på telefonen. Passordfeltet kan stå
-tomt. Velg riktig konto hvis telefonen viser flere passnøkler for domenet.
+Fra 0.97.3 starter siden automatisk passnøkkelbekreftelse når innloggingsbildet
+åpnes, dersom denne nettleseren husker både brukernavn/klientkode og en lokalt
+aktivert eller tidligere brukt passnøkkel. Det samme skjer når økten utløper.
+Etter oppgradering fra eldre versjon bruker du **Logg inn med passnøkkel** én
+gang for å huske nøkkelen på enheten. Ingen private nøkler eller økttokener
+lagres i dette lokale hintet.
+
+Skriv ellers inn brukernavn og klientkode og trykk **Logg inn med passnøkkel**.
+Passordfeltet kan stå tomt. Nettleseren bestemmer om et ekstra trykk kreves;
+knappen er tilgjengelig hvis automatisk visning avvises. Avbrudd gir ingen
+ny automatisk forespørsel i samme innloggingsbilde. Du kan prøve knappen igjen
+eller bruke passord. Egen **Logg ut** åpner innlogging uten å be om passnøkkel
+igjen med en gang. Reset av nettappen glemmer også det lokale nøkkelhintet. Velg riktig konto hvis telefonen viser flere passnøkler for domenet.
 Samme nøkkel kan brukes på de støttede nettklientene på samme serveradresse.
 Kontoens vanlige tilganger og avdelingsgrenser gjelder fortsatt.
 
@@ -110,3 +120,38 @@ old keys. Own keys can be removed, and existing sessions managed separately.
 Mobile nine-hour and desktop 30-minute idle limits remain. Native Linux manages
 keys and opens the browser for web sign-in; it does not import a browser session.
 Physical mobile devices and cross-device synchronization have not been tested.
+
+## Android fra Salsy 0.36.3 / Warehouse 0.11.6
+
+Aktivert lokal biometri starter automatisk når appen åpner innlogging, og når
+en utløpt eller tilbakekalt økt krever ny innlogging. Android bekrefter hver
+ny innlogging; denne funksjonen forlenger ikke en eksisterende økt. Avbryter du,
+kan du bruke passord eller starte biometri manuelt. Egen Logg ut utløser ikke
+en ny forespørsel umiddelbart. Ingen lagring eller sending av fingeravtrykk
+eller ansiktsdata er lagt til. Nettverksfeil og manglende rettigheter behandles
+som feil, ikke som en grunn til automatisk gjeninnlogging. Endringer som ikke
+ble lagret, sendes ikke automatisk på nytt etter innlogging.
+
+Android-appene sjekker offisiell stabil GitHub-utgivelse ved oppstart og når
+Innstillinger åpnes. **Appoppdatering → Se etter oppdateringer** sjekker igjen
+(med kort begrensning mot gjentatte forespørsler). Når nyere APK for riktig app
+finnes, vises **Last ned oppdatering**. Knappen åpner den direkte offisielle
+APK-nedlastingen i nettleseren; brukeren bekrefter installasjonen i Android.
+Telefonen kan be om tillatelse til installasjon fra nettleseren. Sjekken sender
+ikke Salsy-brukernavn, klientkode, serveradresse eller bedriftsdata til GitHub.
+Ingen tilgjengelig nettforbindelse vises som mislykket sjekk, ikke som «oppdatert».
+Appens versjon sammenlignes med APK-versjonen, som er forskjellig fra serverens.
+
+Automatic login (English): after local passkey enrollment or first successful
+passkey sign-in, remembered account details allow one automatic prompt per
+login screen on mobile web, PC/accountant web and Warehouse web. An expired
+session starts a fresh authentication ceremony. Explicit sign-out and cancelled
+prompts do not loop. Some browsers require a tap; the passkey button and password
+remain available. Existing keys need one manual passkey login after upgrading.
+Native Android and Warehouse start enabled biometrics on launch/reauthentication.
+Session deadlines, forced password changes and server-side revocation remain enforced.
+Android Settings shows an official APK download button only for a newer stable
+app version. Downloads and installation remain user-confirmed.
+
+Platform references: [WebKit biometric WebAuthn UI](https://webkit.org/blog/11312/meet-face-id-and-touch-id-for-the-web/),
+[GitHub release API](https://docs.github.com/en/rest/releases/releases#get-the-latest-release).

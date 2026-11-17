@@ -3,7 +3,7 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.97.0](RELEASE_0.97.0.md) ·
+[Utgivelsesnotat 0.97.3](RELEASE_0.97.3.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
@@ -15,40 +15,48 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.97.0 / New in 0.97.0
+## Nytt i 0.97.3 / New in 0.97.3
 
-**Stoffkartotek** er en valgfri modul med søkbare produktfliser, 24 produktikoner
-og de ni standardiserte GHS-faremerkene. Aktiver i **Innstillinger → Tilleggsmoduler**.
-En tredelt veiviser lar bedriften laste opp PDF, registrere faremerking og legge
-inn påkrevd verneutstyr og produktets førstehjelps-/beredskapstiltak. Tiltakene
-vises over PDF-en. Originalfilen kan lastes ned uendret.
+Passnøkler starter automatisk når innlogging vises i mobilnett, PC-/regnskapsførernett
+og Warehouse, når enheten husker en lokalt aktivert eller tidligere brukt nøkkel,
+brukernavn og klientkode. Utløpt økt starter ny bekreftelse. Egen utlogging og avbrudd
+gir ingen løkke, og passord er fortsatt tilgjengelig. Eldre oppsett trenger én
+manuell passnøkkelinnlogging etter oppgradering. Nettleseren kan kreve et trykk.
+[Oppsett / English](PASSKEYS.md).
 
-Tilgjengelig i PC, PC-nett **/app/salsy/**, mobilnett **/app/** og Salsy Android
-**0.36.0**. Ansatte har lesetilgang; administrasjon krever en egen tilgang.
-Avdelinger og instanser har adskilte data. [Veiledning / English](STOFFKARTOTEK.md).
-Oppdater server og PC til **0.97.0** og Salsy Android til **0.36.0**,
-start serveren på nytt og last nettklientene på nytt.
+Salsy Android **0.36.3** og Warehouse **0.11.6** starter aktivert biometri
+ved åpning av innlogging og når økten må fornyes. **Innstillinger → Appoppdatering**
+viser **Last ned oppdatering** når en nyere offisiell APK finnes. Nedlastingen åpnes
+i nettleseren og installasjonen bekreftes av brukeren. Konto- eller bedriftsdata
+sendes ikke i oppdateringssjekken. Ni timers mobilgrense og PC-nettets 30 minutters
+inaktivitet gjelder fortsatt.
 
-Det separate kurset **HMS ved bruk av kjemikalier** har 30 lysbilder med
-illustrasjoner og skjermbilder fra Salsy. Importer via **Kurs → Importer PowerPoint**
-og velg selv hvem som får kurset. Prøven legges inn manuelt; tekstfilen har
-10 spørsmål med tre alternativer og ett riktig svar merket med `*` (fasit for leder).
+Denne utgivelsen inkluderer også lokale forbedringer siden 0.97.0:
 
-- [Last ned PowerPoint-kurset](https://github.com/isaksen20/salsy-releases/releases/latest/download/HMS-ved-bruk-av-kjemikalier.pptx)
-- [Last ned prøven med fasit](https://github.com/isaksen20/salsy-releases/releases/latest/download/Prove-HMS-ved-bruk-av-kjemikalier.txt)
-- [Veiledning for import og bruk](https://github.com/isaksen20/salsy-releases/releases/latest/download/HMS-kjemikalier-LES-MEG.txt)
+- Vaktbok med dag-, tredagers- og ukevisning i PC og PC-nett.
+- Utvidet deling av ordinære ansattilganger for Administrator/leder og IT med brukeradministrasjon. Regnskapsførertilgangene forblir avgrenset til regnskapsførerrollen.
+- **Stoffkartotek** med import/eksport i **.sdb**, original PDF og faremerking/tiltak/verneutstyr. Import krever gjennomgang, hopper over identiske duplikater og overskriver ikke eksisterende produkter. Avdelingsgrenser håndheves. **48 produktikoner**.
 
-The optional chemical register is available across PC, desktop/mobile web and
-Salsy Android. Search products, upload safety data sheets with a three-step wizard,
-record hazard labels and required PPE, and display entered precautions above the
-PDF. Staff viewing and delegated editing remain separate. An illustrated 30-slide
-PowerPoint course and a separate ten-question answer key are provided for manual
-import and assignment. [Release notes](RELEASE_0.97.0.md).
+Oppdater server og PC til **0.97.3**, start serveren på nytt og last nettklientene
+på nytt. [Utgivelsesnotat / release notes](RELEASE_0.97.3.md).
 
-Physical Android/iPhone devices have not been tested. ARM64 was checked with
-QEMU. Private server administration is built and tested locally and is excluded
-from public downloads. Existing tariff coverage remains incomplete and Checkout
-remains test-only, without real payments.
+Automatic passkey prompts are available on remembered devices across mobile,
+desktop/accountant and Warehouse web. Native Android biometrics start at login
+and reauthentication. Explicit sign-out, cancellation and password fallback remain
+available. Android Settings checks official app releases and offers direct APK
+downloads. This release also includes roster day/week views, expanded delegated
+staff permissions, and SDB chemical register import/export with 48 icons.
+
+Physical Android biometrics and Safari/iPhone have not been tested. ARM64 is
+checked under QEMU. Private server administration is built locally and excluded
+from public downloads. User-provided product PDFs/SDB files are not published.
+Existing tariff coverage remains incomplete and Checkout remains test-only.
+
+The separate illustrated chemical HMS course is available for manual import:
+
+- [PowerPoint course](https://github.com/isaksen20/salsy-releases/releases/latest/download/HMS-ved-bruk-av-kjemikalier.pptx)
+- [Quiz with answer key](https://github.com/isaksen20/salsy-releases/releases/latest/download/Prove-HMS-ved-bruk-av-kjemikalier.txt)
+- [Import guide](https://github.com/isaksen20/salsy-releases/releases/latest/download/HMS-kjemikalier-LES-MEG.txt)
 
 ## Passnøkler fra 0.96.2
 
@@ -64,8 +72,8 @@ Regnskapsfører har **Tema** øverst til høyre. [Veiledning](APPEARANCE.md).
 Salsy Status **0.1.3** har innstillinger, testvarsel og server-widget.
 [Oppsett](SERVER_STATUS.md).
 
-Kalenderrettingen fra Salsy Android 0.35.8 er også med i **0.36.0**.
-[Last ned Android](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-android-0.36.0.apk).
+Kalenderrettingen fra Salsy Android 0.35.8 er også med i **0.36.3**.
+[Last ned Android](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-android-0.36.3.apk).
 
 ## Nettsidelenke i Brukerstøtte fra 0.95.7
 
@@ -169,7 +177,7 @@ Denne utgivelsen inkluderer også personalverktøyene fra den tidligere lokale
 0.94.0-utgaven: Minioppgaver, stemplingslogg og begrunnet bruk av stemplingstid
 til lønn, samlet ferieoversikt, korrigering av timebank og OnCall per dag i
 skiftplanen. [Veiledning](STAFF_TOOLS.md) · [Endringsliste](RELEASE_0.94.0.md).
-Salsy Android 0.36.0 følger med. Oppdater server og PC, start serveren
+Salsy Android 0.36.3 følger med. Oppdater server og PC, start serveren
 på nytt og last nettklienten på nytt. Regnskapet er fortsatt skyggeregnskap.
 
 ## Fakturainnstillinger og bankavstemming fra 0.92.0
@@ -216,7 +224,7 @@ Les [kursveiledningen](COURSES.md).
 ## Større lysbilder og prøveforsøk fra 0.89.1
 
 Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
-zoom/panorering av kursbilder. Android 0.36.0 viser større kursbilder og
+zoom/panorering av kursbilder. Android 0.36.3 viser større kursbilder og
 har fullskjerm med knipezoom.
 
 Leder velger **Antall prøveforsøk** i kursbyggeren, med **2 som standard**.
@@ -273,12 +281,12 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.97.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.97.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.97.0 | Debian 13 amd64 |
+| Salsy Server | 0.97.3 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.97.3 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.97.3 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
-| Salsy Android | 0.36.0 | Android 7+, arm64 eller x86_64 |
-| Salsy Warehouse Android | 0.11.5 | Android 7+, arm64 eller x86_64, uendret |
+| Salsy Android | 0.36.3 | Android 7+, arm64 eller x86_64 |
+| Salsy Warehouse Android | 0.11.6 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.3 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.3 | Android 7+, arm64 eller x86_64 |
 | Salsy Status | 0.1.3 | Android 8+, uten særskilt CPU-krav |
@@ -336,7 +344,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.97.0 adds server monitoring and IT accounts as described above. Earlier
+Salsy 0.97.3 adds server monitoring and IT accounts as described above. Earlier
 mini-task improvements remain: assigned mini tasks are sorted chronologically, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
@@ -351,7 +359,7 @@ server validation and calculations. [Guide](VACATION_FINANCE.md).
 
 The staff tools from the previously local 0.94.0 build are included: mini tasks,
 clock logs with reviewed payroll deductions, vacation overview, audited timebank
-corrections and daily OnCall selection. Android 0.36.0 is included.
+corrections and daily OnCall selection. Android 0.36.3 is included.
 [Staff tools guide](STAFF_TOOLS.md).
 
 Earlier versions added course assignment removal and `.ksa` course exchange in
@@ -362,7 +370,7 @@ for review and manual publication/assignment. Files are not encrypted; share
 only with course administrators. Limits: 40 MiB per file, 24 MiB total images.
 
 Course display improvements from 0.89.1 remain available in native PC, PC web and mobile web,
-with full-screen viewing and image zoom/pan. Android 0.36.0 adds larger
+with full-screen viewing and image zoom/pan. Android 0.36.3 adds larger
 course images and full-screen pinch zoom. Managers set the final-exam attempt
 limit, defaulting to **two attempts**. After all attempts fail, learners must
 contact their manager; the server blocks self-reset. Managers with course
@@ -374,7 +382,7 @@ images in a new course draft, with an optional exam added afterwards. Conversion
 runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
 introductions are assigned automatically when courses are enabled: nine content
 slides for managers/admins and six for employees on mobile. Neither introduction
-has an exam. Android 0.36.0 and mobile web support course completion.
+has an exam. Android 0.36.3 and mobile web support course completion.
 See the [course guide](COURSES.md) for limits and dependencies.
 
 Resource management is available in native PC and PC web. Allocate dated,
@@ -382,7 +390,7 @@ fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 0.36.0. A reusable task library will follow.
+PC web, mobile web and Android 0.36.3. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.28 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.

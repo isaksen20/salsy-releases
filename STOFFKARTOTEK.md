@@ -1,7 +1,7 @@
-# Stoffkartotek – Salsy 0.97.0
+# Stoffkartotek – Salsy 0.97.2
 
 Aktiver **Innstillinger → Tilleggsmoduler → Aktiver Stoffkartotek for bedriften**.
-Fanen **Stoffkartotek** vises i sidemenyen for kontoer med lesetilgang.
+Fanen **Stoffkartotek** vises for alle vanlige Salsy-kontoer når modulen er aktivert, også på Android og i mobilnettklienten `/app/`. Lesing krever ingen egen avkrysset brukertilgang.
 Funksjonen finnes i Salsy PC, PC-nettklienten `/app/salsy/`, mobilnettklienten
 `/app/` og Salsy Android 0.36.0. Lager-/Warehouse-appen er en separat klient.
 
@@ -21,12 +21,11 @@ i nettleseren lastes den ned. Innebygd sidevisning krever ingen ekstern PDF-app.
 ## Legg til eller rediger – tre steg
 
 Krever **Administrere Stoffkartotek og sikkerhetsdatablad**, som kan delegeres
-under brukertilganger. Vanlige ansatte får lesetilgang som standard, og kan
-ikke endre oppføringene. IT-kontoer får kun tilgangene som er valgt for kontoen.
+under brukertilganger. Alle ansatte og IT-kontoer kan lese innholdet når modulen er aktivert; bare kontoer med administrasjonstilgangen kan endre oppføringene.
 Regnskapsførerportalen får ikke stoffkartotektilgang automatisk.
 
 1. **Produkt og datablad:** velg PDF, produktnavn, kort beskrivelse og ett av
-   24 produktikoner. Leverandør, produktkode/UFI, plassering og databladets
+   48 produktikoner. Leverandør, produktkode/UFI, plassering og databladets
    revisjonsdato kan også registreres. Ikonene er illustrasjoner og sier ikke
    noe om fareklassifisering.
 2. **Faremerking:** velg de aktuelle GHS01–GHS09-piktogrammene, eventuelt
@@ -64,7 +63,7 @@ permanent fra brukergrensesnittet.
 - Originaler og tidligere revisjoner lagres sammen med bedriftens krypterte
   data og følger vanlig sikkerhetskopi/gjenoppretting. Hver instans og hver
   avdeling har sitt eget kartotek. Slås modulen av, beholdes dataene.
-- Innlogging, lesetilgang og aktivert modul kreves også ved direkte API-kall
+- Innlogging, avdelingstilgang og aktivert modul kreves også ved direkte API-kall
   til dokumentet og PDF-sidene. Endringer loggføres; PDF-innhold kopieres ikke
   inn i endringsloggen.
 - Det er ikke en frakoblet nødvisning. Arbeidsgiver må sikre at gjeldende
@@ -108,3 +107,47 @@ server instances remain separate. Documents require authentication. PDFs must
 be readable, unencrypted, at most 5 MiB and 200 pages. Secure PDF rendering
 requires Poppler, Bubblewrap and util-linux. Provide separate workplace access
 to current safety data sheets for network/server outages.
+
+
+## Import og eksport med SDB
+
+- **Eksporter SDB** i en produktoppføring lagrer dette produktet.
+- **Eksporter viste produkter (SDB)** lagrer produktene som vises i oversikten,
+  med søket og valget **Vis arkiverte produkter**. Tøm søket for hele utvalget.
+- **Importer SDB** krever **Administrere Stoffkartotek og sikkerhetsdatablad**.
+  Velg filen, åpne og les opplysningene i forhåndsvisningen, bekreft gjennomgangen
+  mot gjeldende datablad, og trykk **Importer produkter**.
+- Importen gjelder avdelingen som er valgt. Produktene får nye interne ID-er.
+  Eksisterende oppføringer overskrives ikke. Helt like oppføringer hoppes over,
+  også når samme fil importeres på nytt. Endrede opplysninger gir en ny oppføring.
+  Aktiv/arkivert status følger med.
+- SDB-filen inneholder original PDF, produktnavn, beskrivelse, ikon, leverandør,
+  produktkode, plassering, databladets dato, faremerker, varselord, H/P-setninger,
+  førstehjelp og øvrige tiltak samt verneutstyr. Brukere, avdelings-ID-er og intern
+  endringshistorikk følger ikke med. PDF-en endres ikke.
+- Maksimalt **20 MiB og 100 produkter per fil**. Bruk søk for mindre utvalg ved
+  store biblioteker. PDF-grensen er fortsatt 5 MiB og 1–200 sider per dokument.
+  Hvis et produkt eller en PDF avvises, lagres ingen nye oppføringer fra filen.
+- I nettleseren lastes filen ned som vanlig. På Android velges lagringssted i
+  systemets **Lagre**-vindu; ved import kan filvelgeren vise alle filtyper fordi
+  enkelte filbehandlere ikke kjenner `.sdb`. Velg filen som slutter på `.sdb`.
+  PC-programmet bruker vanlige filvinduer.
+
+Salsy SDB versjon 1 er en UTF-8 JSON-fil med endelsen `.sdb`. Den er ikke en ny
+utgave av leverandørens datablad: original PDF ligger ved uendret. Kontroller
+at leverandørens utgave fortsatt er den som skal brukes. Filen er ikke kryptert
+og følger ikke Salsy-kontoens tilgangsbeskyttelse etter eksport.
+
+## English: SDB exchange
+
+Export a single entry using **Export SDB**, or export the filtered list using
+**Export displayed products (SDB)**. **Import SDB** requires chemical-register
+management permission. Review the displayed information and explicitly confirm
+it before importing into the selected department. Exact duplicates are skipped;
+existing entries are never overwritten. Modified entries are imported separately.
+
+SDB version 1 is a UTF-8 JSON document containing the unchanged original PDF,
+metadata, product icon, hazards, precautions, first aid and required PPE. Maximum
+size is 20 MiB and 100 products per file. Internal IDs, users and audit history
+are excluded. Android uses the system file picker/save dialog. Exported SDB files
+are not encrypted. Verify that the supplied supplier SDS is still applicable.
