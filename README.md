@@ -3,7 +3,7 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 0.97.3](RELEASE_0.97.3.md) ·
+[Utgivelsesnotat 0.97.4](RELEASE_0.97.4.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
@@ -15,7 +15,17 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 0.97.3 / New in 0.97.3
+## Nytt i 0.97.4 / New in 0.97.4
+
+**Aktive innlogginger** under Innstillinger viser nå brukernavnet til hver økt i PC og PC-nett. Dette gjelder også IT-kontoer uten ansattilknytning. Begge klienter viser bruker, enhet, plattform, opprettet og sist brukt, og lar autoriserte brukere avslutte en valgt økt. Listen hentes fersk ved åpning/oppdatering. Eksisterende tilgangs- og avdelingsgrenser beholdes.
+
+Oppdater server og PC til **0.97.4**, start serveren på nytt og last PC-nettklienten på nytt. [Utgivelsesnotat / release notes](RELEASE_0.97.4.md).
+
+Active sessions in PC and PC web Settings now identify the account username, including accounts with no linked employee. Both clients fetch current session lists instead of using a ten-minute cache. Existing permission and department boundaries are retained.
+
+Testet med syntetiske kontoer i PC og nettleser og med pakket Hosting Manager. ARM64 er bygget og kontrollert for samsvar med felles kildekode; fysisk ARM og faktisk systemd-oppstart er ikke testet i denne rettelsen. Privat serveradministrasjon beholdes lokalt.
+
+## Fra 0.97.3 / Since 0.97.3
 
 Passnøkler starter automatisk når innlogging vises i mobilnett, PC-/regnskapsførernett
 og Warehouse, når enheten husker en lokalt aktivert eller tidligere brukt nøkkel,
@@ -31,14 +41,14 @@ i nettleseren og installasjonen bekreftes av brukeren. Konto- eller bedriftsdata
 sendes ikke i oppdateringssjekken. Ni timers mobilgrense og PC-nettets 30 minutters
 inaktivitet gjelder fortsatt.
 
-Denne utgivelsen inkluderer også lokale forbedringer siden 0.97.0:
+Fra 0.97.3 følger også forbedringene som først ble laget lokalt etter 0.97.0:
 
 - Vaktbok med dag-, tredagers- og ukevisning i PC og PC-nett.
 - Utvidet deling av ordinære ansattilganger for Administrator/leder og IT med brukeradministrasjon. Regnskapsførertilgangene forblir avgrenset til regnskapsførerrollen.
 - **Stoffkartotek** med import/eksport i **.sdb**, original PDF og faremerking/tiltak/verneutstyr. Import krever gjennomgang, hopper over identiske duplikater og overskriver ikke eksisterende produkter. Avdelingsgrenser håndheves. **48 produktikoner**.
 
-Oppdater server og PC til **0.97.3**, start serveren på nytt og last nettklientene
-på nytt. [Utgivelsesnotat / release notes](RELEASE_0.97.3.md).
+Oppdater server og PC til **0.97.4**, start serveren på nytt og last nettklientene
+på nytt. [Utgivelsesnotat / release notes](RELEASE_0.97.4.md).
 
 Automatic passkey prompts are available on remembered devices across mobile,
 desktop/accountant and Warehouse web. Native Android biometrics start at login
@@ -281,9 +291,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 0.97.3 | Debian 13 amd64 |
-| Salsy Server ARM64 | 0.97.3 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 0.97.3 | Debian 13 amd64 |
+| Salsy Server | 0.97.4 | Debian 13 amd64 |
+| Salsy Server ARM64 | 0.97.4 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 0.97.4 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
 | Salsy Android | 0.36.3 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.6 | Android 7+, arm64 eller x86_64, uendret |
@@ -344,7 +354,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 0.97.3 adds server monitoring and IT accounts as described above. Earlier
+Salsy 0.97.4 adds server monitoring and IT accounts as described above. Earlier
 mini-task improvements remain: assigned mini tasks are sorted chronologically, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
