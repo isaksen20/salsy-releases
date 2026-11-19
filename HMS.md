@@ -1,6 +1,8 @@
-# HMS i Salsy 1.0.0
+# HMS i Salsy 1.0.1
 
 Oppdatert 19.11.2026. HMS samler avvik, risikovurderinger, SJA, tiltak, vernerunder, håndbok, mål, organisatoriske roller, årshjul, kompetanseoppfølging, arbeidsmiljøundersøkelser og en separat konfidensiell varslingskanal. PC, PC-nett på /app/salsy/, mobilnett på /app/ og Salsy Android bruker samme serverregler. Eksisterende rapporter og vedlegg bevares.
+
+Velg område med de kompakte faneknappene øverst. Aktiv fane er markert. På PC brytes knappene til flere rader ved behov; på mobil rulles fanerekken sideveis.
 
 ## Tilganger og avdelinger
 
