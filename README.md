@@ -3,10 +3,10 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 1.1.0](RELEASE_1.1.0.md) ·
+[Utgivelsesnotat 1.1.4](RELEASE_1.1.4.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
-[Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
+[PowerOffice og lønnseksport](POWER_OFFICE_PAYROLL.md) · [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
 [Serverstatus og IT ansvarlig](SERVER_STATUS.md) · [Lys og mørk modus](APPEARANCE.md) · [Passnøkler](PASSKEYS.md) · [Stoffkartotek](STOFFKARTOTEK.md) · [HMS](HMS.md) · [HMS-sikkerhet](HMS_SECURITY.md)
 
 Utvikler og utgiver: **Thomas Isaksen**. Brukerstøtte: support@salsy.eu.
@@ -15,7 +15,15 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 1.1.0 / New in 1.1.0
+## Nytt i 1.1.4 / New in 1.1.4
+
+- **Trygg bakgrunnsoppdatering:** PC-nettklienten beholder åpne skjemaer, tekst og valgt PDF mens nye data hentes. Bruk **↻ øverst til høyre** for å oppdatere visningen. Ulagrede endringer beskyttes med bekreftelse. PC-klienten følger samme arbeidsflyt.
+- **Leselig vaktbok:** opptil to linjer i hver celle, avkorting innenfor kolonnen og full tekst ved pekeren. Ansatte med arbeid vises før fri og heldagsfravær.
+- **Lønnsgrunnlag og PowerOffice:** én ansatt per PDF-side, kontonummer og rødt førstegangsvarsel ved kontobytte. Egen SalaryBasis Excel-import, oppsett av lønnsarter og klargjort API-overføring med forhåndskontroll og kvitteringer. Se [PowerOffice-veiledningen](POWER_OFFICE_PAYROLL.md).
+
+Background polling preserves drafts and chosen files. Refresh the visible page explicitly with the circular arrow. Roster cells wrap to two lines and keep workers first. Payroll PDFs include payout accounts and a first-export account-change notice. PowerOffice file/API integration requires company-specific setup; live provider testing and credentials are still required.
+
+## Fra 1.1.0 / Since 1.1.0
 
 **Utstyrskontroll** er en valgfri modul for utstyrsregister, egne kontrollister og kontroll ved bruk. Fire eksempelmaler følger med. Utstyret får automatisk et unikt femsifret nummer; kjøretøy kan ha registreringsnummer i tillegg. Skriv ut QR-etiketter i 4 × 6 tommer og åpne riktig utstyr etter innlogging. Avvik, bruksstans, dokumentert utbedring og uforanderlig kontrollhistorikk følger avdeling og tilganger. [Veiledning](EQUIPMENT_INSPECTIONS.md).
 
@@ -23,7 +31,7 @@ Optional equipment inspections include editable checklists, automatic five-digit
 
 ## Fra 1.0.1 / Since 1.0.1
 
-HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.0**, og Salsy Android til **0.40.0**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
+HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.4**, og Salsy Android til **0.40.0**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
 
 HMS now uses compact tabs with a visible selected state across desktop, web and Android. Mobile tabs scroll horizontally.
 
@@ -35,7 +43,7 @@ Utgaven inkluderer også arbeidsavtaler og taushetserklæringer med elektronisk 
 
 The complete health and safety workspace includes risk assessments, job safety analyses, inspections, controlled documents, action plans, annual schedules, qualifications, confidential surveys and a separate identified confidential reporting channel. Ordinary administrators do not automatically see confidential cases. See the Norwegian guides before company activation. This is not an independent safety certification or automatic legal compliance approval.
 
-Oppdater server og PC til **1.1.0**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.0.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
+Oppdater server og PC til **1.1.4**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.4.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
 
 ## Fra 0.97.3 / Since 0.97.3
 
@@ -59,8 +67,8 @@ Fra 0.97.3 følger også forbedringene som først ble laget lokalt etter 0.97.0:
 - Utvidet deling av ordinære ansattilganger for Administrator/leder og IT med brukeradministrasjon. Regnskapsførertilgangene forblir avgrenset til regnskapsførerrollen.
 - **Stoffkartotek** med import/eksport i **.sdb**, original PDF og faremerking/tiltak/verneutstyr. Import krever gjennomgang, hopper over identiske duplikater og overskriver ikke eksisterende produkter. Avdelingsgrenser håndheves. **48 produktikoner**.
 
-Oppdater server og PC til **1.1.0**, start serveren på nytt og last nettklientene
-på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.0.md).
+Oppdater server og PC til **1.1.4**, start serveren på nytt og last nettklientene
+på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.4.md).
 
 Automatic passkey prompts are available on remembered devices across mobile,
 desktop/accountant and Warehouse web. Native Android biometrics start at login
@@ -303,9 +311,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 1.1.0 | Debian 13 amd64 |
-| Salsy Server ARM64 | 1.1.0 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 1.1.0 | Debian 13 amd64 |
+| Salsy Server | 1.1.4 | Debian 13 amd64 |
+| Salsy Server ARM64 | 1.1.4 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 1.1.4 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
 | Salsy Android | 0.40.0 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.9 | Android 7+, arm64 eller x86_64, uendret |
@@ -366,7 +374,7 @@ Les [hele veiledningen](DEPENDENCY_FIX.md).
 
 ## English
 
-Salsy 1.1.0 adds server monitoring and IT accounts as described above. Earlier
+Salsy 1.1.4 adds server monitoring and IT accounts as described above. Earlier
 mini-task improvements remain: assigned mini tasks are sorted chronologically, including
 live assignment refresh, with tasks without a start time last. Native PC,
 desktop web and mobile use the same corrected server order.
