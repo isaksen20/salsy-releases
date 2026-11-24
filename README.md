@@ -3,7 +3,7 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 1.1.8](RELEASE_1.1.8.md) ·
+[Utgivelsesnotat 1.1.9](RELEASE_1.1.9.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [PowerOffice og lønnseksport](POWER_OFFICE_PAYROLL.md) · [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
@@ -15,7 +15,13 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 1.1.8 / New in 1.1.8
+## Nytt i 1.1.9 / New in 1.1.9
+
+**Vaktbok:** retter serverfeilen når fravær ble fulgt av en vakt mellom ansatte eller datoer. Dag-, tre-dagers- og ukevisningen fungerer igjen med riktige statuser. Nettklientene gir en forståelig feilmelding med HTTP-status ved ugyldig serverrespons.
+
+**Roster fix:** prevents a server failure when absence information precedes another shift across employees or dates. All roster views retain correct statuses. Web clients handle non-JSON errors safely, with a readable message and HTTP status.
+
+## Fra 1.1.8 / Since 1.1.8
 
 **Detaljert lønnsgrunnlag i PDF:** stående A4 med alle datoer i rekkefølge, ordinær tid før overtid samme dato, ferie/avspasering og summer øverst og nederst. Ansattfeltet viser utbetalingskonto og gjenstående feriedager ved periodeslutt, med framtidige reservasjoner separat. Hver ansatt starter på ny side, og lange dagsoversikter fortsetter med gjentatt navn og tabellhode. Felles lønnsberegninger og PowerOffice-importens sju kolonner beholdes.
 
@@ -57,7 +63,7 @@ Optional equipment inspections include editable checklists, automatic five-digit
 
 ## Fra 1.0.1 / Since 1.0.1
 
-HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.8**, og Salsy Android til **0.41.0**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
+HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.9**, og Salsy Android til **0.41.0**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
 
 HMS now uses compact tabs with a visible selected state across desktop, web and Android. Mobile tabs scroll horizontally.
 
@@ -69,7 +75,7 @@ Utgaven inkluderer også arbeidsavtaler og taushetserklæringer med elektronisk 
 
 The complete health and safety workspace includes risk assessments, job safety analyses, inspections, controlled documents, action plans, annual schedules, qualifications, confidential surveys and a separate identified confidential reporting channel. Ordinary administrators do not automatically see confidential cases. See the Norwegian guides before company activation. This is not an independent safety certification or automatic legal compliance approval.
 
-Oppdater server og PC til **1.1.8**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.8.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
+Oppdater server og PC til **1.1.9**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.9.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
 
 ## Fra 0.97.3 / Since 0.97.3
 
@@ -93,8 +99,8 @@ Fra 0.97.3 følger også forbedringene som først ble laget lokalt etter 0.97.0:
 - Utvidet deling av ordinære ansattilganger for Administrator/leder og IT med brukeradministrasjon. Regnskapsførertilgangene forblir avgrenset til regnskapsførerrollen.
 - **Stoffkartotek** med import/eksport i **.sdb**, original PDF og faremerking/tiltak/verneutstyr. Import krever gjennomgang, hopper over identiske duplikater og overskriver ikke eksisterende produkter. Avdelingsgrenser håndheves. **48 produktikoner**.
 
-Oppdater server og PC til **1.1.8**, start serveren på nytt og last nettklientene
-på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.8.md).
+Oppdater server og PC til **1.1.9**, start serveren på nytt og last nettklientene
+på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.9.md).
 
 Automatic passkey prompts are available on remembered devices across mobile,
 desktop/accountant and Warehouse web. Native Android biometrics start at login
@@ -337,9 +343,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 1.1.8 | Debian 13 amd64 |
-| Salsy Server ARM64 | 1.1.8 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 1.1.8 | Debian 13 amd64 |
+| Salsy Server | 1.1.9 | Debian 13 amd64 |
+| Salsy Server ARM64 | 1.1.9 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 1.1.9 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
 | Salsy Android | 0.41.0 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.9 | Android 7+, arm64 eller x86_64, uendret |
