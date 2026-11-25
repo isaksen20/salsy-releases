@@ -37,11 +37,11 @@
       "platform": "debian-13-amd64"
     },
     "android": {
-      "version": "1.0.0",
-      "file": "salsy-android-1.0.0.apk",
+      "version": "1.0.1",
+      "file": "salsy-android-1.0.1.apk",
       "size": 35949096,
-      "sha256": "9777270f211ca38f5d63066373a027272461fe74547ded5151e1b9973709bb0a",
-      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v1.1.10/salsy-android-1.0.0.apk",
+      "sha256": "0bf5f5f792d5be7857beafac3bdc37cb40110e57384fedbe01b7225794a33aa1",
+      "url": "https://github.com/isaksen20/salsy-releases/releases/download/v1.1.10/salsy-android-1.0.1.apk",
       "signer_sha256": "d88dfb630483f9eec6bbcea42baa9aff535f630bc26a77a652f67c6e62d0b22f",
       "platform": "android-24+-arm64-x86_64"
     },
@@ -85,8 +85,8 @@
   },
   "documentation": {
     "file": "Salsy-bruksanvisning.pdf",
-    "size": 765607,
-    "sha256": "974ba60a75602bbeb2352e0402d34975e23812b2880b5da6823e1bdbd112d1e6",
+    "size": 765780,
+    "sha256": "d3dfcee62f1d94f38961957d1832382ef2c44e36fd5d168fca8b59db3159b6c4",
     "url": "https://github.com/isaksen20/salsy-releases/releases/download/v1.1.10/Salsy-bruksanvisning.pdf"
   },
   "supplementary": {
@@ -296,8 +296,8 @@
     },
     "release_notes": {
       "file": "RELEASE_1.1.10.md",
-      "size": 3876,
-      "sha256": "9a23ba842dcfc978ac74ead61cfce04751259370a875bff8b0e5a926aaf6ff80",
+      "size": 4753,
+      "sha256": "e8dac11c5a7811e2121f81ef4f17c7190d574b1d323febd3ed182344ff018734",
       "url": "https://github.com/isaksen20/salsy-releases/releases/download/v1.1.10/RELEASE_1.1.10.md"
     }
   }
