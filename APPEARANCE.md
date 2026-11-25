@@ -37,3 +37,8 @@ Warehouse Android and `/app/warehouse/`. The choice is local to the device;
 same-origin browser tabs share it. Switching does not change login, business
 configuration, calculations or exports. Authored images and documents retain
 their original colours. Browser print styles keep a light background.
+
+
+Fra Server/PC 1.1.11 og Android 1.0.1 vises Salsy-logoen med gjennomsiktig bakgrunn og tynn hvit kontur rundt bokstavene og symbolet. Originalfargene beholdes, også i mørk modus. Serveroppdateringen gjelder både `/app/`, `/app/salsy/` og regnskapsførerens sider.
+
+Since Server/PC 1.1.11 and Android 1.0.1, the Salsy logo retains its original colours on a transparent background, with a thin white outline in both themes.
