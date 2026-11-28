@@ -3,7 +3,7 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 1.1.15](RELEASE_1.1.15.md) ·
+[Utgivelsesnotat 1.1.16](RELEASE_1.1.16.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [PowerOffice og lønnseksport](POWER_OFFICE_PAYROLL.md) · [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
@@ -15,23 +15,29 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 1.1.15 / New in 1.1.15
+## Nytt i 1.1.16 / New in 1.1.16
 
-**Stemplingsetikett:** Nytt PDF-format på 4 × 6 tommer ved siden av dagens A4. Stor QR-kode, «Salsy stempling» og plasseringens navn i fet svart skrift. Tilgjengelig i PC, PC-nett og Android; samme kode brukes som før. Nye koder har Salsy-klokken i midten i rent svart/hvitt. Eksisterende koder beholder sitt opprinnelige utseende. Skriv ut i faktisk størrelse / 100 %. En feil ved NFC-skanning i nettklientene er også rettet. Server/PC 1.1.15; Android 1.0.5.
+**Lageretiketter:** Nye QR-koder har Salsy-klokken i midten i rent svart/hvitt. Eksisterende koder beholdes uendret ved ny utskrift. PC og PC-nett har et ekstra PDF-format på 4 × 6 tommer, med stor QR-kode, varenavn og varenummer. Dagens A4-etiketter og strekkoder beholdes. Server/PC 1.1.16; Android 1.0.5 er uendret.
+
+**Warehouse labels:** New warehouse QR registrations include the monochrome Salsy clock; existing codes retain their original artwork. Desktop and desktop web add a 4 × 6 inch product-label PDF alongside existing A4 sheets and barcodes. Both clients use the shared server label API. Android 1.0.5 remains unchanged.
+
+## Fra 1.1.15 / Since 1.1.15
+
+**Stemplingsetikett:** Nytt PDF-format på 4 × 6 tommer ved siden av dagens A4. Stor QR-kode, «Salsy stempling» og plasseringens navn i fet svart skrift. Tilgjengelig i PC, PC-nett og Android; samme kode brukes som før. Nye koder har Salsy-klokken i midten i rent svart/hvitt. Eksisterende koder beholder sitt opprinnelige utseende. Skriv ut i faktisk størrelse / 100 %. En feil ved NFC-skanning i nettklientene er også rettet. Server/PC 1.1.16; Android 1.0.5.
 
 **Clock location labels:** additional portrait 4 × 6 inch PDF with a large vector QR, “Salsy stempling” and the location name in bold black text. Available in desktop, desktop web and Android, using the existing location credential. New credentials include a monochrome Salsy clock icon; existing codes keep their original artwork. Print at actual size / 100%. Also fixes an NFC scanning error in the web clients.
 
 ## Fra 1.1.14 / Since 1.1.14
 
-**Overtid og lønnsartnummer:** Innstillinger har et samlet oppsett for overtidsgrenser og satser, med valgfrie 50/100 % og tidsrom, ukedager og helligdager for høy sats. Standard er lovens 40 % og normalt 9/40 timer; valgt tariff beholdes. PDF viser tallkode sammen med tekstkoden; CSV og vanlig Excel får en egen kolonne. Uten eget register brukes dokumenterte PowerOffice-standarder 100 Fastlønn og 120 Timelønn. Egne koblinger har forrang. Server/PC 1.1.15; Android 1.0.5.
+**Overtid og lønnsartnummer:** Innstillinger har et samlet oppsett for overtidsgrenser og satser, med valgfrie 50/100 % og tidsrom, ukedager og helligdager for høy sats. Standard er lovens 40 % og normalt 9/40 timer; valgt tariff beholdes. PDF viser tallkode sammen med tekstkoden; CSV og vanlig Excel får en egen kolonne. Uten eget register brukes dokumenterte PowerOffice-standarder 100 Fastlønn og 120 Timelønn. Egne koblinger har forrang. Server/PC 1.1.16; Android 1.0.5.
 
 **Overtime and numeric pay item codes:** company overtime thresholds and rates can be configured in Settings, including 50/100% and periods for the higher rate. Statutory defaults remain 40% and normally 9/40 hours, with collective agreements retained. PDF exports show numeric and text codes together; CSV and regular Excel include a separate numeric-code column. Documented PowerOffice defaults are used for fixed salary (100) and hourly pay (120) when no custom register exists. Company mappings take precedence.
 
 ## Fra 1.1.13 / Since 1.1.13
 
-**Bankdager og lønnsgrunnlag:** utbetalingsdato flyttes til siste bankdag før helg, norsk helligdag eller julaften. Skjæringsdatoen flyttes tilsvarende og videre til siste virkedag ved behov. Opptjeningsperiodene følger hverandre uten hull; tidligere utstedte lønnsslipper beholder sine lagrede perioder. Faktisk utbetalingsdato vises i PC/nett, på mobil og i Android. PDF viser **TOTALT FØR SKATT** med fet skrift øverst på hver ansatts side, også fortsettelsessider; refusjoner vises separat. Server/PC 1.1.15; Android 1.0.5.
+**Bankdager og lønnsgrunnlag:** utbetalingsdato flyttes til siste bankdag før helg, norsk helligdag eller julaften. Skjæringsdatoen flyttes tilsvarende og videre til siste virkedag ved behov. Opptjeningsperiodene følger hverandre uten hull; tidligere utstedte lønnsslipper beholder sine lagrede perioder. Faktisk utbetalingsdato vises i PC/nett, på mobil og i Android. PDF viser **TOTALT FØR SKATT** med fet skrift øverst på hver ansatts side, også fortsettelsessider; refusjoner vises separat. Server/PC 1.1.16; Android 1.0.5.
 
-**Banking dates and payroll PDFs:** paydays move to the preceding Norwegian banking day, with a matching cut-off adjustment and contiguous earning windows. Issued payslips retain their frozen periods. Actual payment dates appear across desktop, web and Android. Each employee's PDF page, including continuation pages, shows a bold **TOTAL BEFORE TAX**; reimbursements are separate. Server/PC 1.1.15; Android 1.0.5.
+**Banking dates and payroll PDFs:** paydays move to the preceding Norwegian banking day, with a matching cut-off adjustment and contiguous earning windows. Issued payslips retain their frozen periods. Actual payment dates appear across desktop, web and Android. Each employee's PDF page, including continuation pages, shows a bold **TOTAL BEFORE TAX**; reimbursements are separate. Server/PC 1.1.16; Android 1.0.5.
 
 ## Fra 1.1.12 / Since 1.1.12
 
@@ -99,7 +105,7 @@ Optional equipment inspections include editable checklists, automatic five-digit
 
 ## Fra 1.0.1 / Since 1.0.1
 
-HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.15**, og Salsy Android til **1.0.5**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
+HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.16**, og Salsy Android til **1.0.5**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
 
 HMS now uses compact tabs with a visible selected state across desktop, web and Android. Mobile tabs scroll horizontally.
 
@@ -111,7 +117,7 @@ Utgaven inkluderer også arbeidsavtaler og taushetserklæringer med elektronisk 
 
 The complete health and safety workspace includes risk assessments, job safety analyses, inspections, controlled documents, action plans, annual schedules, qualifications, confidential surveys and a separate identified confidential reporting channel. Ordinary administrators do not automatically see confidential cases. See the Norwegian guides before company activation. This is not an independent safety certification or automatic legal compliance approval.
 
-Oppdater server og PC til **1.1.15**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.15.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
+Oppdater server og PC til **1.1.16**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.16.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
 
 ## Fra 0.97.3 / Since 0.97.3
 
@@ -135,8 +141,8 @@ Fra 0.97.3 følger også forbedringene som først ble laget lokalt etter 0.97.0:
 - Utvidet deling av ordinære ansattilganger for Administrator/leder og IT med brukeradministrasjon. Regnskapsførertilgangene forblir avgrenset til regnskapsførerrollen.
 - **Stoffkartotek** med import/eksport i **.sdb**, original PDF og faremerking/tiltak/verneutstyr. Import krever gjennomgang, hopper over identiske duplikater og overskriver ikke eksisterende produkter. Avdelingsgrenser håndheves. **48 produktikoner**.
 
-Oppdater server og PC til **1.1.15**, start serveren på nytt og last nettklientene
-på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.15.md).
+Oppdater server og PC til **1.1.16**, start serveren på nytt og last nettklientene
+på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.16.md).
 
 Automatic passkey prompts are available on remembered devices across mobile,
 desktop/accountant and Warehouse web. Native Android biometrics start at login
@@ -379,9 +385,9 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 1.1.15 | Debian 13 amd64 |
-| Salsy Server ARM64 | 1.1.15 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 1.1.15 | Debian 13 amd64 |
+| Salsy Server | 1.1.16 | Debian 13 amd64 |
+| Salsy Server ARM64 | 1.1.16 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 1.1.16 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
 | Salsy Android | 1.0.5 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.9 | Android 7+, arm64 eller x86_64, uendret |
