@@ -95,3 +95,12 @@ Oppsettet gjelder fra første dag i en valgt **utbetalingsmåned** og beholdes v
 I lønnseksport, regnskapsførerens lønnsgrunnlag og generering av lønnsslipper er **Bruk ansattes lønnsperioder** forhåndsvalgt. Velg da én hel utbetalingsmåned. Fastlønn og variable betalinger kan ha ulike opptjeningsperioder selv om de betales samtidig. Periodene vises i estimatet, på lønnsslippen og i PDF-grunnlaget. CSV og Excel inneholder de faktiske opptjeningsperiodene per linje; PowerOffice-fil og API bruker samme beløpsgrunnlag. PowerOffice må fortsatt ha riktige lønnsarter, ansattnummer og avdelingskode.
 
 Fjern avkrysningen når du ønsker det tidligere uttrekket basert direkte på **arbeidsdato fra–til**, for eksempel ved kontroll av en delmåned. Ikke importer både et slikt uttrekk og betalingsmånedens uttrekk for de samme registreringene. Vanlige timeoversikter og kalenderen viser fremdeles faktisk arbeidstid etter arbeidsdato. Dette oppretter ikke en bankutbetaling.
+
+
+## Tallkode i lønnseksport
+
+**Lønnseksport → Lønnskoder** viser nå en egen **Tallkode** ved siden av dagens navn/kode for hver lønnsart. Samme oppsett finnes hos regnskapsfører. I PDF står tallkoden sammen med tekstkoden; dagens beskrivelser og beløp beholdes. Vanlig CSV får kolonnen `lonnsart_nummer`, og vanlig Excel får **Lønnsartnummer** til høyre for **Lønnskode**. Ledende nuller beholdes.
+
+Når bedriften ikke har eget lønnsartsoppsett, brukes dokumenterte PowerOffice-standarder: **100 Fastlønn** og **120 Timelønn**. Bedriftens egne koder beholdes. En uttrykkelig kobling i **PowerOffice-oppsett** har forrang også i PDF, CSV og vanlig Excel. Andre tillegg og trekk må kobles til bedriftens lønnsartregister; tom tallkode betyr ikke konfigurert. Timene som inngår i fast månedslønn er informasjonsrader og overføres ikke som en ekstra fastlønnsbetaling. PowerOffice-import beholder sitt nøyaktige sju-kolonners format og krav til kontrollert kobling.
+
+Kildekontroll 28.11.2026: [PowerOffice – timeinnstillinger og lønnsart 120](https://hjelpesenter.poweroffice.no/timeinnstillinger-oversikt), [PowerOffice – fastlønn, lønnsart 100](https://hjelpesenter.poweroffice.no/lonnskostnader-fordeling-avdeling).
