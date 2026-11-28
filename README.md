@@ -3,7 +3,7 @@
 Last ned fra [nyeste utgivelse](https://github.com/isaksen20/salsy-releases/releases/latest).
 [Bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-bruksanvisning.pdf) ·
 [Regnskapsfører – bruksanvisning (PDF)](https://github.com/isaksen20/salsy-releases/releases/latest/download/Salsy-regnskapsforer-bruksanvisning.pdf) ·
-[Utgivelsesnotat 1.1.14](RELEASE_1.1.14.md) ·
+[Utgivelsesnotat 1.1.15](RELEASE_1.1.15.md) ·
 [Ressursstyring](RESOURCE_MANAGEMENT.md) · [Kompetanse](COMPETENCIES.md) ·
 [Reise og Utlegg](TRAVEL_EXPENSES.md) · [Kurs](COURSES.md) · [Regnskapsfører](ACCOUNTANT.md) ·
 [PowerOffice og lønnseksport](POWER_OFFICE_PAYROLL.md) · [Ferieoppgjør](VACATION_FINANCE.md) · [Personalverktøy](STAFF_TOOLS.md) · [Bruksstatistikk](USAGE_STATISTICS.md) ·
@@ -15,17 +15,23 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 [distribusjonsinformasjon](NOTICE.md) og vilkår på
 [norsk](terms-nb.md) / [English](terms-en.md). Tredjepartslisenser følger pakkene.
 
-## Nytt i 1.1.14 / New in 1.1.14
+## Nytt i 1.1.15 / New in 1.1.15
 
-**Overtid og lønnsartnummer:** Innstillinger har et samlet oppsett for overtidsgrenser og satser, med valgfrie 50/100 % og tidsrom, ukedager og helligdager for høy sats. Standard er lovens 40 % og normalt 9/40 timer; valgt tariff beholdes. PDF viser tallkode sammen med tekstkoden; CSV og vanlig Excel får en egen kolonne. Uten eget register brukes dokumenterte PowerOffice-standarder 100 Fastlønn og 120 Timelønn. Egne koblinger har forrang. Server/PC 1.1.14; Android 1.0.4.
+**Stemplingsetikett:** Nytt PDF-format på 4 × 6 tommer ved siden av dagens A4. Stor QR-kode, «Salsy stempling» og plasseringens navn i fet svart skrift. Tilgjengelig i PC, PC-nett og Android; samme kode brukes som før. Nye koder har Salsy-klokken i midten i rent svart/hvitt. Eksisterende koder beholder sitt opprinnelige utseende. Skriv ut i faktisk størrelse / 100 %. En feil ved NFC-skanning i nettklientene er også rettet. Server/PC 1.1.15; Android 1.0.5.
+
+**Clock location labels:** additional portrait 4 × 6 inch PDF with a large vector QR, “Salsy stempling” and the location name in bold black text. Available in desktop, desktop web and Android, using the existing location credential. New credentials include a monochrome Salsy clock icon; existing codes keep their original artwork. Print at actual size / 100%. Also fixes an NFC scanning error in the web clients.
+
+## Fra 1.1.14 / Since 1.1.14
+
+**Overtid og lønnsartnummer:** Innstillinger har et samlet oppsett for overtidsgrenser og satser, med valgfrie 50/100 % og tidsrom, ukedager og helligdager for høy sats. Standard er lovens 40 % og normalt 9/40 timer; valgt tariff beholdes. PDF viser tallkode sammen med tekstkoden; CSV og vanlig Excel får en egen kolonne. Uten eget register brukes dokumenterte PowerOffice-standarder 100 Fastlønn og 120 Timelønn. Egne koblinger har forrang. Server/PC 1.1.15; Android 1.0.5.
 
 **Overtime and numeric pay item codes:** company overtime thresholds and rates can be configured in Settings, including 50/100% and periods for the higher rate. Statutory defaults remain 40% and normally 9/40 hours, with collective agreements retained. PDF exports show numeric and text codes together; CSV and regular Excel include a separate numeric-code column. Documented PowerOffice defaults are used for fixed salary (100) and hourly pay (120) when no custom register exists. Company mappings take precedence.
 
 ## Fra 1.1.13 / Since 1.1.13
 
-**Bankdager og lønnsgrunnlag:** utbetalingsdato flyttes til siste bankdag før helg, norsk helligdag eller julaften. Skjæringsdatoen flyttes tilsvarende og videre til siste virkedag ved behov. Opptjeningsperiodene følger hverandre uten hull; tidligere utstedte lønnsslipper beholder sine lagrede perioder. Faktisk utbetalingsdato vises i PC/nett, på mobil og i Android. PDF viser **TOTALT FØR SKATT** med fet skrift øverst på hver ansatts side, også fortsettelsessider; refusjoner vises separat. Server/PC 1.1.14; Android 1.0.4.
+**Bankdager og lønnsgrunnlag:** utbetalingsdato flyttes til siste bankdag før helg, norsk helligdag eller julaften. Skjæringsdatoen flyttes tilsvarende og videre til siste virkedag ved behov. Opptjeningsperiodene følger hverandre uten hull; tidligere utstedte lønnsslipper beholder sine lagrede perioder. Faktisk utbetalingsdato vises i PC/nett, på mobil og i Android. PDF viser **TOTALT FØR SKATT** med fet skrift øverst på hver ansatts side, også fortsettelsessider; refusjoner vises separat. Server/PC 1.1.15; Android 1.0.5.
 
-**Banking dates and payroll PDFs:** paydays move to the preceding Norwegian banking day, with a matching cut-off adjustment and contiguous earning windows. Issued payslips retain their frozen periods. Actual payment dates appear across desktop, web and Android. Each employee's PDF page, including continuation pages, shows a bold **TOTAL BEFORE TAX**; reimbursements are separate. Server/PC 1.1.14; Android 1.0.4.
+**Banking dates and payroll PDFs:** paydays move to the preceding Norwegian banking day, with a matching cut-off adjustment and contiguous earning windows. Issued payslips retain their frozen periods. Actual payment dates appear across desktop, web and Android. Each employee's PDF page, including continuation pages, shows a bold **TOTAL BEFORE TAX**; reimbursements are separate. Server/PC 1.1.15; Android 1.0.5.
 
 ## Fra 1.1.12 / Since 1.1.12
 
@@ -61,7 +67,7 @@ Kildekoden holdes privat; ingen åpen kildekodelisens gis. Se
 
 - **Arbeidsordre:** valgfri modul for PC, PC-nett, mobilnett og Android. Opprett ordre med frist, prioritet og tildelte ansatte. Leder bestemmer påkrevde felt og egne tilleggsfelt. Søk, Mine/Alle og Ikke utførte/Fullførte følger samme avdelingsavgrensede API. Fullføring lagrer bruker, tidspunkt og utført arbeid.
 - **Synlig vaktstatus:** På jobb, Kurs, Annet oppdrag og Møte kan velges fra vakten. Statusen vises i kalender og vaktbok uten å endre arbeidstid, betalte timer, lønn eller fravær.
-- **Android 1.0.4:** arbeidsordre og vaktstatus med samme oppsett og validering som PC/nett. Ny bruksanvisning følger utgivelsen.
+- **Android 1.0.5:** arbeidsordre og vaktstatus med samme oppsett og validering som PC/nett. Ny bruksanvisning følger utgivelsen.
 
 Optional work orders now support configurable required/custom fields, deadlines, employee assignments, search and completion history across desktop, web and Android. Informational shift statuses never change payroll or absence records.
 
@@ -93,7 +99,7 @@ Optional equipment inspections include editable checklists, automatic five-digit
 
 ## Fra 1.0.1 / Since 1.0.1
 
-HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.14**, og Salsy Android til **1.0.4**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
+HMS har kompakte faneknapper som på Ansettelse-siden. Aktiv fane er markert. PC-nett viser flere korte rader ved behov, mens mobilnett og Android lar fanerekken rulles sideveis. Dette retter den store loddrette menyen som tok opp skjermen. Oppdater server og PC til **1.1.15**, og Salsy Android til **1.0.5**. Start serveren på nytt og last nettklientene på nytt. Ingen ny Caddyfile kreves.
 
 HMS now uses compact tabs with a visible selected state across desktop, web and Android. Mobile tabs scroll horizontally.
 
@@ -105,7 +111,7 @@ Utgaven inkluderer også arbeidsavtaler og taushetserklæringer med elektronisk 
 
 The complete health and safety workspace includes risk assessments, job safety analyses, inspections, controlled documents, action plans, annual schedules, qualifications, confidential surveys and a separate identified confidential reporting channel. Ordinary administrators do not automatically see confidential cases. See the Norwegian guides before company activation. This is not an independent safety certification or automatic legal compliance approval.
 
-Oppdater server og PC til **1.1.14**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.14.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
+Oppdater server og PC til **1.1.15**, start serveren på nytt, oppdater Android og last nettklientene på nytt. [Utgivelsesnotat](RELEASE_1.1.15.md). ARM64 har samme serverfunksjoner. Fysisk telefon, Raspberry Pi og faktisk systemd-oppstart er ikke testet i denne runden; automatiske tester bruker syntetiske data. Privat serveradministrasjon beholdes lokalt.
 
 ## Fra 0.97.3 / Since 0.97.3
 
@@ -116,7 +122,7 @@ gir ingen løkke, og passord er fortsatt tilgjengelig. Eldre oppsett trenger én
 manuell passnøkkelinnlogging etter oppgradering. Nettleseren kan kreve et trykk.
 [Oppsett / English](PASSKEYS.md).
 
-Salsy Android **1.0.4** og Warehouse **0.11.9** starter aktivert biometri
+Salsy Android **1.0.5** og Warehouse **0.11.9** starter aktivert biometri
 ved åpning av innlogging og når økten må fornyes. **Innstillinger → Appoppdatering**
 viser **Last ned oppdatering** når en nyere offisiell APK finnes. Nedlastingen åpnes
 i nettleseren og installasjonen bekreftes av brukeren. Konto- eller bedriftsdata
@@ -129,8 +135,8 @@ Fra 0.97.3 følger også forbedringene som først ble laget lokalt etter 0.97.0:
 - Utvidet deling av ordinære ansattilganger for Administrator/leder og IT med brukeradministrasjon. Regnskapsførertilgangene forblir avgrenset til regnskapsførerrollen.
 - **Stoffkartotek** med import/eksport i **.sdb**, original PDF og faremerking/tiltak/verneutstyr. Import krever gjennomgang, hopper over identiske duplikater og overskriver ikke eksisterende produkter. Avdelingsgrenser håndheves. **48 produktikoner**.
 
-Oppdater server og PC til **1.1.14**, start serveren på nytt og last nettklientene
-på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.14.md).
+Oppdater server og PC til **1.1.15**, start serveren på nytt og last nettklientene
+på nytt. [Utgivelsesnotat / release notes](RELEASE_1.1.15.md).
 
 Automatic passkey prompts are available on remembered devices across mobile,
 desktop/accountant and Warehouse web. Native Android biometrics start at login
@@ -164,8 +170,8 @@ Regnskapsfører har **Tema** øverst til høyre. [Veiledning](APPEARANCE.md).
 Salsy Status **0.1.3** har innstillinger, testvarsel og server-widget.
 [Oppsett](SERVER_STATUS.md).
 
-Kalenderrettingen fra Salsy Android 0.35.8 er også med i **1.0.4**.
-[Last ned Android](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-android-1.0.4.apk).
+Kalenderrettingen fra Salsy Android 0.35.8 er også med i **1.0.5**.
+[Last ned Android](https://github.com/isaksen20/salsy-releases/releases/latest/download/salsy-android-1.0.5.apk).
 
 ## Nettsidelenke i Brukerstøtte fra 0.95.7
 
@@ -269,7 +275,7 @@ Denne utgivelsen inkluderer også personalverktøyene fra den tidligere lokale
 0.94.0-utgaven: Minioppgaver, stemplingslogg og begrunnet bruk av stemplingstid
 til lønn, samlet ferieoversikt, korrigering av timebank og OnCall per dag i
 skiftplanen. [Veiledning](STAFF_TOOLS.md) · [Endringsliste](RELEASE_0.94.0.md).
-Salsy Android 1.0.4 følger med. Oppdater server og PC, start serveren
+Salsy Android 1.0.5 følger med. Oppdater server og PC, start serveren
 på nytt og last nettklienten på nytt. Regnskapet er fortsatt skyggeregnskap.
 
 ## Fakturainnstillinger og bankavstemming fra 0.92.0
@@ -316,7 +322,7 @@ Les [kursveiledningen](COURSES.md).
 ## Større lysbilder og prøveforsøk fra 0.89.1
 
 Kurs bruker mer av skjermen i PC, PC-nett og mobilnett, med fullskjerm og
-zoom/panorering av kursbilder. Android 1.0.4 viser større kursbilder og
+zoom/panorering av kursbilder. Android 1.0.5 viser større kursbilder og
 har fullskjerm med knipezoom.
 
 Leder velger **Antall prøveforsøk** i kursbyggeren, med **2 som standard**.
@@ -373,11 +379,11 @@ Les [testveiledningen](SALSY_KASSE.md).
 
 | Program | Versjon | Plattform |
 | --- | --- | --- |
-| Salsy Server | 1.1.14 | Debian 13 amd64 |
-| Salsy Server ARM64 | 1.1.14 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
-| Salsy PC-klient | 1.1.14 | Debian 13 amd64 |
+| Salsy Server | 1.1.15 | Debian 13 amd64 |
+| Salsy Server ARM64 | 1.1.15 | Debian 13 arm64 / 64-bits Raspberry Pi OS (trixie) |
+| Salsy PC-klient | 1.1.15 | Debian 13 amd64 |
 | Salsy PRP, frittstående | 0.2.28 | Debian 13 amd64 |
-| Salsy Android | 1.0.4 | Android 7+, arm64 eller x86_64 |
+| Salsy Android | 1.0.5 | Android 7+, arm64 eller x86_64 |
 | Salsy Warehouse Android | 0.11.9 | Android 7+, arm64 eller x86_64, uendret |
 | Salsy Kasse – test | 0.1.3 | Debian 13, Python 3.13 |
 | Salsy Kasse Android – test | 0.1.3 | Android 7+, arm64 eller x86_64 |
@@ -451,7 +457,7 @@ server validation and calculations. [Guide](VACATION_FINANCE.md).
 
 The staff tools from the previously local 0.94.0 build are included: mini tasks,
 clock logs with reviewed payroll deductions, vacation overview, audited timebank
-corrections and daily OnCall selection. Android 1.0.4 is included.
+corrections and daily OnCall selection. Android 1.0.5 is included.
 [Staff tools guide](STAFF_TOOLS.md).
 
 Earlier versions added course assignment removal and `.ksa` course exchange in
@@ -462,7 +468,7 @@ for review and manual publication/assignment. Files are not encrypted; share
 only with course administrators. Limits: 40 MiB per file, 24 MiB total images.
 
 Course display improvements from 0.89.1 remain available in native PC, PC web and mobile web,
-with full-screen viewing and image zoom/pan. Android 1.0.4 adds larger
+with full-screen viewing and image zoom/pan. Android 1.0.5 adds larger
 course images and full-screen pinch zoom. Managers set the final-exam attempt
 limit, defaulting to **two attempts**. After all attempts fail, learners must
 contact their manager; the server blocks self-reset. Managers with course
@@ -474,7 +480,7 @@ images in a new course draft, with an optional exam added afterwards. Conversion
 runs in a network-isolated sandbox. Bundled Norwegian/English illustrated
 introductions are assigned automatically when courses are enabled: nine content
 slides for managers/admins and six for employees on mobile. Neither introduction
-has an exam. Android 1.0.4 and mobile web support course completion.
+has an exam. Android 1.0.5 and mobile web support course completion.
 See the [course guide](COURSES.md) for limits and dependencies.
 
 Resource management is available in native PC and PC web. Allocate dated,
@@ -482,7 +488,7 @@ fixed-time tasks with competency requirements and priorities by dragging between
 employees. Outside a shift, cancel or explicitly extend the shift automatically
 or with manually entered times. Shift changes and assignment commit atomically
 using shared calendar checks. Employees see only their own tasks in native PC,
-PC web, mobile web and Android 1.0.4. A reusable task library will follow.
+PC web, mobile web and Android 1.0.5. A reusable task library will follow.
 
 The Competencies module and PRP 0.2.28 share stable competency and employee IDs,
 with employee matrices, colours, plan markers and JSON exchange.
